@@ -1,0 +1,57 @@
+{{ 'section-best-seller.css' | asset_url | stylesheet_tag }}
+
+<div class="section-best-seller">
+    <div class="page-width">
+        <div class="section-heading">
+            <h5 class="title-helper">{{ section.settings.subtitle }}</h5>
+            <h2>{{ section.settings.title }}</h2>
+        </div>
+        <div class="swiper best-seller-slider">
+            <div class="swiper-wrapper">
+                {% for product in section.settings.products %}
+                <div class="swiper-slide">
+                    <div class="product-card-item">
+                        {% render 'item-card-product', product: product %}
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+            <div class="swiper-carousel__actions">
+                <button class="swiper-btn swiper-button-prev">
+                    {% render 'icon-arrow-left' %}
+                </button>
+                <button class="swiper-btn swiper-button-next">
+                    {% render 'icon-arrow-right' %}
+                </button>
+            </div>
+        </div>
+    </div>   
+</div>
+
+{% schema %}
+{
+    "name": "Section: Best Seller",
+    "settings": [
+        {
+            "type": "text",
+            "id": "subtitle",
+            "label": "Sub Title"
+        },
+        {
+            "type": "text",
+            "id": "title",
+            "label": "Title"
+        },
+        {
+            "type": "product_list",
+            "id": "products",
+            "label": "Product List"
+        }
+    ],
+    "presets": [
+        {
+            "name": "Section:Best Seller"
+        }
+    ]
+}
+{% endschema %}

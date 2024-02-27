@@ -1,0 +1,52 @@
+{{ 'section-welcome.css' | asset_url | stylesheet_tag }}
+
+<div class="section-welcome">
+    <div class="floating-bg-image">
+        <img class="w-100" src="{{ 'welcome-bg-pattern.png' | asset_url }}" alt="">
+    </div>
+    <div class="page-width">
+        <div class="inner-page-width">
+            <div class="section-heading">
+                <h2>{{ section.settings.title }}</h2>
+                <p class="subtxt">{{ section.settings.subtxt }}</p>
+            </div>
+            <div class="image-section">
+                <div class="large-image">
+                    {{ section.settings.large_image | image_url: width: 1000 | image_tag }}
+                </div>
+                <div class="small-image-sideload">
+                    <img src="{{ 'welcome-image-donut.png' | asset_url }}" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% schema %}
+{
+    "name": "Section: Welcome",
+    "class": "welcome-section-wrapper",
+    "settings": [
+        {
+            "type": "text",
+            "id": "title",
+            "label": "Title"
+        },
+        {
+            "type": "text",
+            "id": "subtxt",
+            "label": "Sub Text"
+        },
+        {
+            "type": "image_picker",
+            "id": "large_image",
+            "label": "Large Image"
+        },
+        {
+            "type": "image_picker",
+            "id": "small_image",
+            "label": "Small Image"
+        }
+    ]
+}
+{% endschema %}

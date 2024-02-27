@@ -1,0 +1,162 @@
+{
+  "sections": {
+    "banner_slideshow": {
+      "type": "banner-slideshow",
+      "blocks": {
+        "slide_Wyp4aq": {
+          "type": "slide",
+          "settings": {
+            "bg_color": "orange",
+            "product_item": "donutbox",
+            "is_special": true
+          }
+        },
+        "slide_VCn8Rf": {
+          "type": "slide",
+          "settings": {
+            "bg_color": "blue",
+            "product_item": "churrobox",
+            "is_special": false
+          }
+        },
+        "slide_B7t86i": {
+          "type": "slide",
+          "settings": {
+            "bg_color": "pink",
+            "product_item": "icecreambox",
+            "is_special": false
+          }
+        }
+      },
+      "block_order": [
+        "slide_Wyp4aq",
+        "slide_VCn8Rf",
+        "slide_B7t86i"
+      ],
+      "settings": {
+        "show_slide_arrow": true
+      }
+    },
+    "image_banner": {
+      "type": "section-welcome",
+      "settings": {
+        "title": "Welcome to Buffet Box",
+        "subtxt": "Food & Fun For Friends And Family",
+        "large_image": "shopify:\/\/shop_images\/welcome-large_1e271964-9d5f-4b8e-ac90-bf9c225c4461.png",
+        "small_image": "shopify:\/\/shop_images\/welcome-inner.png"
+      }
+    },
+    "rich_text": {
+      "type": "section-shop-occasion",
+      "blocks": {
+        "card_VxXKma": {
+          "type": "card",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/heart.png",
+            "image": "shopify:\/\/shop_images\/loved.png",
+            "title": "Loved Ones"
+          }
+        },
+        "card_4KaDcN": {
+          "type": "card",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/ring.png",
+            "image": "shopify:\/\/shop_images\/loved.png",
+            "title": "Wdding"
+          }
+        },
+        "card_HGdMiJ": {
+          "type": "card",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/balloon.png",
+            "image": "shopify:\/\/shop_images\/loved.png",
+            "title": "Birthday"
+          }
+        },
+        "card_cDwni3": {
+          "type": "card",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/heart.png",
+            "image": "shopify:\/\/shop_images\/loved.png",
+            "title": "Lover"
+          }
+        },
+        "card_zH4Wqh": {
+          "type": "card",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/balloon.png",
+            "image": "shopify:\/\/shop_images\/loved.png",
+            "title": "Bday"
+          }
+        },
+        "card_yYqknf": {
+          "type": "card",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/ring.png",
+            "image": "shopify:\/\/shop_images\/loved.png",
+            "title": "Wed"
+          }
+        },
+        "card_QMeDam": {
+          "type": "card",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/heart.png",
+            "image": "shopify:\/\/shop_images\/loved.png",
+            "title": "Love"
+          }
+        }
+      },
+      "block_order": [
+        "card_VxXKma",
+        "card_4KaDcN",
+        "card_HGdMiJ",
+        "card_cDwni3",
+        "card_zH4Wqh",
+        "card_yYqknf",
+        "card_QMeDam"
+      ],
+      "settings": {
+        "title": "Shop By <br> Occasion",
+        "show_arrow": false
+      }
+    },
+    "featured_collection": {
+      "type": "section-best-seller",
+      "settings": {
+        "subtitle": "Explore Our",
+        "title": "Best Sellers",
+        "products": [
+          "donutbox",
+          "churrobox",
+          "icecreambox",
+          "hamantoshenbox",
+          "copy-of-churrobox",
+          "copy-of-donutbox"
+        ]
+      }
+    },
+    "collage": {
+      "type": "banner-with-product",
+      "settings": {
+        "save_value": "Save up to 35%",
+        "product": "churrobox",
+        "custom_img": "shopify:\/\/shop_images\/img-pill.png"
+      }
+    },
+    "sectionTestimonial": {
+      "type": "section-testimonial"
+    },
+    "findPerfectGift": {
+      "type": "section-find-perfect-gift"
+    }
+  },
+  "order": [
+    "banner_slideshow",
+    "image_banner",
+    "rich_text",
+    "featured_collection",
+    "collage",
+    "sectionTestimonial",
+    "findPerfectGift"
+  ]
+}

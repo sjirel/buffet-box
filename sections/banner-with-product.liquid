@@ -1,0 +1,70 @@
+{{ 'section-banner-with-product.css' | asset_url | stylesheet_tag }}
+
+{% assign product = section.settings.product %}
+
+<div class="banner-with-product">    
+    <div class="bgArcWrapper">
+        <div class="bgArc">&nbsp;</div>
+    </div>
+    <div class="floating-bg-image">
+        <img class="w-100" src="{{ 'composition-churros.png' | asset_url }}" alt="">
+    </div>
+    <div class="page-width">
+        <div class="banner-pill">            
+            <div class="bg-box-image">
+                {{ section.settings.custom_img | image_url: width: 1200 | image_tag }}
+            </div>
+            <div class="content-holder">
+                <span class="save">{{ section.settings.save_value }}</span>
+                <div class="pill-title">
+                    Churros <br> Extravaganza
+                </div>
+                <div class="desc">
+                    Indulge your sweet tooth and make every moment memorable with the magic of BuffetBox Churros!
+                </div>
+                {%- if product != blank -%}
+                    <div {{ block.shopify_attributes }}>
+                        {%- form 'product', product -%}
+                            <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
+                            {{ form | payment_terms }}
+                        {%- endform -%}
+                    </div>
+                    {%- render 'buy-buttons-all-ajax',
+                        block: block,
+                        product: product,
+                        product_form_id: product_form_id,
+                        section_id: section.id
+                    -%}
+                {%- endif -%}
+            </div>
+        </div>
+    </div>
+</div>
+
+{% schema %}
+{
+    "name": "Section: Banner w product",
+    "settings": [
+        {
+            "type": "text",
+            "id": "save_value",
+            "label": "Save Banner Text"
+        },
+        {
+            "type": "product",
+            "id": "product",
+            "label": "Product"
+        },
+        {
+            "type": "image_picker",
+            "id": "custom_img",
+            "label": "Custom image Product"
+        }
+    ],
+    "presets": [
+        {
+            "name": "Section: Banner w product"
+        }
+    ]
+}
+{% endschema %}

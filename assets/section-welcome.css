@@ -1,0 +1,38 @@
+/*
+* Mixin for easy media queries
+* @include bp(tablet-only) { SCSS here };
+* Default css is for mobile screens
+*/
+.section-welcome {
+  position: relative;
+  z-index: 1;
+  padding-top: 6rem;
+  margin-bottom: 33.5rem;
+}
+@media (min-width: 992px) {
+  .section-welcome .inner-page-width {
+    max-width: 96.2rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+.section-welcome .floating-bg-image {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: -1;
+}
+.section-welcome .image-section {
+  position: relative;
+}
+.section-welcome .image-section img {
+  width: 100%;
+}
+.section-welcome .image-section .small-image-sideload {
+  position: absolute;
+  left: -8rem;
+  bottom: 0;
+  right: -4rem;
+  transform: translateY(38%);
+}

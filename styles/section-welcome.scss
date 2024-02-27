@@ -1,0 +1,35 @@
+@import './mixins/helpers';
+
+.section-welcome {
+    position: relative;
+    z-index: 1;
+    padding-top: 6rem;
+    margin-bottom: 33.5rem;
+    .inner-page-width {
+        @include bp(lg) {
+            max-width: 96.2rem;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+    .floating-bg-image {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        z-index: -1;
+    }   
+    .image-section {
+        position: relative;
+        img {
+            width: 100%;
+        }
+        .small-image-sideload {
+            position: absolute;
+            left: -8rem;
+            bottom: 0;
+            right: -4rem;
+            transform: translateY(38%);
+        }
+    }
+}

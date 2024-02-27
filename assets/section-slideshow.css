@@ -1,0 +1,204 @@
+/*
+* Mixin for easy media queries
+* @include bp(tablet-only) { SCSS here };
+* Default css is for mobile screens
+*/
+.banner-slideshow {
+  height: 89rem;
+  width: 100%;
+}
+.banner-slideshow .swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+  height: auto;
+}
+.banner-slideshow .swiper-slide .banner-composition-image {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 60%;
+  transform: translateY(-50%);
+  z-index: -1;
+}
+.banner-slideshow .swiper-slide .banner-composition-image img {
+  width: 100%;
+}
+.banner-slideshow .color-bg-orange {
+  background: rgb(255, 243, 234);
+  background: radial-gradient(circle, rgb(255, 243, 234) 0%, rgb(255, 150, 120) 100%);
+}
+.banner-slideshow .color-bg-orange .slider-fixed-elem .price-section-wrapper .title {
+  color: #F5724C;
+}
+.banner-slideshow .color-bg-pink {
+  background: rgb(254, 239, 242);
+  background: radial-gradient(circle, rgb(254, 239, 242) 0%, rgb(233, 119, 144) 100%);
+}
+.banner-slideshow .color-bg-pink .slider-fixed-elem .price-section-wrapper .title {
+  color: #ED4C66;
+}
+.banner-slideshow .color-bg-pink .slider-fixed-elem .price-section-wrapper img {
+  filter: hue-rotate(320deg);
+}
+.banner-slideshow .color-bg-blue {
+  background: rgb(243, 253, 255);
+  background: radial-gradient(circle, rgb(243, 253, 255) 0%, rgb(102, 180, 191) 100%);
+}
+.banner-slideshow .color-bg-blue .slider-fixed-elem .price-section-wrapper .title {
+  color: #54ACB9;
+}
+.banner-slideshow .color-bg-blue .slider-fixed-elem .price-section-wrapper img {
+  filter: hue-rotate(170deg);
+}
+.banner-slideshow .form-details {
+  position: absolute;
+  bottom: 8.5rem;
+  z-index: 2;
+}
+.banner-slideshow .swiper-btn {
+  width: 6rem;
+  height: 6rem;
+  padding: 2rem;
+  border-radius: 50%;
+  background: #ffffff;
+  box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.1);
+  outline: none;
+}
+.banner-slideshow .swiper-btn:after {
+  content: none;
+}
+.banner-slideshow .swiper-btn.swiper-button-prev {
+  left: calc(50% - 12rem);
+  bottom: 9rem;
+  top: auto;
+}
+.banner-slideshow .swiper-btn.swiper-button-next {
+  right: calc(50% - 12rem);
+  bottom: 9rem;
+  top: auto;
+}
+.banner-slideshow .swiper-pagination {
+  width: auto;
+  right: 4.8rem;
+  left: auto;
+  bottom: 10.5rem;
+  color: rgba(31, 31, 31, 0.5);
+}
+.banner-slideshow .swiper-pagination .swiper-pagination-current {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1F1F1F;
+}
+.banner-slideshow .product-details-wrapper {
+  width: 100%;
+  height: 100%;
+  flex: auto;
+  position: relative;
+}
+.banner-slideshow .product-details {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem 0;
+}
+.banner-slideshow .product-details .title-main {
+  padding-bottom: 5rem;
+}
+.banner-slideshow .product-details .title-main .h0 {
+  font-size: 26rem;
+  text-align: center;
+  background: rgb(255, 255, 255);
+  text-transform: uppercase;
+  background: linear-gradient(180deg, rgb(255, 255, 255) 86%, rgba(0, 0, 0, 0) 100%);
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+  line-height: 0.6;
+}
+.banner-slideshow .slider-fixed-elem {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  height: 100%;
+}
+.banner-slideshow .slider-fixed-elem .product-image__main {
+  position: absolute;
+  z-index: 1;
+  top: 57%;
+  left: 0;
+  right: 0;
+  transform: translateY(-50%);
+  width: 120rem;
+  max-width: 100%;
+  margin: 0 auto;
+}
+.banner-slideshow .slider-fixed-elem .product-image__main > img {
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+.banner-slideshow .slider-fixed-elem .price-section-wrapper {
+  position: absolute;
+  top: 10%;
+  left: 8%;
+  width: 26rem;
+  max-width: 21.67%;
+}
+.banner-slideshow .slider-fixed-elem .price-section-wrapper .price-section {
+  position: relative;
+}
+.banner-slideshow .slider-fixed-elem .price-section-wrapper .price-section .price-txt-section {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.banner-slideshow .slider-fixed-elem .price-section-wrapper .price-section .price-txt-section .title {
+  margin: 0 0 0.5rem;
+  font-weight: 500;
+  font-size: 1.6rem;
+}
+.banner-slideshow .slider-fixed-elem .price-section-wrapper .price-section .price-txt-section .p-price {
+  font-size: 4.8rem;
+  color: #ED4C66;
+  display: inline-flex;
+  margin-bottom: 1rem;
+  line-height: 1;
+  font-weight: bold;
+  gap: 0.3rem;
+}
+.banner-slideshow .slider-fixed-elem .price-section-wrapper .price-section .price-txt-section .p-price span {
+  font-size: 1.6rem;
+}
+.banner-slideshow .slider-fixed-elem .price-section-wrapper .price-section .price-txt-section .special-tag {
+  font-weight: 700;
+  border: 1px red dashed;
+  box-shadow: 0 0 20px rgba(237, 76, 102, 0.5019607843);
+  display: inline-block;
+  padding: 1.1rem 1.8rem;
+  font-size: 1.1rem;
+  background-color: #fff;
+  border-radius: 10rem;
+  text-transform: uppercase;
+  letter-spacing: 0;
+  color: #ED4C66;
+}
+.banner-slideshow .slider-fixed-elem .bottom-title {
+  position: absolute;
+  left: 4.8rem;
+  bottom: 10rem;
+  font-weight: 700;
+  font-size: 3.2rem;
+  line-height: 1;
+  margin: 0;
+  color: #ED4C66;
+}

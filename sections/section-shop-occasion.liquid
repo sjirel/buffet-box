@@ -1,0 +1,85 @@
+{{ 'section-shop-occasion.css' | asset_url | stylesheet_tag }}
+
+<div class="section-shop-occasion">
+    <div class="section-heading">
+        <h2>{{ section.settings.title }}</h2>
+    </div>
+    <div class="shop-carousel">
+        <div class="swiper shop-occasion-slider">
+            <div class="swiper-wrapper">
+                {% for block in section.blocks %}
+                    <div class="swiper-slide">
+                        <div class="swiper-card">
+                            <div class="floating-bg-image">
+                                <img class="w-100" src="{{ 'paper-texture.png' | asset_url }}" alt="">
+                            </div>
+                            <div class="card-shadow">                                
+                                <div class="card-main">
+                                    <div class="ico-holder">
+                                        {{ block.settings.icon | image_url: width: 40 | image_tag }}
+                                    </div>
+                                    <div class="title">
+                                        {{ block.settings.title }}
+                                    </div>
+                                    <div class="image-holder">
+                                        {{ block.settings.image | image_url: width: 600 | image_tag: loading: 'lazy' }}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+
+            <div class="shop-carousel__actions">
+                <button class="shop-carousel__control shop-carousel__control--prev">
+                    {% render 'icon-arrow-left' %}
+                </button>
+                <button class="shop-carousel__control shop-carousel__control--next">
+                    {% render 'icon-arrow-right' %}
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% schema %}
+{
+    "name": "Section: Shop Occasion",
+    "settings": [
+        {
+            "type": "text",
+            "id": "title",
+            "label": "Title"
+        },
+        {
+            "type": "checkbox",
+            "id": "show_arrow",
+            "label": "Show arrow?"
+        }
+    ],
+    "blocks": [
+        {
+            "name": "Card",
+            "type": "card",
+            "settings": [
+                {
+                    "type": "image_picker",
+                    "id": "icon",
+                    "label": "Icon"
+                },
+                {
+                    "type": "image_picker",
+                    "id": "image",
+                    "label": "Card Image"
+                },
+                {
+                   "type": "text",
+                   "id": "title",
+                   "label": "Title" 
+                }
+            ]
+        }
+    ]
+}
+{% endschema %}

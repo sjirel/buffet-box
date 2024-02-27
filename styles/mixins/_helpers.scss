@@ -1,0 +1,169 @@
+// --------------------------------------------------
+// font size
+
+@function calculate-rem($size) {
+  $rem-size: $size / 16px;
+  @return $rem-size * 1rem;
+}
+
+@mixin font-size($size) {
+  font-size: calculate-rem($size);
+}
+
+// --------------------------------------------------
+// svg background image
+
+$image-path: '{{ asset_url }}' !default;
+
+@mixin background-svg($name, $size: false) {
+  background-image: url( #{'{{ "#{$name}.svg" | asset_url }}'} );
+
+  @if ($size) {
+    background-size: $size;
+  }
+}
+
+//scss-lint:enable all
+
+// --------------------------------------------------
+// aspect ratio
+// e.g. @include aspect-ratio(16,9);
+// expects child to have class of `.content` (could be replaced with a wildcard `*`)
+
+@mixin aspect-ratio($width, $height) {
+  position: relative;
+
+  &::before {
+    content: '';
+    display: block;
+    padding-top: ($height / $width) * 100%;
+    width: 100%;
+  }
+
+  > .content {
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+}
+
+// --------------------------------------------------
+// links
+
+@mixin make-link($normal: $link-color, $hover: $link-hover-color, $active: $link-active-color) {
+  color: $normal;
+
+  &:hover {
+    color: $hover;
+  }
+
+  &:active {
+    color: $active;
+  }
+}
+
+// --------------------------------------------------
+// viewport height fix
+// this fixes issue where address bar in touch devices messes `vh` up
+
+//scss-lint:disable all
+@mixin vh-height-min($height: 100) {
+  min-height: #{$height}vh; // fallback for browsers that do not support Custom Props
+  min-height: calc(var(--vh) * #{$height});
+}
+
+@mixin vh-height($height: 100) {
+  height: #{$height}vh; // fallback for browsers that do not support Custom Props
+  height: calc(var(--vh) * #{$height});
+}
+//scss-lint:enable all
+
+
+/*
+* Mixin for easy media queries
+* @include bp(tablet-only) { SCSS here };
+* Default css is for mobile screens
+*/
+@mixin bp($point) {
+  @if $point == below-sm {
+      @media (max-width: 575px) { @content; }
+  }    
+  @if $point == below-lg {
+      @media (max-width: 767px) { @content; }
+  }
+  @if $point == below-lg {
+      @media (max-width: 991px) { @content; }
+  }
+  @if $point == below-xl {
+      @media (max-width: 1199px) { @content; }
+  }
+  @if $point == sm {
+      @media (min-width: 576px) { @content; }
+  } 
+  @if $point == md {
+      @media (min-width: 768px) { @content; }
+  }    
+  @if $point == lg {
+      @media (min-width: 992px) { @content; }
+  }
+  @if $point == md-lg {
+      @media (min-width: 768px) and (max-width: 991px) { @content; }
+  }
+  @if $point == md-xl {
+      @media (min-width: 768px) and (max-width: 1199px) { @content; }
+  }
+  @if $point == lg-xl {
+      @media (min-width: 992px) and (max-width: 1199px) { @content; }
+  }
+  @if $point == xl {
+      @media (min-width: 1200px) { @content; }
+  }
+  @if $point == xxl {
+      @media (min-width: 1400px) { @content; }
+  }
+  @if $point == xxxl {
+      @media (min-width: 1600px) { @content; }
+  }
+
+}
+
+
+// --------------------------------------------------
+// colours
+$font-main: 'Roobert', sans-serif;
+$font-secondary: 'Founders Grotesk', sans-serif;
+
+$color-black: #1F1F1F;
+$color-near-black: #504F51;
+$color-orange: #F5724C;
+$color-white: #ffffff;
+$color-red: #ED4C66;
+$color-blue: #54ACB9;
+$color-dark-blue: #0D4867;
+$color-purple: #2a0037;
+$color-dark-red: #B62940;
+$color-heading-black: #1a1b18;
+$color-brown-light: #F0E9D7;
+$color-dark-grey: #504F51;
+
+// Bg Color
+$bg-blue: rgba(243,253,255);
+$bg-pink: rgb(254,239,242,1);
+$bg-orange:  rgb(255,243,234);
+
+// Radial BG
+$bg-radial-orange: radial-gradient(circle, rgba(255,243,234,1) 0%, rgba(255,150,120,1) 100%);
+$bg-radial-blue: radial-gradient(circle, rgba(243,253,255,1) 0%, rgba(102,180,191,1) 100%);
+$bg-radial-pink: radial-gradient(circle, rgba(254,239,242,1) 0%, rgba(233,119,144,1) 100%);
+
+// links
+$link-color: $color-black;
+$link-hover-color: lighten($link-color, 5);
+$link-active-color: lighten($link-color, 10);
+
+//Heights
+$header-height: var(--header-height);
+$footer-height: var(--footer-height);
+$window-height: var(--window-height);

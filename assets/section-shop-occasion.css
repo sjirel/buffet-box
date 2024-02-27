@@ -1,0 +1,110 @@
+/*
+* Mixin for easy media queries
+* @include bp(tablet-only) { SCSS here };
+* Default css is for mobile screens
+*/
+.section-shop-occasion {
+  margin-bottom: 18rem;
+}
+.section-shop-occasion .swiper-creative .swiper-wrapper {
+  padding-bottom: 6rem;
+}
+.section-shop-occasion .swiper-creative .swiper-slide {
+  overflow: initial;
+}
+.section-shop-occasion .swiper-creative .swiper-slide .swiper-card {
+  margin: 0 auto;
+  width: 36.5rem;
+  max-width: 100%;
+  position: relative;
+  z-index: 1;
+  background-color: #ffffff;
+  border-radius: 10rem;
+}
+.section-shop-occasion .swiper-creative .swiper-slide .swiper-card .floating-bg-image {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: -1;
+}
+.section-shop-occasion .swiper-creative .swiper-slide .swiper-card .card-shadow {
+  box-shadow: 0 2.5rem 5rem rgba(75, 29, 10, 0.25);
+  border: 0.6rem solid #ffffff;
+  border-radius: 10rem;
+  overflow: hidden;
+}
+.section-shop-occasion .swiper-creative .swiper-slide .swiper-card .card-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: #fff;
+  border-radius: 4rem;
+  padding-top: 2.5rem;
+  overflow: hidden;
+}
+.section-shop-occasion .swiper-creative .swiper-slide .swiper-card .card-main .ico-holder {
+  border: 1px solid #504F51;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 5rem;
+  min-height: 5rem;
+  border-radius: 12px;
+}
+.section-shop-occasion .swiper-creative .swiper-slide .swiper-card .card-main .ico-holder img {
+  width: 2.4rem;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.section-shop-occasion .swiper-creative .swiper-slide .swiper-card .card-main .title {
+  color: #1F1F1F;
+  margin: 2rem 0 1.5rem;
+  text-align: center;
+}
+.section-shop-occasion .swiper-creative .swiper-slide .swiper-card .card-main .image-holder {
+  width: 100%;
+  flex-grow: 1;
+}
+.section-shop-occasion .swiper-creative .swiper-slide .swiper-card .card-main .image-holder img {
+  width: 100%;
+  height: 29.5rem;
+  -o-object-position: center;
+     object-position: center;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.shop-carousel {
+  position: relative;
+}
+
+.shop-carousel__actions {
+  z-index: 1;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.shop-carousel__control {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  background-color: #ffffff;
+  font-weight: 500;
+  width: 6rem;
+  height: 6rem;
+  border-radius: 50%;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.1019607843);
+  outline: none;
+}
+.shop-carousel__control:hover {
+  cursor: pointer;
+}
+
+/* Rectangle 30 */
