@@ -39,6 +39,10 @@ var shopoccasion = new Swiper(".shop-occasion-slider", {
     },
     slidesPerView: 3,
     spaceBetween: 50,
+    speed: 750,
+    autoplay: {
+        delay: 5000,
+    },
     effect: "creative",
     initialSlide: '3',
     creativeEffect: {
@@ -68,6 +72,10 @@ let bestSellers = new Swiper('.best-seller-slider', {
     spaceBetween: 32,
     slidesPerView: 3,
     centeredSlides: true,
+    speed: 750,
+    autoplay: {
+        delay: 5000,
+    },
     centeredSlidesBounds: true,
     // Navigation arrows
     navigation: {
@@ -76,9 +84,23 @@ let bestSellers = new Swiper('.best-seller-slider', {
     },
 });
 
-let testimonialsSlider = new Swiper('.js-testimonials-slider', {
+let testimonialsSliderTop = new Swiper('.js-testimonials-slider-top', {
     loop: true,
     spaceBetween: 30,
+    speed: 750,
+    autoplay: {
+        delay: 5000,
+    },
+    slidesPerView: 'auto',
+});
+
+let testimonialsSliderBtm = new Swiper('.js-testimonials-slider-btm', {
+    loop: true,
+    spaceBetween: 30,
+    speed: 750,
+    autoplay: {
+        delay: 5000,
+    },
     slidesPerView: 'auto',
 });
 

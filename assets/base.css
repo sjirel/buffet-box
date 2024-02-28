@@ -3223,6 +3223,9 @@ product-info .loading__spinner:not(.hidden) ~ *,
   position: relative;
   top: 0.2rem;
 }
+.announcement-bar-header .announce-link:hover {
+  color: #B62940;
+}
 
 .announcement-bar__link {
   display: flex;
@@ -3375,6 +3378,9 @@ product-info .loading__spinner:not(.hidden) ~ *,
   font-size: 1.4rem;
   letter-spacing: 0;
   line-height: 1;
+}
+.header-btm .header__inline-menu .header__menu-item:hover {
+  color: #B62940;
 }
 .header-btm .header__inline-menu .header__menu-item span, .header-btm .header__inline-menu .header__menu-item svg {
   text-align: center;

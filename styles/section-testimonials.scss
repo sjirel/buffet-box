@@ -71,6 +71,12 @@
         }
       }
     }
+    &.js-testimonials-slider-btm {
+      margin-top: -4rem;
+      .swiper-slide {
+        width: 36.3rem;
+      }
+    }
   }
   .btn-wrapper {
     text-align: center;

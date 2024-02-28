@@ -156,9 +156,25 @@
             top: 10%;
             left: 8%;
             width: 26rem;
-            max-width: 21.67%;
+            height: 26rem;
+            background: linear-gradient(329.97deg, rgba(255, 255, 255, 0) 32.11%, rgba(255, 255, 255, 0.75) 63.32%);
+            backdrop-filter: blur(10px);
+            border-radius: 50%;
+            border: 0.3rem solid $color-white;
             .price-section {
-                position: relative;
+                position: absolute;
+                left: 0;
+                right: 0;
+                top: 0;
+                bottom: 0;
+                margin: 0.7rem;
+                .circular-text {
+                    position: relative;
+                    left: 0;
+                    width: 100%;
+                    top: 0;
+                    height: 100%;
+                }
                 .price-txt-section {
                     position: absolute;
                     top: 50%;

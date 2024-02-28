@@ -1,6 +1,7 @@
 {{ 'product-card.css' | asset_url | stylesheet_tag }}
 
 <div class="product-card">
+    <a class="link" href="{{ product.url }}">
     <div class="product-image">
         <div class="product-image__box">
             {{ product.featured_media |  image_url: width: 450 |  image_tag: loading: 'lazy' }}
@@ -25,4 +26,5 @@
             -%}
         {%- endif -%}
     </div>
+    </a>
 </div>

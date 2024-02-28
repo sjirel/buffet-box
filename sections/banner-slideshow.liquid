@@ -37,7 +37,7 @@
                 {{ product.featured_image | image_url: width: 850 | image_tag: loading: 'eager' }}
                 <div class="price-section-wrapper">
                     <div class="price-section">
-                        <img src="{{ 'banner-pricebg.png' | asset_url }}" alt="" loading="eager" width="260" height="260">
+                        <img class="circular-text" src="{{ 'circular-text.png' | asset_url }}" alt="" loading="eager" width="260" height="260">
                         <div class="price-txt-section">
                             <h5 class="title">{{ product.title |  prepend: '#'  }}</h5>
                             <div class="p-price"><span class="symbol">{{ cart.currency.symbol }}</span>{{ product.price_min | money_without_currency }}</div>

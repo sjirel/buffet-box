@@ -2535,6 +2535,9 @@ product-info .loading__spinner:not(.hidden) ~ *,
       position: relative;
       top: 0.2rem;
     }
+    &:hover {
+      color: $color-dark-red;
+    }
   }
 }
 
@@ -2678,6 +2681,9 @@ product-info .loading__spinner:not(.hidden) ~ *,
       font-size: 1.4rem;
       letter-spacing: 0;
       line-height: 1;
+      &:hover {
+        color: $color-dark-red;
+      }
       span,svg {
         text-align: center;
         font-weight: 600;

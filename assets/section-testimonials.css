@@ -76,6 +76,12 @@
 .testimonials .swiper .swiper-slide blockquote .floating-quote img, .testimonials .swiper .swiper-slide blockquote .floating-quote svg {
   width: 100%;
 }
+.testimonials .swiper.js-testimonials-slider-btm {
+  margin-top: -4rem;
+}
+.testimonials .swiper.js-testimonials-slider-btm .swiper-slide {
+  width: 36.3rem;
+}
 .testimonials .btn-wrapper {
   text-align: center;
   margin-top: -2rem;

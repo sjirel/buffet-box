@@ -48,6 +48,10 @@ var shopoccasion = new swiper_bundle__WEBPACK_IMPORTED_MODULE_0__["default"](".s
   },
   slidesPerView: 3,
   spaceBetween: 50,
+  speed: 750,
+  autoplay: {
+    delay: 5000
+  },
   effect: "creative",
   initialSlide: '3',
   creativeEffect: {
@@ -75,6 +79,10 @@ var bestSellers = new swiper_bundle__WEBPACK_IMPORTED_MODULE_0__["default"]('.be
   spaceBetween: 32,
   slidesPerView: 3,
   centeredSlides: true,
+  speed: 750,
+  autoplay: {
+    delay: 5000
+  },
   centeredSlidesBounds: true,
   // Navigation arrows
   navigation: {
@@ -82,9 +90,22 @@ var bestSellers = new swiper_bundle__WEBPACK_IMPORTED_MODULE_0__["default"]('.be
     prevEl: ".swiper-button-prev"
   }
 });
-var testimonialsSlider = new swiper_bundle__WEBPACK_IMPORTED_MODULE_0__["default"]('.js-testimonials-slider', {
+var testimonialsSliderTop = new swiper_bundle__WEBPACK_IMPORTED_MODULE_0__["default"]('.js-testimonials-slider-top', {
   loop: true,
   spaceBetween: 30,
+  speed: 750,
+  autoplay: {
+    delay: 5000
+  },
+  slidesPerView: 'auto'
+});
+var testimonialsSliderBtm = new swiper_bundle__WEBPACK_IMPORTED_MODULE_0__["default"]('.js-testimonials-slider-btm', {
+  loop: true,
+  spaceBetween: 30,
+  speed: 750,
+  autoplay: {
+    delay: 5000
+  },
   slidesPerView: 'auto'
 });
 console.log('here lies your code');
