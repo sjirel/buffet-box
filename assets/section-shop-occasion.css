@@ -118,21 +118,6 @@
   position: relative;
 }
 
-.shop-carousel__actions {
-  z-index: 1;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 1rem;
-  padding-bottom: 2rem;
-}
-@media (min-width: 768px) {
-  .shop-carousel__actions {
-    gap: 2rem;
-  }
-}
-
 .shop-carousel__control {
   display: inline-flex;
   justify-content: center;
