@@ -126,10 +126,10 @@
         "subtitle": "Explore Our",
         "title": "Best Sellers",
         "products": [
+          "hamantoshenbox",
           "donutbox",
           "churrobox",
           "icecreambox",
-          "hamantoshenbox",
           "copy-of-churrobox",
           "copy-of-donutbox"
         ]
