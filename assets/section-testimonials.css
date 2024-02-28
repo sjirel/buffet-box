@@ -17,6 +17,9 @@
   padding-bottom: 8rem;
   width: 100%;
 }
+.testimonials .swiper .swiper-wrapper {
+  transition-timing-function: linear;
+}
 .testimonials .swiper .swiper-slide {
   background-color: #ffffff;
   background: linear-gradient(34.63deg, rgba(255, 255, 255, 0.75) 25.57%, rgba(255, 255, 255, 0.35) 72.23%);

@@ -41,7 +41,6 @@ var shopoccasion = new swiper_bundle__WEBPACK_IMPORTED_MODULE_0__["default"](".s
   loop: true,
   grabCursor: true,
   centeredSlides: true,
-  centeredSlidesBounds: true,
   navigation: {
     nextEl: ".shop-carousel__control--next",
     prevEl: ".shop-carousel__control--prev"
@@ -49,28 +48,28 @@ var shopoccasion = new swiper_bundle__WEBPACK_IMPORTED_MODULE_0__["default"](".s
   slidesPerView: 3,
   spaceBetween: 50,
   speed: 750,
-  autoplay: {
-    delay: 5000
-  },
+  // autoplay: {
+  //     delay: 5000,
+  // },
   effect: "creative",
-  initialSlide: '3',
+  initialSlide: '5',
   creativeEffect: {
     perspective: true,
     limitProgress: 5,
     prev: {
-      translate: ['-90%', 30, -100],
+      translate: ['-90%', 30, -60],
       rotate: [0, 0, -5],
       origin: "center"
     },
     next: {
-      translate: ['90%', 30, -100],
+      translate: ['90%', 30, -60],
       rotate: [0, 0, 5],
       origin: "center"
     }
   },
   breakpoints: {
     1792: {
-      spaceBetween: 100
+      spaceBetween: 65
     }
   }
 });
@@ -83,7 +82,6 @@ var bestSellers = new swiper_bundle__WEBPACK_IMPORTED_MODULE_0__["default"]('.be
   autoplay: {
     delay: 5000
   },
-  centeredSlidesBounds: true,
   // Navigation arrows
   navigation: {
     nextEl: ".swiper-button-next",
@@ -93,20 +91,27 @@ var bestSellers = new swiper_bundle__WEBPACK_IMPORTED_MODULE_0__["default"]('.be
 var testimonialsSliderTop = new swiper_bundle__WEBPACK_IMPORTED_MODULE_0__["default"]('.js-testimonials-slider-top', {
   loop: true,
   spaceBetween: 30,
-  speed: 750,
+  slidesPerView: 'auto',
+  speed: 8000,
+  allowTouchMove: false,
   autoplay: {
-    delay: 5000
-  },
-  slidesPerView: 'auto'
+    delay: 0,
+    disableOnInteraction: false,
+    pauseOnMouseEnter: true
+  }
 });
 var testimonialsSliderBtm = new swiper_bundle__WEBPACK_IMPORTED_MODULE_0__["default"]('.js-testimonials-slider-btm', {
   loop: true,
   spaceBetween: 30,
-  speed: 750,
+  slidesPerView: 'auto',
+  speed: 8000,
+  allowTouchMove: false,
   autoplay: {
-    delay: 5000
-  },
-  slidesPerView: 'auto'
+    delay: 0,
+    disableOnInteraction: false,
+    reverseDirection: true,
+    pauseOnMouseEnter: true
+  }
 });
 console.log('here lies your code');
 

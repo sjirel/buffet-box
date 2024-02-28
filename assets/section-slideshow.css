@@ -132,11 +132,11 @@
 .banner-slideshow .slider-fixed-elem .product-image__main {
   position: absolute;
   z-index: 1;
-  top: 57%;
+  top: 50%;
   left: 0;
   right: 0;
   transform: translateY(-50%);
-  width: 120rem;
+  width: 134rem;
   max-width: 100%;
   margin: 0 auto;
 }
@@ -147,8 +147,8 @@
 }
 .banner-slideshow .slider-fixed-elem .price-section-wrapper {
   position: absolute;
-  top: 10%;
-  left: 8%;
+  top: 8%;
+  left: 12.5%;
   width: 26rem;
   height: 26rem;
   background: linear-gradient(329.97deg, rgba(255, 255, 255, 0) 32.11%, rgba(255, 255, 255, 0.75) 63.32%);

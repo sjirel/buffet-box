@@ -4,13 +4,16 @@
 * Default css is for mobile screens
 */
 .section-shop-occasion {
-  margin-bottom: 18rem;
+  margin-bottom: 16rem;
 }
 .section-shop-occasion .swiper-creative .swiper-wrapper {
   padding-bottom: 6rem;
 }
 .section-shop-occasion .swiper-creative .swiper-slide {
   overflow: initial;
+}
+.section-shop-occasion .swiper-creative .swiper-slide.swiper-slide-active .swiper-card .card-shadow {
+  border-color: #F5724C;
 }
 .section-shop-occasion .swiper-creative .swiper-slide .swiper-card {
   margin: 0 auto;
@@ -33,6 +36,7 @@
   border: 0.6rem solid #ffffff;
   border-radius: 10rem;
   overflow: hidden;
+  transition: border 0.4s ease-in-out;
 }
 .section-shop-occasion .swiper-creative .swiper-slide .swiper-card .card-main {
   display: flex;
@@ -75,6 +79,7 @@
      object-position: center;
   -o-object-fit: cover;
      object-fit: cover;
+  border-radius: 2.5rem;
 }
 
 .shop-carousel {
@@ -88,6 +93,7 @@
   justify-content: center;
   align-items: center;
   gap: 20px;
+  padding-bottom: 2rem;
 }
 
 .shop-carousel__control {
@@ -100,7 +106,7 @@
   width: 6rem;
   height: 6rem;
   border-radius: 50%;
-  box-shadow: 0 0 25px rgba(0, 0, 0, 0.1019607843);
+  box-shadow: 0 0 2.5rem rgba(31, 31, 31, 0.1);
   outline: none;
 }
 .shop-carousel__control:hover {

@@ -1,13 +1,20 @@
 @import './mixins/helpers';
 
 .section-shop-occasion {
-  margin-bottom: 18rem;
+  margin-bottom: 16rem;
   .swiper-creative {
     .swiper-wrapper {
       padding-bottom: 6rem;
     } 
     .swiper-slide {
       overflow: initial;
+      &.swiper-slide-active {
+        .swiper-card {
+          .card-shadow {
+            border-color: $color-orange;     
+          }
+        }
+      }
       .swiper-card {
         margin: 0 auto;
         width: 36.5rem;
@@ -27,7 +34,8 @@
           box-shadow: 0 2.5rem 5rem rgba(75, 29, 10, 0.25);          
           border: 0.6rem solid $color-white;
           border-radius: 10rem;
-          overflow: hidden;          
+          overflow: hidden;        
+          transition: border 0.4s ease-in-out;  
         }
         .card-main {
           display: flex;
@@ -49,7 +57,7 @@
             border-radius: 12px;
             img{
               width: 2.4rem;
-              object-fit: contain;
+              object-fit: contain;             
             }
           }
           .title {
@@ -65,6 +73,7 @@
               height: 29.5rem;
               object-position: center;
               object-fit: cover;
+              border-radius: 2.5rem;
             }
           }
         }
@@ -84,6 +93,7 @@
   justify-content: center;
   align-items: center;
   gap: 20px;
+  padding-bottom: 2rem;
 }
 
 .shop-carousel__control {
@@ -96,7 +106,7 @@
   width: 6rem;
   height: 6rem;
   border-radius: 50%;
-  box-shadow: 0 0 25px #0000001a;
+  box-shadow: 0 0 2.5rem rgba($color-black, 0.1);
   outline: none;
   &:hover {
     cursor: pointer;

@@ -14,6 +14,9 @@
   .swiper {
     padding-bottom: 8rem;
     width: 100%;
+    .swiper-wrapper {
+      transition-timing-function: linear;
+    }
     .swiper-slide {
       background-color: $color-white;
       background: linear-gradient(34.63deg, rgba(255, 255, 255, 0.75) 25.57%, rgba(255, 255, 255, 0.35) 72.23%);

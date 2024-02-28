@@ -3389,6 +3389,10 @@ product-info .loading__spinner:not(.hidden) ~ *,
   color: #1F1F1F;
   font-size: 1.4rem;
   letter-spacing: 0;
+  transition: color 0.4s ease-in-out;
+}
+.header-btm .header__inline-menu .header__menu-item span:hover, .header-btm .header__inline-menu .header__menu-item svg:hover {
+  color: #B62940;
 }
 
 @media screen and (max-width: 749px) {

@@ -123,7 +123,7 @@
     "featured_collection": {
       "type": "section-best-seller",
       "settings": {
-        "subtitle": "Explore Our Test",
+        "subtitle": "Explore Our",
         "title": "Best Sellers",
         "products": [
           "donutbox",
