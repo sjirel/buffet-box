@@ -2,7 +2,10 @@
 
 .testimonials {
   overflow: hidden;
-  margin-bottom: 18rem;
+  margin-bottom: 10rem;
+  @include bp(md) {
+    margin-bottom: 18rem;
+  }
   .section-heading {
     .title-helper {
       color: #249FB7;
@@ -23,7 +26,8 @@
       box-shadow: 0px 4rem 4rem rgba(27, 108, 148, 0.15);
       border-radius: 11rem;
       padding: 4rem 4.5rem 4rem 6rem;
-      width: 43rem;
+      width: 42.7rem;
+      height: auto;
       .elems-top {
         display: flex;
         align-items: center;   
@@ -75,14 +79,19 @@
       }
     }
     &.js-testimonials-slider-btm {
-      margin-top: -4rem;
-      .swiper-slide {
-        width: 36.3rem;
+      margin-top: -6.5rem;
+      position: relative;
+      z-index: 2;
+      @include bp(md) {
+        margin-top: -4rem;
       }
     }
   }
   .btn-wrapper {
     text-align: center;
-    margin-top: -2rem;
+    margin-top: -4rem;
+    @include bp(md) {
+      margin-top: -2rem;
+    }
   }
 }

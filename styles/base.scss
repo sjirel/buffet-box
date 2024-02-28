@@ -176,12 +176,16 @@ body {
 .bgArc {
   background: linear-gradient(180deg, #82D0DB 0%, transparent 32.95%, rgba(130, 208, 219, 0) 95.82%);
   position: absolute;
-  left: -37rem;
-  right: -37rem;
+  left: -18rem;
+  right: -18rem;
   top: 0;
   z-index: -1;
   border-radius: 50%;
   pointer-events: none;
+  @include bp(md) {
+    left: -37rem;
+    right: -37rem;
+  }
   &:before {
       content: "";
       display: block;
@@ -206,8 +210,8 @@ a {
 }
 .btn {
   transition: background-color 0.4s ease-in-out, color 0.4s ease-in-out, opacity 0.4s ease-in-out, background-color 0.4s ease-in-out, transform 0.4s ease-in-out, border 0.4s ease-in-out;
-  min-width: 21.6rem;
-  padding: 2.2rem;
+  min-width: 20.4rem;
+  padding: 1.7rem;
   font-size: 1.6rem;
   line-height: 1;
   font-weight: bold;
@@ -216,6 +220,10 @@ a {
   border-radius: 10rem;
   display: inline-block;
   cursor: pointer;
+  @include bp(md) {
+    padding: 2.2rem;
+    min-width: 21.6rem;
+  }
   &-blue-gradient {
     background: linear-gradient(180deg, #0D4867 0%, #239EB6 80%);
     color: $color-white;
