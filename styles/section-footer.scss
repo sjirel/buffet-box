@@ -39,7 +39,10 @@
 }
 
 .footer__blocks-wrapper {
-  display: flex;
+  display: block;
+  @include bp(md) {
+    display: flex;
+  }
 }
 
 .footer:not(.color-scheme-1) {

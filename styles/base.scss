@@ -120,17 +120,20 @@ body {
   font-weight: normal;
   letter-spacing: 0 !important;
   background-color: #FFF5F1 !important;
+  color: $color-black !important;
 }
-
+*, ::after, ::before {
+  box-sizing: border-box;
+}
 .container-fluid {
   // max-width: var(--page-width);
   max-width: initial;
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
   margin: auto;
   @include bp(md){
-     padding-left: 1.5rem;
-     padding-right: 1.5rem;
+     padding-left: 3rem;
+     padding-right: 3rem;
   }
   @include bp(xl){
      padding-left: 4.8rem;
@@ -140,19 +143,13 @@ body {
 .page-width {
   margin-left: auto;
   margin-right: auto;
-  @include bp(xl) {
+  padding-left: 2rem;
+  padding-right: 2rem;
+  @include bp(md) {
     max-width: 131rem;
     padding-left: 7.5rem;
     padding-right: 7.5rem;
   }
-}
-.swiper-button-prev {
-  left: -3rem;
-  transform: translateX(-100%);
-}
-.swiper-button-next {
-  right: -3rem;
-  transform: translateX(100%);
 }
 .bgImg {
   position: absolute;
@@ -261,8 +258,11 @@ select.form-control {
 }
 .section-heading {
   text-align: center;
-  margin-bottom: 6rem;
+  margin-bottom: 4rem;
   line-height: 1;
+  @include bp(md) {
+    margin-bottom: 6rem;
+  }
   > *:last-child {
     margin-bottom: 0;
   }
@@ -270,19 +270,28 @@ select.form-control {
     line-height: 1;
     color: $color-red;
     margin-bottom: 1rem;
-    font-size: 3.2rem;
+    font-size: 2rem;
     font-weight: normal;
+    @include bp(md) {
+      font-size: 3.2rem;
+    }
   }
   h2{
-    font-size: 6.4rem;
+    font-size: 4rem;
     text-transform: capitalize;
     margin-bottom: 2rem;
+    @include bp(md) {
+      font-size: 6.4rem;
+    }
   }
   .subtxt {
       letter-spacing: 0.5em;
-      font-size: 1.8rem;
+      font-size: 1.6rem;
       text-transform: uppercase;      
       font-weight: 500;
+      @include bp(md) {
+        font-size: 1.8rem;
+      }
   }
 }
 body:has(.section-header .drawer-menu) .announcement-bar-section .page-width {
@@ -904,6 +913,37 @@ summary::-webkit-details-marker {
     margin: 0;
   }
 }
+.swiper-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  .swiper-button-prev, .swiper-button-next {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    background-color: $color-white;
+    font-weight: 500;
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50%;
+    box-shadow: 0 0 2.5rem #0000001a;
+    outline: none;
+    position: static;
+    margin: 0;
+    @include bp(md) {
+      width: 6rem;
+      height: 6rem;
+    }
+    svg, img {
+      width: 1.5rem;
+    }
+    &:after {
+      content: none;
+    }
+  }
+}
 
 //swiper overrides
 .swiper-carousel__actions {
@@ -1466,7 +1506,7 @@ button.shopify-payment-button__button--unbranded {
   justify-content: center;
   align-items: center;
   border: none;
-  padding: 0.5rem 1.5rem;
+  padding: 0.5rem 1rem;
   cursor: pointer;
   font-size: 1.6rem;
   text-decoration: none;
@@ -1474,16 +1514,20 @@ button.shopify-payment-button__button--unbranded {
   color: rgb(var(--color-button-text));
   transition: box-shadow var(--duration-short) ease;
   appearance: none;
-  height: 6rem;
+  height: 5rem;
+  min-width: 16.7rem;
   border-radius: 10rem;
   background: linear-gradient(180deg, #ED4C66 16.67%, #F58864 80.83%);
   box-shadow: inset 0 0.4rem 3rem #EC4864;
   text-transform: capitalize;
-  min-width: 18rem;
   text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.2);
   font-family: $font-secondary;
   line-height: 1;
   position: relative;
+  @include bp(md) {
+    height: 6rem;
+    min-width: 18rem;
+  }
   &:before {
       content: "";
       border: 1px solid rgba(255, 255, 255, 0.35);
@@ -1509,7 +1553,17 @@ button.shopify-payment-button__button--unbranded {
   }
 }
 
-
+.d-none {
+  display: none !important;
+}
+.d-md-none {
+  @include bp(md) {
+    display: none !important;
+  }
+}
+.d-block {
+  display: block !important;
+}
 
 .button:before,
 .shopify-challenge__button:before,
@@ -2516,11 +2570,14 @@ product-info .loading__spinner:not(.hidden) ~ *,
 .announcement-bar-header {
   display: flex;
   align-items: center;
+  @include bp(below-xl) {
+    display: none;
+  }
   .announce-txt {
     color: $color-dark-red;
     margin: 0;
     font-weight: 600;
-    margin-right: 3rem;
+    margin-right: 3rem;   
   }
   .announce-link {
     color: $color-black;
@@ -2867,8 +2924,8 @@ product-info .loading__spinner:not(.hidden) ~ *,
 }
 
 .header__icon .icon {
-  height: 1.4rem;
-  width: 1.4rem;
+  height: 1.6rem;
+  width: 1.6rem;
   fill: none;
   vertical-align: middle;
 }

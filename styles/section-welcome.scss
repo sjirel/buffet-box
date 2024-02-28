@@ -4,7 +4,10 @@
     position: relative;
     z-index: 1;
     padding-top: 6rem;
-    margin-bottom: 33.5rem;
+    margin-bottom: 20rem;
+    @include bp(md) {
+        margin-bottom: 33.5rem;
+    }
     .inner-page-width {
         @include bp(lg) {
             max-width: 96.2rem;
@@ -21,15 +24,30 @@
     }   
     .image-section {
         position: relative;
+        .large-image {
+            img {
+                min-height: 19rem;
+                object-fit: cover;
+                object-position: center;
+                border-radius: 3rem;
+                @include bp(md) {
+                    border-radius: 10rem;
+                }
+            }
+        }
         img {
             width: 100%;
         }
         .small-image-sideload {
             position: absolute;
-            left: -8rem;
             bottom: 0;
-            right: -4rem;
+            left: -4rem;
+            right: -2rem;
             transform: translateY(38%);
+            @include bp(md) {
+                left: -8rem;
+                right: -4rem;
+            }
         }
     }
 }

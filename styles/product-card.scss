@@ -1,9 +1,17 @@
 @import './mixins/helpers';
 
 .product-card {
-    width: 36.5rem;
-    align-self: center;
-    justify-self: center;
+    .link{
+        display: flex;
+        flex-direction: column;
+        text-decoration: none;
+        .product-title {
+            transition: color 0.4s ease-in-out;
+            &:hover {
+                color: #ed4c66;
+            }
+        }
+    }
     .product-image {
        position: relative;
        border-radius: 50%;
@@ -31,22 +39,40 @@
     }
     .product-content {
         text-align: center;
-        margin-top: 2.2rem;
+        margin-top: 1.7rem;
+        @include bp(md) {
+            margin-top: 2.2rem;
+        }
         .product-title {
-            margin-bottom: 1rem;
-            font-size: 3.2rem;
+            margin-bottom: 1.5rem;
+            font-size: 2rem;
             color: $color-black;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+
+            @include bp(md) {
+                font-size: 3.2rem;
+                margin-bottom: 1rem;
+            }
         }
         .product-price {
-            margin-bottom: 2rem;
+            margin-bottom: 1.5rem;
             display: inline-flex;
             font-weight: 700;
             font-size: 2.8rem;
             color: $color-red;
             justify-content: center;
-            line-height: 1;           
+            line-height: 1; 
+            @include bp(md) {
+                margin-bottom: 2rem;
+            }          
             .currency {
                 font-size: 1.4rem;
+                font-weight: normal;
+                position: relative;
+                transform: translateY(10%);
+                margin-right: 0.2rem;
             }
         }
         .product-form__submit {
@@ -75,5 +101,9 @@
                 }
             }
         }
+    }
+    .product-content-footer {
+        margin-top: auto;
+        text-align: center;
     }
 }

@@ -856,18 +856,23 @@ body {
   font-weight: normal;
   letter-spacing: 0 !important;
   background-color: #FFF5F1 !important;
+  color: #1F1F1F !important;
+}
+
+*, ::after, ::before {
+  box-sizing: border-box;
 }
 
 .container-fluid {
   max-width: initial;
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
   margin: auto;
 }
 @media (min-width: 768px) {
   .container-fluid {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
   }
 }
 @media (min-width: 1200px) {
@@ -880,23 +885,15 @@ body {
 .page-width {
   margin-left: auto;
   margin-right: auto;
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
-@media (min-width: 1200px) {
+@media (min-width: 768px) {
   .page-width {
     max-width: 131rem;
     padding-left: 7.5rem;
     padding-right: 7.5rem;
   }
-}
-
-.swiper-button-prev {
-  left: -3rem;
-  transform: translateX(-100%);
-}
-
-.swiper-button-next {
-  right: -3rem;
-  transform: translateX(100%);
 }
 
 .bgImg {
@@ -1016,8 +1013,13 @@ select.form-control {
 
 .section-heading {
   text-align: center;
-  margin-bottom: 6rem;
+  margin-bottom: 4rem;
   line-height: 1;
+}
+@media (min-width: 768px) {
+  .section-heading {
+    margin-bottom: 6rem;
+  }
 }
 .section-heading > *:last-child {
   margin-bottom: 0;
@@ -1026,19 +1028,34 @@ select.form-control {
   line-height: 1;
   color: #ED4C66;
   margin-bottom: 1rem;
-  font-size: 3.2rem;
+  font-size: 2rem;
   font-weight: normal;
 }
+@media (min-width: 768px) {
+  .section-heading .title-helper {
+    font-size: 3.2rem;
+  }
+}
 .section-heading h2 {
-  font-size: 6.4rem;
+  font-size: 4rem;
   text-transform: capitalize;
   margin-bottom: 2rem;
 }
+@media (min-width: 768px) {
+  .section-heading h2 {
+    font-size: 6.4rem;
+  }
+}
 .section-heading .subtxt {
   letter-spacing: 0.5em;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   text-transform: uppercase;
   font-weight: 500;
+}
+@media (min-width: 768px) {
+  .section-heading .subtxt {
+    font-size: 1.8rem;
+  }
 }
 
 body:has(.section-header .drawer-menu) .announcement-bar-section .page-width {
@@ -1641,6 +1658,40 @@ summary::-webkit-details-marker {
   margin: 0;
 }
 
+.swiper-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+.swiper-buttons .swiper-button-prev, .swiper-buttons .swiper-button-next {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  background-color: #ffffff;
+  font-weight: 500;
+  width: 6rem;
+  height: 6rem;
+  border-radius: 50%;
+  box-shadow: 0 0 2.5rem rgba(0, 0, 0, 0.1019607843);
+  outline: none;
+  position: static;
+  margin: 0;
+}
+@media (min-width: 768px) {
+  .swiper-buttons .swiper-button-prev, .swiper-buttons .swiper-button-next {
+    width: 6rem;
+    height: 6rem;
+  }
+}
+.swiper-buttons .swiper-button-prev svg, .swiper-buttons .swiper-button-prev img, .swiper-buttons .swiper-button-next svg, .swiper-buttons .swiper-button-next img {
+  width: 1.5rem;
+}
+.swiper-buttons .swiper-button-prev:after, .swiper-buttons .swiper-button-next:after {
+  content: none;
+}
+
 .swiper-carousel__actions .swiper-btn {
   display: inline-flex;
   justify-content: center;
@@ -2156,7 +2207,7 @@ button.shopify-payment-button__button--unbranded {
   justify-content: center;
   align-items: center;
   border: none;
-  padding: 0.5rem 1.5rem;
+  padding: 0.5rem 1rem;
   cursor: pointer;
   font-size: 1.6rem;
   text-decoration: none;
@@ -2166,16 +2217,24 @@ button.shopify-payment-button__button--unbranded {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
-  height: 6rem;
+  height: 5rem;
+  min-width: 16.7rem;
   border-radius: 10rem;
   background: linear-gradient(180deg, #ED4C66 16.67%, #F58864 80.83%);
   box-shadow: inset 0 0.4rem 3rem #EC4864;
   text-transform: capitalize;
-  min-width: 18rem;
   text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.2);
   font-family: "Founders Grotesk", sans-serif;
   line-height: 1;
   position: relative;
+}
+@media (min-width: 768px) {
+  .button,
+  .shopify-challenge__button,
+  .customer button {
+    height: 6rem;
+    min-width: 18rem;
+  }
 }
 .button:before,
 .shopify-challenge__button:before,
@@ -2205,6 +2264,20 @@ button.shopify-payment-button__button--unbranded {
 .customer button span .icon {
   position: relative;
   top: -0.3rem;
+}
+
+.d-none {
+  display: none !important;
+}
+
+@media (min-width: 768px) {
+  .d-md-none {
+    display: none !important;
+  }
+}
+
+.d-block {
+  display: block !important;
 }
 
 .button:before,
@@ -3203,6 +3276,11 @@ product-info .loading__spinner:not(.hidden) ~ *,
   display: flex;
   align-items: center;
 }
+@media (max-width: 1199px) {
+  .announcement-bar-header {
+    display: none;
+  }
+}
 .announcement-bar-header .announce-txt {
   color: #B62940;
   margin: 0;
@@ -3540,8 +3618,8 @@ product-info .loading__spinner:not(.hidden) ~ *,
 }
 
 .header__icon .icon {
-  height: 1.4rem;
-  width: 1.4rem;
+  height: 1.6rem;
+  width: 1.6rem;
   fill: none;
   vertical-align: middle;
 }

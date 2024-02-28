@@ -10,7 +10,9 @@
     <div class="product-content">
         {%- assign product_form_id = 'product-form-' | append: block.id -%}
         <h2 class="product-title">{{ product.title |  prepend: '#' }}</h2>
-        <div class="product-price"><span class="currency">{{ cart.currency.symbol }}</span>{{ product.price | money_without_currency }}</div>
+        <div class="product-price"><span class="currency">{{ cart.currency.symbol }}</span>{{ product.price | money_without_currency }}</div>        
+    </div>
+    <div class="product-content-footer">
         {%- if product != blank -%}
             <div {{ block.shopify_attributes }}>
                 {%- form 'product', product -%}
@@ -25,6 +27,6 @@
                 section_id: section.id
             -%}
         {%- endif -%}
-    </div>
+       </div>
     </a>
 </div>

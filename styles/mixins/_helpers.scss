@@ -90,7 +90,7 @@ $image-path: '{{ asset_url }}' !default;
   @if $point == below-sm {
       @media (max-width: 575px) { @content; }
   }    
-  @if $point == below-lg {
+  @if $point == below-md {
       @media (max-width: 767px) { @content; }
   }
   @if $point == below-lg {

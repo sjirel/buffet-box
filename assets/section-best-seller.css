@@ -4,8 +4,14 @@
 * Default css is for mobile screens
 */
 .section-best-seller {
-  margin-bottom: 18rem;
+  margin-bottom: 8.5rem;
   overflow: hidden;
+  position: relative;
+}
+@media (min-width: 768px) {
+  .section-best-seller {
+    margin-bottom: 18rem;
+  }
 }
 .section-best-seller .best-seller-slider {
   position: relative;
@@ -15,43 +21,37 @@
   justify-content: center;
   align-items: center;
   transition: opacity 0.4s ease-out;
+  height: auto;
 }
 .section-best-seller .best-seller-slider .swiper-slide:not(.swiper-slide-next):not(.swiper-slide-prev):not(.swiper-slide-active) {
   opacity: 0.4;
 }
-.section-best-seller .product-card-item {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.section-best-seller .best-seller-slider .swiper-slide .product-card-item, .section-best-seller .best-seller-slider .swiper-slide .product-card, .section-best-seller .best-seller-slider .swiper-slide .link {
+  height: 100%;
 }
-.section-best-seller .product-card-item .link {
-  display: block;
-  text-decoration: none;
+.section-best-seller .swiper-buttons {
+  padding-bottom: 1.5rem;
 }
-.section-best-seller .product-card-item .link .product-title {
-  transition: color 0.4s ease-in-out;
+@media (max-width: 767px) {
+  .section-best-seller .swiper-buttons {
+    margin-top: 4rem;
+  }
 }
-.section-best-seller .product-card-item .link .product-title:hover {
-  color: #ed4c66;
+@media (min-width: 768px) {
+  .section-best-seller .swiper-buttons .swiper-button-prev, .section-best-seller .swiper-buttons .swiper-button-next {
+    top: 16rem;
+    position: absolute;
+  }
 }
-.section-best-seller .swiper-btn {
-  top: 18rem;
+@media (min-width: 768px) {
+  .section-best-seller .swiper-buttons .swiper-button-prev {
+    left: -3rem;
+    transform: translateX(-100%);
+  }
 }
-
-.swiper-btn {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  border: none;
-  background-color: #fff;
-  font-weight: 500;
-  width: 6rem;
-  height: 6rem;
-  border-radius: 50%;
-  box-shadow: 0 0 25px rgba(0, 0, 0, 0.1019607843);
-  outline: none;
-  padding: 2rem;
-}
-.swiper-btn::after {
-  content: none;
+@media (min-width: 768px) {
+  .section-best-seller .swiper-buttons .swiper-button-next {
+    right: -3rem;
+    transform: translateX(100%);
+  }
 }

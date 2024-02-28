@@ -46,7 +46,12 @@
 }
 
 .footer__blocks-wrapper {
-  display: flex;
+  display: block;
+}
+@media (min-width: 768px) {
+  .footer__blocks-wrapper {
+    display: flex;
+  }
 }
 
 .footer:not(.color-scheme-1) {

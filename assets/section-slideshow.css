@@ -4,8 +4,19 @@
 * Default css is for mobile screens
 */
 .banner-slideshow {
-  height: 89rem;
+  height: 69rem;
   width: 100%;
+}
+@media (min-width: 768px) {
+  .banner-slideshow {
+    height: 89rem;
+  }
+}
+.banner-slideshow .floating-papper-effect-mobile {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
 .banner-slideshow .swiper-slide {
   display: flex;
@@ -19,9 +30,14 @@
   position: absolute;
   left: 0;
   right: 0;
-  top: 60%;
+  top: 52%;
   transform: translateY(-50%);
   z-index: -1;
+}
+@media (min-width: 768px) {
+  .banner-slideshow .swiper-slide .banner-composition-image {
+    top: 60%;
+  }
 }
 .banner-slideshow .swiper-slide .banner-composition-image img {
   width: 100%;
@@ -55,37 +71,65 @@
 }
 .banner-slideshow .form-details {
   position: absolute;
-  bottom: 8.5rem;
+  bottom: 4rem;
   z-index: 2;
 }
+@media (min-width: 768px) {
+  .banner-slideshow .form-details {
+    bottom: 8.5rem;
+  }
+}
 .banner-slideshow .swiper-btn {
-  width: 6rem;
-  height: 6rem;
-  padding: 2rem;
+  width: 5rem;
+  height: 5rem;
+  padding: 1.5rem;
   border-radius: 50%;
   background: #ffffff;
   box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.1);
   outline: none;
+  transform: initial;
+  margin: 0;
+  top: auto;
+  bottom: 4rem;
+}
+@media (min-width: 768px) {
+  .banner-slideshow .swiper-btn {
+    padding: 2rem;
+    width: 6rem;
+    height: 6rem;
+    bottom: 8.5rem;
+  }
 }
 .banner-slideshow .swiper-btn:after {
   content: none;
 }
 .banner-slideshow .swiper-btn.swiper-button-prev {
-  left: calc(50% - 12rem);
-  bottom: 9rem;
-  top: auto;
+  left: 2rem;
+}
+@media (min-width: 768px) {
+  .banner-slideshow .swiper-btn.swiper-button-prev {
+    left: calc(50% - 18rem);
+  }
 }
 .banner-slideshow .swiper-btn.swiper-button-next {
-  right: calc(50% - 12rem);
-  bottom: 9rem;
-  top: auto;
+  right: 2rem;
+}
+@media (min-width: 768px) {
+  .banner-slideshow .swiper-btn.swiper-button-next {
+    right: calc(50% - 18rem);
+  }
 }
 .banner-slideshow .swiper-pagination {
   width: auto;
-  right: 4.8rem;
+  right: 2rem;
   left: auto;
   bottom: 10.5rem;
   color: rgba(31, 31, 31, 0.5);
+}
+@media (min-width: 768px) {
+  .banner-slideshow .swiper-pagination {
+    right: 4.8rem;
+  }
 }
 .banner-slideshow .swiper-pagination .swiper-pagination-current {
   font-size: 2rem;
@@ -111,7 +155,7 @@
   padding-bottom: 5rem;
 }
 .banner-slideshow .product-details .title-main .h0 {
-  font-size: 26rem;
+  font-size: 8rem;
   text-align: center;
   background: rgb(255, 255, 255);
   text-transform: uppercase;
@@ -120,6 +164,11 @@
           background-clip: text;
   -webkit-text-fill-color: transparent;
   line-height: 0.6;
+}
+@media (min-width: 768px) {
+  .banner-slideshow .product-details .title-main .h0 {
+    font-size: 26rem;
+  }
 }
 .banner-slideshow .slider-fixed-elem {
   position: absolute;
@@ -211,11 +260,18 @@
 }
 .banner-slideshow .slider-fixed-elem .bottom-title {
   position: absolute;
-  left: 4.8rem;
-  bottom: 10rem;
+  left: 2rem;
+  bottom: 10.5rem;
   font-weight: 700;
-  font-size: 3.2rem;
+  font-size: 2.4rem;
   line-height: 1;
   margin: 0;
   color: #ED4C66;
+}
+@media (min-width: 768px) {
+  .banner-slideshow .slider-fixed-elem .bottom-title {
+    left: 4.8rem;
+    bottom: 9.8rem;
+    font-size: 3.2rem;
+  }
 }

@@ -45,17 +45,17 @@ var shopoccasion = new swiper_bundle__WEBPACK_IMPORTED_MODULE_0__["default"](".s
     nextEl: ".shop-carousel__control--next",
     prevEl: ".shop-carousel__control--prev"
   },
-  slidesPerView: 3,
-  spaceBetween: 50,
+  slidesPerView: 1.32,
+  spaceBetween: 0,
   speed: 750,
   // autoplay: {
   //     delay: 5000,
   // },
   effect: "creative",
-  initialSlide: '5',
+  initialSlide: '3',
   creativeEffect: {
     perspective: true,
-    limitProgress: 5,
+    limitProgress: 10,
     prev: {
       translate: ['-90%', 30, -60],
       rotate: [0, 0, -5],
@@ -68,24 +68,35 @@ var shopoccasion = new swiper_bundle__WEBPACK_IMPORTED_MODULE_0__["default"](".s
     }
   },
   breakpoints: {
+    768: {
+      spaceBetween: 65,
+      slidesPerView: 3
+    },
     1792: {
-      spaceBetween: 65
+      spaceBetween: 65,
+      slidesPerView: 3
     }
   }
 });
 var bestSellers = new swiper_bundle__WEBPACK_IMPORTED_MODULE_0__["default"]('.best-seller-slider', {
   loop: true,
-  spaceBetween: 32,
-  slidesPerView: 3,
-  centeredSlides: true,
+  spaceBetween: 14,
+  slidesPerView: 2,
   speed: 750,
-  autoplay: {
-    delay: 5000
-  },
+  // autoplay: {
+  //     delay: 5000,
+  // },
   // Navigation arrows
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev"
+  },
+  breakpoints: {
+    768: {
+      slidesPerView: 3,
+      spaceBetween: 32,
+      centeredSlides: true
+    }
   }
 });
 var testimonialsSliderTop = new swiper_bundle__WEBPACK_IMPORTED_MODULE_0__["default"]('.js-testimonials-slider-top', {

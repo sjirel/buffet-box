@@ -1,8 +1,17 @@
 @import './mixins/helpers';
 
 .banner-slideshow {
-    height: 89rem;
+    height: 69rem;
     width: 100%;
+    @include bp(md) {
+        height: 89rem;
+    }
+    .floating-papper-effect-mobile {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
     .swiper-slide {
         display: flex;
         justify-content: center;
@@ -14,9 +23,12 @@
             position: absolute;
             left: 0;
             right: 0;
-            top: 60%;
+            top: 52%;
             transform: translateY(-50%);
             z-index: -1;
+            @include bp(md) {
+                top: 60%; 
+            }
             img {
                 width: 100%;
             }
@@ -63,37 +75,55 @@
     }
     .form-details {
         position: absolute;
-        bottom: 8.5rem;
+        bottom: 4rem;
         z-index: 2;
+        @include bp(md) {
+            bottom: 8.5rem;
+        }
     }
     .swiper-btn {
-        width: 6rem;
-        height: 6rem;
-        padding: 2rem;
+        width: 5rem;
+        height: 5rem;
+        padding: 1.5rem;
         border-radius: 50%;
         background: $color-white;
         box-shadow: 0 0 25px 0 rgba(0,0,0,0.1);
         outline: none;
+        transform: initial;
+        margin: 0;
+        top: auto;
+        bottom: 4rem;
+        @include bp(md) {
+            padding: 2rem;
+            width: 6rem;
+            height: 6rem;
+            bottom: 8.5rem;
+        }
         &:after {
             content: none;
         }
         &.swiper-button-prev{
-            left: calc(50% - 12rem);
-            bottom: 9rem;
-            top: auto;
+            left: 2rem;
+            @include bp(md) {
+                left: calc(50% - 18rem);
+            }
         }
         &.swiper-button-next{
-            right: calc(50% - 12rem);
-            bottom: 9rem;
-            top: auto;
+            right: 2rem;
+            @include bp(md) {
+                right: calc(50% - 18rem);
+            }
         }
     }
     .swiper-pagination {
         width: auto;
-        right: 4.8rem;
+        right: 2rem;
         left: auto;
         bottom: 10.5rem;
         color: rgba(#1F1F1F, 0.5);
+        @include bp(md) {
+            right: 4.8rem;
+        }
         .swiper-pagination-current {
             font-size: 2rem;
             font-weight: 700;
@@ -117,7 +147,7 @@
         .title-main {
             padding-bottom: 5rem;
             .h0 {
-                font-size: 26rem;
+                font-size: 8rem;
                 text-align: center;
                 background: rgb(255,255,255);
                 text-transform: uppercase;
@@ -125,6 +155,9 @@
                 background-clip: text;
                 -webkit-text-fill-color: transparent;
                 line-height: 0.6;
+                @include bp(md) {
+                    font-size: 26rem;
+                }
             }
         }
     }
@@ -216,13 +249,18 @@
         }
         .bottom-title {
             position: absolute;
-            left: 4.8rem;
-            bottom: 10rem;
+            left: 2rem;
+            bottom: 10.5rem;
             font-weight: 700;
-            font-size: 3.2rem;
+            font-size: 2.4rem;
             line-height: 1;
             margin: 0;
             color: $color-red;
+            @include bp(md) {
+                left: 4.8rem;
+                bottom: 9.8rem;
+                font-size: 3.2rem;
+            }
         }
     }
 }

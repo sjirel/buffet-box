@@ -8,7 +8,8 @@
         {% assign product = block.settings.product_item %}
         {%- assign product_form_id = 'product-form-' | append: block.id -%}
         <div class="banner-composition-image">
-            <img src="{{ 'composition.png' | asset_url }}" alt="">
+            <img class="d-none d-md-block" src="{{ 'composition.png' | asset_url }}" alt="">
+            <img class="d-md-none" src="{{ 'composition-mobile.png' | asset_url }}" alt="">
         </div>
         <div class="product-details-wrapper">
             <div class="product-details">
@@ -51,6 +52,9 @@
             <div class="bottom-title">{{ product.title |  prepend: '#' }}</div>
         </div>
         </div>
+        <div class="floating-papper-effect-mobile d-md-none">
+            <img class="w-100" src="{{ 'papper-effect-mobile.png' | asset_url }}" alt="">
+        </div>
     </div>
     {% endfor %}
   </div>
@@ -62,7 +66,6 @@
   </div>
   <div class="swiper-pagination"></div>
 </div>
-
 {% schema %}
 {
     "name": "Banner: Slideshow",
