@@ -42,15 +42,15 @@ var shopoccasion = new swiper_bundle__WEBPACK_IMPORTED_MODULE_0__["default"](".s
   grabCursor: true,
   centeredSlides: true,
   navigation: {
-    nextEl: ".shop-carousel__control--next",
-    prevEl: ".shop-carousel__control--prev"
+    nextEl: ".swiper-button-prev",
+    prevEl: ".swiper-button-next"
   },
   slidesPerView: 1.32,
   spaceBetween: 0,
   speed: 750,
-  // autoplay: {
-  //     delay: 5000,
-  // },
+  autoplay: {
+    delay: 5000
+  },
   effect: "creative",
   initialSlide: '3',
   creativeEffect: {

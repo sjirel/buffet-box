@@ -113,6 +113,9 @@
     height: 29.5rem;
   }
 }
+.section-shop-occasion .swiper-buttons {
+  padding-bottom: 2rem;
+}
 
 .shop-carousel {
   position: relative;
