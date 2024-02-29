@@ -34,8 +34,7 @@
             </div>
         </div>
         <div class="slider-fixed-elem">
-            <div class="product-image__main">
-                {{ product.featured_image | image_url: width: 850 | image_tag: loading: 'eager' }}
+            <div class="product-image__main">               
                 <div class="price-section-wrapper">
                     <div class="price-section">
                         <img class="circular-text" src="{{ 'circular-text.png' | asset_url }}" alt="" loading="eager" width="260" height="260">
@@ -48,6 +47,7 @@
                         </div>
                     </div>
                 </div>
+                {{ product.featured_image | image_url: width: 850 | image_tag: loading: 'eager' }}
             </div>            
             <div class="bottom-title">{{ product.title |  prepend: '#' }}</div>
         </div>

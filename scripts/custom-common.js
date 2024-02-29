@@ -33,8 +33,8 @@ var shopoccasion = new Swiper(".shop-occasion-slider", {
     grabCursor: true,
     centeredSlides: true,
     navigation: {
-        nextEl: ".swiper-button-prev",
-        prevEl: ".swiper-button-next",
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
     },
     slidesPerView: 1.32,
     spaceBetween: 0,
@@ -65,7 +65,7 @@ var shopoccasion = new Swiper(".shop-occasion-slider", {
         },
         1792: {
           spaceBetween: 65,
-          slidesPerView: 3,
+          slidesPerView: 3.5,
         },
     },
 });
