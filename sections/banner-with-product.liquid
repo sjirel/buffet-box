@@ -17,10 +17,10 @@
             <div class="content-holder">
                 <span class="save">{{ section.settings.save_value }}</span>
                 <div class="pill-title">
-                    Churros <br> Extravaganza
+                  {{ section.settings.title }}
                 </div>
                 <div class="desc">
-                    Indulge your sweet tooth and make every moment memorable with the magic of BuffetBox Churros!
+                  {{ section.settings.desc }}
                 </div>
                 {%- if product != blank -%}
                     <div {{ block.shopify_attributes }}>
@@ -51,9 +51,19 @@
             "label": "Save Banner Text"
         },
         {
+            "type": "text",
+            "id": "title",
+            "label": "Title"
+        },
+        {
             "type": "product",
             "id": "product",
             "label": "Product"
+        },
+        {
+          "type":"richtext",
+          "id": "desc",
+          "label":  "Custom Description"
         },
         {
             "type": "image_picker",

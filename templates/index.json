@@ -139,7 +139,9 @@
       "type": "banner-with-product",
       "settings": {
         "save_value": "Save up to 35%",
+        "title": "Churros <br> Extravaganza",
         "product": "churrobox",
+        "desc": "<p>Indulge your sweet tooth and make every moment memorable with the magic of BuffetBox Churros!<\/p>",
         "custom_img": "shopify:\/\/shop_images\/img-pill.png"
       }
     },
