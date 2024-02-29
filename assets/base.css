@@ -2284,13 +2284,19 @@ button.shopify-payment-button__button--unbranded {
 }
 
 @media (min-width: 768px) {
-  .d-md-none {
-    display: none !important;
+  .d-md-block {
+    display: block !important;
   }
 }
 
 .d-block {
   display: block !important;
+}
+
+@media (min-width: 768px) {
+  .d-md-none {
+    display: none !important;
+  }
 }
 
 .button:before,

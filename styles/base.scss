@@ -1568,14 +1568,21 @@ button.shopify-payment-button__button--unbranded {
 .d-none {
   display: none !important;
 }
-.d-md-none {
+.d-md-block {
   @include bp(md) {
-    display: none !important;
+    display: block !important;
   }
 }
 .d-block {
   display: block !important;
 }
+.d-md-none {
+  @include bp(md) {
+    display: none !important;
+  }
+}
+
+
 
 .button:before,
 .shopify-challenge__button:before,
