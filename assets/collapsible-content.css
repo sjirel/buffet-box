@@ -44,7 +44,7 @@
   margin: 0 auto;
   padding-right: 1.5rem;
   padding-left: 1.5rem;
-  max-width: 96.4rem;
+  max-width: 99.4rem;
 }
 
 .collapsible-content__header {
@@ -73,11 +73,11 @@
 }
 
 .collapsible-content .accordion details {
-  background-color: var(--gradient-background);
+  background-color: white;
   border-radius: 1.5rem;
 }
 .collapsible-content .accordion details, .collapsible-content .accordion details .accordion__count {
-  border: 0.1rem solid rgba(var(--color-foreground), 0.15);
+  border: 0.1rem solid rgba(31, 31, 31, 0.15);
   transition: border var(--duration-medium) ease;
 }
 .collapsible-content .accordion details .accordion__count {

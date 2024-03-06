@@ -212,7 +212,7 @@
 
 .facets__disclosure[open] .facets__summary,
 .facets__summary:hover {
-  color: rgb(var(--color-foreground));
+  color: black;
 }
 .facets__disclosure[open] {
   .facets__summary .icon-caret {
@@ -276,7 +276,7 @@
   border-radius: var(--popup-corner-radius);
   box-shadow: var(--popup-shadow-horizontal-offset) var(--popup-shadow-vertical-offset) var(--popup-shadow-blur-radius)
     rgba(var(--color-shadow), var(--popup-shadow-opacity));
-  background-color: rgb(var(--color-background));
+  background-color: white;
   position: absolute;
   top: calc(100% + 0.5rem);
   left: -1.2rem;
@@ -360,7 +360,7 @@
 
 /* Hover, active, and focus states */
 :is(.facets__label:hover, .facets__label.active, .facets__label:has(:focus-visible)) {
-  color: rgba(var(--color-foreground), 1);
+  color:black;
 }
 
 /* Focus states for older browsers */
@@ -404,7 +404,7 @@
 }
 
 .facet-checkbox > svg {
-  background-color: rgb(var(--color-background));
+  background-color: white;
   margin-right: 1.2rem;
   flex-shrink: 0;
 }
@@ -478,7 +478,6 @@ button.facets__button {
   width: 100%;
   grid-column: 1 / -1;
   grid-row: 2;
-  border-top: 1px solid rgba(#1f1f1f, 0.15);
   justify-content: center;
 }
 
@@ -505,6 +504,7 @@ span.active-facets__button-inner {
   text-shadow: none;
   font-weight: normal;
   font-family: 'Roobert', sans-serif;
+  background: none;
 }
 
 span.active-facets__button-inner:before,
@@ -1045,9 +1045,6 @@ input.mobile-facets__checkbox {
   top: 50%;
   transform: translateY(-50%);
   width: 1.8rem;
-}
-.active-facets-desktop {
-  padding-bottom: 1.5rem;
 }
 @media screen and (min-width: 750px) {
   .facets__form {
