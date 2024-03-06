@@ -70,16 +70,128 @@
         "enable_quick_add": false,
         "enable_filtering": true,
         "filter_type": "horizontal",
-        "enable_sorting": true,
+        "enable_sorting": false,
         "columns_mobile": "2",
         "padding_top": 40,
         "padding_bottom": 36
+      }
+    },
+    "collapsible_content_b3TFBE": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_dVt8e4": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What is BuffetBox?",
+            "row_content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer suscipit libero mi, vel ultrices ipsum commodo ac.<\/p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_jLYnT8": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How can I place an order?",
+            "row_content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer suscipit libero mi, vel ultrices ipsum commodo ac.<\/p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_76drT8": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What types of BuffetBoxes do y ou offer?",
+            "row_content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer suscipit libero mi, vel ultrices ipsum commodo ac.<\/p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_6gCExD": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Can I customize the contents of my BuffetBox?",
+            "row_content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer suscipit libero mi, vel ultrices ipsum commodo ac.<\/p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_jXnTpF": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Is Buffetbox available for special occasions or events?",
+            "row_content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer suscipit libero mi, vel ultrices ipsum commodo ac.<\/p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_GxxeFc": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Do you accomodate dietary restrictions?",
+            "row_content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer suscipit libero mi, vel ultrices ipsum commodo ac.<\/p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_ATjQ78": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How is BuffetBox pasckaged and delivered?",
+            "row_content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer suscipit libero mi, vel ultrices ipsum commodo ac.<\/p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_iWCyKG": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What is the shelf life of BuffetBox treats?",
+            "row_content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer suscipit libero mi, vel ultrices ipsum commodo ac.<\/p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_CcgGJ7": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Can I track my BuffetBox deliver?",
+            "row_content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer suscipit libero mi, vel ultrices ipsum commodo ac.<\/p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_kx9xtW": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What should I do if there's an issue with my order?",
+            "row_content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer suscipit libero mi, vel ultrices ipsum commodo ac.<\/p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_dVt8e4",
+        "collapsible_row_jLYnT8",
+        "collapsible_row_76drT8",
+        "collapsible_row_6gCExD",
+        "collapsible_row_jXnTpF",
+        "collapsible_row_GxxeFc",
+        "collapsible_row_ATjQ78",
+        "collapsible_row_iWCyKG",
+        "collapsible_row_CcgGJ7",
+        "collapsible_row_kx9xtW"
+      ],
+      "settings": {
+        "caption": "FAQ's",
+        "heading": "<p>Questions? <\/p><p>We've got Answers<\/p>",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "layout": "none",
+        "color_scheme": "",
+        "container_color_scheme": "",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 100,
+        "padding_bottom": 48
       }
     }
   },
   "order": [
     "image_banner_Y3kN47",
     "banner",
-    "product-grid"
+    "product-grid",
+    "collapsible_content_b3TFBE"
   ]
 }

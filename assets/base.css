@@ -741,6 +741,7 @@ button.swiper-pagination-bullet {
   --alpha-button-border: 1;
   --alpha-link: 0.85;
   --alpha-badge-border: 0.1;
+  --color-red: #ED4C66 ;
 }
 
 .product-card-wrapper .card,
@@ -1355,10 +1356,12 @@ blockquote {
   }
 }
 .caption-with-letter-spacing {
-  font-size: 1rem;
+  font-size: 3.2rem;
   letter-spacing: 0.13rem;
   line-height: calc(1 + 0.2 / var(--font-body-scale));
   text-transform: uppercase;
+  color: #ED4C66;
+  margin-bottom: 1rem;
 }
 
 .caption-with-letter-spacing--medium {
