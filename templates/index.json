@@ -8,6 +8,9 @@
           "settings": {
             "bg_color": "orange",
             "product_item": "donutbox",
+            "img_or_svg": false,
+            "bg_composition_img": "shopify:\/\/shop_images\/composition_8e31f4f1-b74f-4441-bafa-659058cc4424.png",
+            "svg_code": "",
             "is_special": true
           }
         },
@@ -16,6 +19,9 @@
           "settings": {
             "bg_color": "blue",
             "product_item": "churrobox",
+            "img_or_svg": false,
+            "bg_composition_img": "shopify:\/\/shop_images\/composition-churros.png",
+            "svg_code": "",
             "is_special": false
           }
         },
@@ -24,6 +30,8 @@
           "settings": {
             "bg_color": "pink",
             "product_item": "icecreambox",
+            "img_or_svg": false,
+            "svg_code": "",
             "is_special": false
           }
         }

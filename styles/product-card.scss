@@ -5,6 +5,7 @@
         display: flex;
         flex-direction: column;
         text-decoration: none;
+        height: 100%;
         .product-title {
             transition: color 0.4s ease-in-out;
             &:hover {

@@ -13,14 +13,19 @@ __webpack_require__.r(__webpack_exports__);
 
 // import 'swiper/css/bundle';
 
-var bannerSLideshow = new swiper_bundle__WEBPACK_IMPORTED_MODULE_0__["default"]('.banner-slideshow', {
-  loop: true,
-  effect: "fade",
-  spaceBetween: 0,
+var heroBannerProductMainSlider = new swiper_bundle__WEBPACK_IMPORTED_MODULE_0__["default"]('.js-banner-product-main-slider', {
   slidesPerView: 1,
+  speed: 1500,
+  rewind: true,
+  grabCursor: true,
+  effect: "creative",
+  navigation: {
+    nextEl: '.hero-banner .swiper-button-next',
+    prevEl: '.hero-banner .swiper-button-prev'
+  },
   pagination: {
-    el: ".swiper-pagination",
-    type: 'fraction',
+    el: ".hero-banner .swiper-pagination",
+    type: "fraction",
     formatFractionCurrent: function formatFractionCurrent(number) {
       return ('0' + number).slice(-2);
     },
@@ -30,13 +35,15 @@ var bannerSLideshow = new swiper_bundle__WEBPACK_IMPORTED_MODULE_0__["default"](
     renderFraction: function renderFraction(currentClass, totalClass) {
       return '<span class="' + currentClass + '"></span>' + ' of ' + '<span class="' + totalClass + '"></span>';
     }
-  },
-  // Navigation arrows
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev'
   }
 });
+var heroBannerBigProductTitleSlider = new swiper_bundle__WEBPACK_IMPORTED_MODULE_0__["default"]('.js-banner-big-product-title-slider', {
+  slidesPerView: 1,
+  speed: 1500,
+  rewind: true
+});
+heroBannerProductMainSlider.controller.control = [heroBannerBigProductTitleSlider];
+heroBannerBigProductTitleSlider.controller.control = [heroBannerProductMainSlider];
 var shopoccasion = new swiper_bundle__WEBPACK_IMPORTED_MODULE_0__["default"](".shop-occasion-slider", {
   loop: true,
   grabCursor: true,
