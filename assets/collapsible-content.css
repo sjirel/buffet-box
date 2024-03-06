@@ -44,7 +44,7 @@
   margin: 0 auto;
   padding-right: 1.5rem;
   padding-left: 1.5rem;
-  max-width: 73.4rem;
+  max-width: 96.4rem;
 }
 
 .collapsible-content__header {
@@ -55,22 +55,45 @@
   margin-bottom: 2rem;
   margin-top: 0;
 }
+.collapsible-content__heading p {
+  margin-bottom: 0;
+}
 
 @media screen and (min-width: 750px) {
   .collapsible-content__heading {
-    margin-bottom: 3rem;
+    margin-bottom: 6.5rem;
   }
 }
-.collapsible-none-layout .accordion + .accordion {
-  border-top: 0;
-}
-
 .collapsible-row-layout .accordion:not(:first-child):not(.color-scheme-1) {
   margin-top: 1rem;
 }
 
 .caption-with-letter-spacing + h2 {
   margin-top: 1rem;
+}
+
+.collapsible-content .accordion details {
+  background-color: var(--gradient-background);
+  border-radius: 1.5rem;
+}
+.collapsible-content .accordion details, .collapsible-content .accordion details .accordion__count {
+  border: 0.1rem solid rgba(var(--color-foreground), 0.15);
+  transition: border var(--duration-medium) ease;
+}
+.collapsible-content .accordion details .accordion__count {
+  border-radius: 100%;
+  font-weight: normal;
+  line-height: 2.8rem;
+  font-size: 1.4rem;
+  width: 3rem;
+  height: 3rem;
+  text-align: center;
+  display: inline-block;
+  margin-right: 1rem;
+  color: var(--color-red);
+}
+.collapsible-content .accordion details[open], .collapsible-content .accordion details[open] .accordion__count {
+  border-color: var(--color-foreground);
 }
 
 @media screen and (min-width: 750px) {
@@ -92,15 +115,6 @@
 
 .collapsible-row-layout .accordion .accordion__content {
   padding-top: 0;
-}
-
-.collapsible-content summary:hover {
-  background: rgba(var(--color-foreground), 0.04);
-}
-
-.collapsible-content summary:hover .accordion__title {
-  text-decoration: underline;
-  text-underline-offset: 0.3rem;
 }
 
 /* check for flexbox gap in older Safari versions */

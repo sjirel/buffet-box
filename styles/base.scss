@@ -609,6 +609,7 @@ blockquote {
   line-height: calc(1 + 0.2 / var(--font-body-scale));
   text-transform: uppercase;
   color: $color-red;
+  margin-bottom: 1rem;
 }
 
 .caption-with-letter-spacing--medium {
