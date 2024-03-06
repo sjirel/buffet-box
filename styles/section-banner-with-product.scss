@@ -95,30 +95,7 @@
             }
             .product-form__submit {
                 position: relative;
-                margin-top: 2.5rem,;
-                &:before {
-                    content: "";
-                    border: 1px solid rgba(255, 255, 255, 0.35);
-                    position: absolute;
-                    left: 0;
-                    right: 0;
-                    top: 0;
-                    bottom: 0;
-                    border-radius: 10rem;
-                    z-index: 1;
-                    pointer-events: none;
-                    margin: 1px;
-                }
-                span {
-                    display: inline-flex;
-                    align-items: center;
-                    gap: 1rem;
-                    padding-top: 0.4rem;
-                    .icon {
-                        position: relative;
-                        top: -0.3rem;
-                    }
-                }
+                margin-top: 2.5rem;
             }
         }
     }

@@ -233,11 +233,17 @@ a {
     background: linear-gradient(180deg, #0D4867 0%, #239EB6 80%);
     color: $color-white;
     border: none;
+    &:hover {
+      background: linear-gradient(180deg, #239EB6 0%, #0D4867 80%);
+    }
   } 
   &-red-gradient {
     background: linear-gradient(180deg, #B62940 0%, #ED4C66 80%);
     color: $color-white;
     border: none;
+    &:hover {
+      background: linear-gradient(180deg, #ED4C66 0%, #B62940 80%);
+    }
   }
 }
 .form-control {
@@ -928,6 +934,33 @@ summary::-webkit-details-marker {
     margin: 0;
   }
 }
+.swiper-button-prev, .swiper-button-next { 
+  border: none;
+  background-color: $color-white;
+  width: 6rem;
+  height: 6rem;
+  border-radius: 50%;
+  box-shadow: 0 0 2.5rem #0000001a;
+  font-weight: 500; 
+  transition: background-color 0.3s ease-out, transform 0.3s ease-out;
+  &:hover {
+    background-color: $color-red;
+    transform: scale(1.05);
+    svg path {
+      fill: $color-white;
+    }
+  }
+  @include bp(md) {
+    width: 6rem;
+    height: 6rem;
+  }
+  svg, img {
+    width: 1.5rem;
+  }
+  &:after {
+    content: none;
+  }
+}
 .swiper-buttons {
   display: flex;
   align-items: center;
@@ -936,27 +969,10 @@ summary::-webkit-details-marker {
   .swiper-button-prev, .swiper-button-next {
     display: inline-flex;
     justify-content: center;
-    align-items: center;
-    border: none;
-    background-color: $color-white;
-    font-weight: 500;
-    width: 6rem;
-    height: 6rem;
-    border-radius: 50%;
-    box-shadow: 0 0 2.5rem #0000001a;
+    align-items: center;   
     outline: none;
     position: static;
     margin: 0;
-    @include bp(md) {
-      width: 6rem;
-      height: 6rem;
-    }
-    svg, img {
-      width: 1.5rem;
-    }
-    &:after {
-      content: none;
-    }
   }
 }
 
@@ -1521,7 +1537,7 @@ button.shopify-payment-button__button--unbranded {
   justify-content: center;
   align-items: center;
   border: none;
-  padding: 0.5rem 1rem;
+  padding: 1rem 1rem .5rem;
   cursor: pointer;
   font-size: 1.6rem;
   text-decoration: none;
@@ -1556,14 +1572,27 @@ button.shopify-payment-button__button--unbranded {
       pointer-events: none;
       margin: 1px;
   }
+  &:hover {
+    span {
+      padding-right: 0;
+      padding-left: 2.5rem;
+      .icon {
+        left: 3.5rem;
+        transform: translateY(-50%) translateX(0);
+      }
+    }
+  }
   span {
       display: inline-flex;
       align-items: center;
-      gap: 1rem;
-      padding-top: 0.4rem;
+      padding-right: 2.5rem;
+      transition: padding 0.3s ease-out;
       .icon {
-          position: relative;
-          top: -0.3rem;
+          position: absolute;
+          top: 50%;
+          left: calc(100% - 3.5rem);
+          transform: translateY(-50%) translateX(-100%);
+          transition: transform 0.3s ease-out, left 0.3s ease-out;
       }
   }
 }

@@ -57,7 +57,7 @@
   background: radial-gradient(121.68% 121.68% at 50% 83.59%, #FEEFF2 0%, #E97790 100%);
 }
 .hero-banner .outer-js-banner-big-product-title-slider .swiper .swiper-slide h2 {
-  line-height: 1.1;
+  line-height: 1;
   margin: 0;
   color: #fff;
   font-size: 26rem;
@@ -65,12 +65,12 @@
   font-family: "Founders Grotesk";
   position: relative;
   top: -3rem;
-  background: rgb(255, 255, 255);
   background: linear-gradient(180deg, #FFFFFF 63.73%, rgba(255, 255, 255, 0) 89.75%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   text-fill-color: transparent;
+  height: 16rem;
 }
 .hero-banner .outer-js-banner-product-main-slider {
   position: absolute;
@@ -88,6 +88,13 @@
 .hero-banner .outer-js-banner-product-main-slider .swiper {
   height: 100%;
   width: 100%;
+}
+.hero-banner .outer-js-banner-product-main-slider .swiper-slide:not(.swiper-slide-active) {
+  pointer-events: none;
+}
+.hero-banner .outer-js-banner-product-main-slider .swiper-slide:not(.swiper-slide-active) .main-image-with-price .main-image img {
+  opacity: 0;
+  transition: opacity 0.1s ease-out 0.8s;
 }
 .hero-banner .outer-js-banner-product-main-slider .color-bg-orange .price-section-wrapper .title {
   color: #F5724C;

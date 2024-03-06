@@ -986,10 +986,16 @@ a {
   color: #ffffff;
   border: none;
 }
+.btn-blue-gradient:hover {
+  background: linear-gradient(180deg, #239EB6 0%, #0D4867 80%);
+}
 .btn-red-gradient {
   background: linear-gradient(180deg, #B62940 0%, #ED4C66 80%);
   color: #ffffff;
   border: none;
+}
+.btn-red-gradient:hover {
+  background: linear-gradient(180deg, #ED4C66 0%, #B62940 80%);
 }
 
 .form-control {
@@ -1674,6 +1680,36 @@ summary::-webkit-details-marker {
   margin: 0;
 }
 
+.swiper-button-prev, .swiper-button-next {
+  border: none;
+  background-color: #ffffff;
+  width: 6rem;
+  height: 6rem;
+  border-radius: 50%;
+  box-shadow: 0 0 2.5rem rgba(0, 0, 0, 0.1019607843);
+  font-weight: 500;
+  transition: background-color 0.3s ease-out, transform 0.3s ease-out;
+}
+.swiper-button-prev:hover, .swiper-button-next:hover {
+  background-color: #ED4C66;
+  transform: scale(1.05);
+}
+.swiper-button-prev:hover svg path, .swiper-button-next:hover svg path {
+  fill: #ffffff;
+}
+@media (min-width: 768px) {
+  .swiper-button-prev, .swiper-button-next {
+    width: 6rem;
+    height: 6rem;
+  }
+}
+.swiper-button-prev svg, .swiper-button-prev img, .swiper-button-next svg, .swiper-button-next img {
+  width: 1.5rem;
+}
+.swiper-button-prev:after, .swiper-button-next:after {
+  content: none;
+}
+
 .swiper-buttons {
   display: flex;
   align-items: center;
@@ -1684,28 +1720,9 @@ summary::-webkit-details-marker {
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  border: none;
-  background-color: #ffffff;
-  font-weight: 500;
-  width: 6rem;
-  height: 6rem;
-  border-radius: 50%;
-  box-shadow: 0 0 2.5rem rgba(0, 0, 0, 0.1019607843);
   outline: none;
   position: static;
   margin: 0;
-}
-@media (min-width: 768px) {
-  .swiper-buttons .swiper-button-prev, .swiper-buttons .swiper-button-next {
-    width: 6rem;
-    height: 6rem;
-  }
-}
-.swiper-buttons .swiper-button-prev svg, .swiper-buttons .swiper-button-prev img, .swiper-buttons .swiper-button-next svg, .swiper-buttons .swiper-button-next img {
-  width: 1.5rem;
-}
-.swiper-buttons .swiper-button-prev:after, .swiper-buttons .swiper-button-next:after {
-  content: none;
 }
 
 .swiper-carousel__actions .swiper-btn {
@@ -2223,7 +2240,7 @@ button.shopify-payment-button__button--unbranded {
   justify-content: center;
   align-items: center;
   border: none;
-  padding: 0.5rem 1rem;
+  padding: 1rem 1rem 0.5rem;
   cursor: pointer;
   font-size: 1.6rem;
   text-decoration: none;
@@ -2267,19 +2284,34 @@ button.shopify-payment-button__button--unbranded {
   pointer-events: none;
   margin: 1px;
 }
+.button:hover span,
+.shopify-challenge__button:hover span,
+.customer button:hover span {
+  padding-right: 0;
+  padding-left: 2.5rem;
+}
+.button:hover span .icon,
+.shopify-challenge__button:hover span .icon,
+.customer button:hover span .icon {
+  left: 3.5rem;
+  transform: translateY(-50%) translateX(0);
+}
 .button span,
 .shopify-challenge__button span,
 .customer button span {
   display: inline-flex;
   align-items: center;
-  gap: 1rem;
-  padding-top: 0.4rem;
+  padding-right: 2.5rem;
+  transition: padding 0.3s ease-out;
 }
 .button span .icon,
 .shopify-challenge__button span .icon,
 .customer button span .icon {
-  position: relative;
-  top: -0.3rem;
+  position: absolute;
+  top: 50%;
+  left: calc(100% - 3.5rem);
+  transform: translateY(-50%) translateX(-100%);
+  transition: transform 0.3s ease-out, left 0.3s ease-out;
 }
 
 .d-none {

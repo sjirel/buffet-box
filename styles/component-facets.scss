@@ -1,3 +1,4 @@
+@import './mixins/helpers';
 .facets-container {
   display: grid;
   grid-template-columns: repeat(2, auto);
@@ -27,7 +28,6 @@
 @media screen and (max-width: 989px) {
   .facets-container {
     grid-template-columns: auto minmax(0, max-content);
-    column-gap: 2rem;
   }
 }
 
@@ -479,12 +479,17 @@ button.facets__button {
   grid-column: 1 / -1;
   grid-row: 2;
   justify-content: center;
+  @include bp(md) {
+    border-top: 1px solid rgba(#1f1f1f, 0.15);
+    margin-bottom: -1px;
+  }
 }
 
 .active-facets__button {
   display: block;
   margin-right: 1.5rem;
   margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
   padding-left: 0.2rem;
   padding-right: 0.2rem;
   text-decoration: none;
@@ -667,8 +672,11 @@ a.active-facets__button.focused .active-facets__button-inner,
 }
 
 .mobile-facets__wrapper {
-  margin-left: 0;
   display: flex;
+  justify-content: center;
+  margin: 1rem 0 3rem;
+  border-bottom: 1px solid rgba(#1f1f1f, 0.15);
+  padding-bottom: 1rem;
 }
 
 .mobile-facets__wrapper .disclosure-has-popup[open] > summary::before {
@@ -746,7 +754,7 @@ a.active-facets__button.focused .active-facets__button-inner,
   padding-bottom: 0.5rem;
   display: flex;
   align-items: center;
-  color: rgba(var(--color-link), var(--alpha-link));
+  color: black;
 }
 
 .mobile-facets__open:hover {

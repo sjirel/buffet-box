@@ -24,7 +24,7 @@
 }
 
 .accordion__title {
-  display: inline-block;
+  display: flex;
   max-width: calc(100% - 6rem);
   min-height: 1.6rem;
   margin: 0;

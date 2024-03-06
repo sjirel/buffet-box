@@ -117,26 +117,3 @@
   position: relative;
   margin-top: 2.5rem;
 }
-.banner-with-product .banner-pill .content-holder .product-form__submit:before {
-  content: "";
-  border: 1px solid rgba(255, 255, 255, 0.35);
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  border-radius: 10rem;
-  z-index: 1;
-  pointer-events: none;
-  margin: 1px;
-}
-.banner-with-product .banner-pill .content-holder .product-form__submit span {
-  display: inline-flex;
-  align-items: center;
-  gap: 1rem;
-  padding-top: 0.4rem;
-}
-.banner-with-product .banner-pill .content-holder .product-form__submit span .icon {
-  position: relative;
-  top: -0.3rem;
-}
