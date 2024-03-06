@@ -111,6 +111,7 @@
           </div>
         </aside>
       {%- endif -%}
+      
 
       <div
         class="product-grid-container{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
@@ -136,6 +137,9 @@
         {%- else -%}
           <div class="collection{% if section.settings.filter_type != 'vertical' %} page-width{% endif %}">
             <div class="loading-overlay gradient"></div>
+            <div class="section-heading">
+              <h1>Shop All Valentine’s Boxes</h1>
+            </div>
             <ul
               id="product-grid"
               data-id="{{ section.id }}"

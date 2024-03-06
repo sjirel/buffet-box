@@ -472,7 +472,8 @@ button.facets__button {
   width: 100%;
   grid-column: 1/-1;
   grid-row: 2;
-  margin-top: -0.5rem;
+  border-top: 1px solid rgba(31, 31, 31, 0.15);
+  justify-content: center;
 }
 
 .active-facets__button {
@@ -494,6 +495,10 @@ span.active-facets__button-inner {
   padding: 0.5rem 1rem;
   display: flex;
   align-items: stretch;
+  height: auto;
+  text-shadow: none;
+  font-weight: normal;
+  font-family: "Roobert", sans-serif;
 }
 
 span.active-facets__button-inner:before,
@@ -1026,6 +1031,10 @@ input.mobile-facets__checkbox {
   width: 1.8rem;
 }
 
+.active-facets-desktop {
+  padding-bottom: 1.5rem;
+}
+
 @media screen and (min-width: 750px) {
   .facets__form {
     margin-bottom: 0;
@@ -1041,6 +1050,8 @@ input.mobile-facets__checkbox {
   }
   .facets-wrapper {
     border: 1px solid rgba(31, 31, 31, 0.15);
+    background-color: white;
+    margin-bottom: 6rem;
   }
   .facets__display {
     top: 100%;
