@@ -8,6 +8,9 @@
 
 .banner__box {
   text-align: center;
+  color: #fff;
+  width: 100%;
+  line-height: 1.5;
 }
 
 /* Needed for gradient continuity with or without animation, the transform scopes the gradient to its container which happens already when animation are turned on */
@@ -81,7 +84,7 @@
     min-height: 56rem;
   }
   .banner--large:not(.banner--adapt) {
-    min-height: 72rem;
+    min-height: 62rem;
   }
   .banner__content.banner__content--top-left {
     align-items: flex-start;
@@ -138,6 +141,16 @@
   left: 0;
   top: 0;
   width: 100%;
+}
+.banner__media:before {
+  z-index: 1;
+  content: "";
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  background: linear-gradient(74.39deg, #B62940 12.89%, rgba(237, 76, 102, 0) 51.65%);
 }
 
 .banner__media-half {
@@ -233,6 +246,9 @@
   align-items: center;
   justify-content: center;
   z-index: 2;
+  font-size: 1.8rem;
+  color: #fff;
+  font-weight: 600;
 }
 
 @media screen and (min-width: 750px) {
@@ -286,15 +302,16 @@
   }
 }
 .banner__box {
-  padding: 4rem 3.5rem;
+  padding: 4rem 0;
   position: relative;
   height: -moz-fit-content;
   height: fit-content;
   align-items: center;
-  text-align: center;
+  text-align: initial;
   width: 100%;
   word-wrap: break-word;
   z-index: 1;
+  background: none;
 }
 
 @media screen and (min-width: 750px) {
@@ -354,18 +371,12 @@
 }
 @media screen and (min-width: 750px) {
   .banner__box {
-    width: auto;
-    max-width: 71rem;
-    min-width: 45rem;
-  }
-}
-@media screen and (min-width: 1400px) {
-  .banner__box {
-    max-width: 90rem;
+    max-width: 44.5rem;
   }
 }
 .banner__heading {
   margin-bottom: 0;
+  color: #fff;
 }
 
 .banner__box .banner__heading + * {
