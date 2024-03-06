@@ -1,14 +1,19 @@
 import Swiper from 'swiper/bundle';
 // import 'swiper/css/bundle';
 
-let bannerSLideshow = new Swiper('.banner-slideshow', {
-    loop: true,
-    effect: "fade",
-    spaceBetween: 0,
+const heroBannerProductMainSlider = new Swiper('.js-banner-product-main-slider', {
     slidesPerView: 1,
+    speed: 1500, 
+    rewind: true,
+    grabCursor: true,
+    effect: "creative",
+    navigation: {
+        nextEl: '.hero-banner .swiper-button-next',
+        prevEl: '.hero-banner .swiper-button-prev',
+    },
     pagination: {
-        el: ".swiper-pagination",
-        type: 'fraction',
+        el: ".hero-banner .swiper-pagination",
+        type: "fraction",
         formatFractionCurrent: function (number) {
             return ('0' + number).slice(-2);
         },
@@ -20,13 +25,16 @@ let bannerSLideshow = new Swiper('.banner-slideshow', {
                    ' of ' +
                    '<span class="' + totalClass + '"></span>';
         }
-    },
-    // Navigation arrows
-    navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-    },
+    }
 });
+
+const heroBannerBigProductTitleSlider = new Swiper('.js-banner-big-product-title-slider', {
+    slidesPerView: 1,
+    speed: 1500,
+    rewind: true,   
+});
+heroBannerProductMainSlider.controller.control = [heroBannerBigProductTitleSlider]; 
+heroBannerBigProductTitleSlider.controller.control = [heroBannerProductMainSlider];
 
 var shopoccasion = new Swiper(".shop-occasion-slider", {
     loop: true,

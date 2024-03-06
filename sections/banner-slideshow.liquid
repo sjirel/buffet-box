@@ -1,123 +1,152 @@
 {{ 'section-slideshow.css' | asset_url | stylesheet_tag }}
-
-<div class="swiper banner-slideshow">
-  <div class="swiper-wrapper">
-    {% for block in section.blocks %}
-        
-    <div class="swiper-slide color-bg-{{ block.settings.bg_color }}">
-        {% assign product = block.settings.product_item %}
-        {%- assign product_form_id = 'product-form-' | append: block.id -%}
-        <div class="banner-composition-image">
-            <img class="d-none d-md-block" src="{{ 'composition.png' | asset_url }}" alt="">
-            <img class="d-md-none" src="{{ 'composition-mobile.png' | asset_url }}" alt="">
-        </div>
-        <div class="product-details-wrapper">
-            <div class="product-details">
-            <div class="title-main">
-                <div class="h0">{{ product.title }}</div>
-            </div>
-            <div class="form-details">
-                {%- if product != blank -%}
-                    <div {{ block.shopify_attributes }}>
-                        {%- form 'product', product -%}
-                            <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
-                            {{ form | payment_terms }}
-                        {%- endform -%}
-                    </div>
-                    {%- render 'buy-buttons-all-ajax',
-                        block: block,
-                        product: product,
-                        product_form_id: product_form_id,
-                        section_id: section.id
-                    -%}
-                  {%- endif -%}
-            </div>
-        </div>
-        <div class="slider-fixed-elem">
-            <div class="product-image__main">               
-                <div class="price-section-wrapper">
-                    <div class="price-section">
-                        <img class="circular-text" src="{{ 'circular-text.png' | asset_url }}" alt="" loading="eager" width="260" height="260">
-                        <div class="price-txt-section">
-                            <h5 class="title">{{ product.title |  prepend: '#'  }}</h5>
-                            <div class="p-price"><span class="symbol">{{ cart.currency.symbol }}</span>{{ product.price_min | money_without_currency }}</div>
-                            {% if block.settings.is_special %}
-                                <span class="special-tag">Special Price</span>
-                            {% endif %}
-                        </div>
-                    </div>
+<div class="outer-js-banner-big-product-title-slider">
+    <div style="height: 100%; width: 100%;">
+        <div class="swiper js-banner-big-product-title-slider">
+            <div class="swiper-wrapper">
+                {% for block in section.blocks %}
+                {% assign product = block.settings.product_item %}
+                <div class="swiper-slide color-bg-{{ block.settings.bg_color }}">
+                    <h2>{{ product.title }}</h2>
                 </div>
-                {{ product.featured_image | image_url: width: 850 | image_tag: loading: 'eager' }}
-            </div>            
-            <div class="bottom-title">{{ product.title |  prepend: '#' }}</div>
-        </div>
-        </div>
-        <div class="floating-papper-effect-mobile d-md-none">
-            <img class="w-100" src="{{ 'papper-effect-mobile.png' | asset_url }}" alt="">
+                {% endfor %}
+            </div>
         </div>
     </div>
-    {% endfor %}
-  </div>
-  <div class="swiper-btn swiper-button-prev">
-    {% render 'icon-arrow-left' %}
-  </div>
-  <div class="swiper-btn swiper-button-next">
-    {% render 'icon-arrow-right' %}
-  </div>
-  <div class="swiper-pagination"></div>
+    <div class="floating-papper-effect-mobile d-md-none">
+        <img class="w-100" src="{{ 'papper-effect-mobile.png' | asset_url }}" alt="">
+    </div>
+</div>
+<div class="outer-js-banner-product-main-slider">
+    <div class="swiper js-banner-product-main-slider">
+        <div class="swiper-wrapper">
+            {% for block in section.blocks %}
+            <div class="swiper-slide  color-bg-{{ block.settings.bg_color }}">
+                {% assign product = block.settings.product_item %}
+                {%- assign product_form_id = 'product-form-' | append: block.id -%}
+                <div class="main-image-with-price">
+                    <div class="main-image">
+                        {{ product.featured_image | image_url: width: 850 | image_tag: loading: 'eager' }}
+                    </div>
+                    <div class="price-section-wrapper">
+                        <div class="price-section">
+                            <img class="circular-text" src="{{ 'circular-text.png' | asset_url }}" alt=""
+                                loading="eager" width="260" height="260">
+                            <div class="price-txt-section">
+                                <h5 class="title">{{ product.title | prepend: '#' }}</h5>
+                                <div class="p-price">
+                                    <span class="symbol">{{ cart.currency.symbol }}</span>
+                                    {{- product.price_min | money_without_currency }}
+                                </div>
+                                {% if block.settings.is_special %}
+                                <span class="special-tag">Special Price</span>
+                                {% endif %}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box-image-shadow">
+                        <img class="w-100" src="{{ 'box-shadow.png' | asset_url}}" alt="">
+                    </div>
+                </div>
+                {% if block.settings.svg_code != blank or block.settings.bg_composition_img != blank %}
+                <div class="floating-composition">
+                    {% if block.settings.img_or_svg %}
+                        <div class="svg">{{ block.settings.svg_code }}</div>
+                    {%  else %}
+                    {{ block.settings.bg_composition_img | image_url: width: 1800 | image_tag: loading: 'eager' }}
+                    {% endif %}
+                </div>
+                {% endif %}
+                <div class="slide-title-small">{{ product.title | prepend: '#' }}</div>
+                <div class="form-details">
+                    {%- if product != blank -%}
+                    <div {{ block.shopify_attributes }}>
+                        {%- form 'product'
+                        , product -%}
+                        <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
+                        {{ form | payment_terms }}
+                        {%- endform -%}
+                    </div>
+                    {%- render 'buy-buttons-all-ajax', block: block, product: product, product_form_id: product_form_id, section_id: section.id
+                    -%}
+                    {%- endif -%}
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+<div class="hero-banner__footer">
+    <div></div>
+    <div class="swiper-buttons">
+        <div class="swiper-button-prev">{% render 'icon-arrow-left' %}</div>
+        <div class="swiper-button-next">{% render 'icon-arrow-right' %}</div>
+    </div>
+    <div class="swiper-pagination"></div>
 </div>
 {% schema %}
 {
-    "name": "Banner: Slideshow",
-    "settings": [
-        {
-            "type": "checkbox",
-            "id": "show_slide_arrow",
-            "label": "Show Arrow"
-        }
-    ],
-    "blocks": [
-        {
-            "name": "Slide",
-            "type": "slide",
-            "limit": 5,
-            "settings": [
-                {
-                    "type": "select",
-                    "id": "bg_color",
-                    "label": "Background Color",
-                    "options": [
-                        {
-                            "label": "Orange",
-                            "value": "orange"
-                        },
-                        {
-                            "label": "Blue",
-                            "value": "blue"
-                        },
-                        {
-                            "label": "Pink",
-                            "value": "pink"
-                        }
-                    ]
-                },
-                {
-                    "type": "product",
-                    "id": "product_item",
-                    "label": "Product"
-                },
-                {
-                    "type":"checkbox",
-                    "id": "is_special",
-                    "label": "Special Label?"
-                }
-            ]
-        }
-    ],
-    "presets": [
-        {
-            "name": "Banner: Slideshow"
-        }
-    ]
+"name": "Banner: Slideshow",
+"class": "hero-banner",
+"settings": [
+{
+"type": "checkbox",
+"id": "show_slide_arrow",
+"label": "Show Arrow"
+}
+],
+"blocks": [
+{
+"name": "Slide",
+"type": "slide",
+"limit": 5,
+"settings": [
+{
+"type": "select",
+"id": "bg_color",
+"label": "Background Color",
+"options": [
+{
+"label": "Orange",
+"value": "orange"
+}, {
+"label": "Blue",
+"value": "blue"
+}, {
+"label": "Pink",
+"value": "pink"
+}
+]
+}, {
+"type": "product",
+"id": "product_item",
+"label": "Product"
+},
+{
+    "type": "checkbox",
+    "id": "img_or_svg",
+    "label": "Is SVG?",
+    "info": "If selected, svg code will replace Image"
+}, {
+    "type": "image_picker",
+    "id": "bg_composition_img",
+    "label": "BG composition"
+},
+{
+    "type": "html",
+    "id": "svg_code",
+    "label": "SVG code"
+}, {
+"type": "checkbox",
+"id": "is_special",
+"label": "Special Label?"
+}
+]
+}
+],
+"presets": [
+{
+"name": "Banner: Slideshow"
+}
+]
 }
 {% endschema %}
