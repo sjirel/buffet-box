@@ -1,3 +1,8 @@
+/*
+* Mixin for easy media queries
+* @include bp(tablet-only) { SCSS here };
+* Default css is for mobile screens
+*/
 .price {
   font-size: 1.6rem;
   letter-spacing: 0.1rem;
@@ -19,8 +24,19 @@
 }
 
 .price .price-item {
-  display: inline-block;
   margin: 0 1rem 0 0;
+  display: inline-flex;
+  font-weight: 700;
+  font-size: 3.9rem;
+  color: #ED4C66;
+  line-height: 1;
+}
+.price .price-item .currency {
+  font-size: 1.4rem;
+  font-weight: normal;
+  position: relative;
+  transform: translateY(10%);
+  margin-right: 0.2rem;
 }
 
 .price__regular .price-item--regular {

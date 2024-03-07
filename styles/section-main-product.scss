@@ -1,3 +1,4 @@
+@import './mixins/helpers';
 .product {
   margin: 0;
 }
@@ -251,6 +252,9 @@ a.product__text {
 .product__title {
   word-break: break-word;
   margin-bottom: 1.5rem;
+  h1 {
+    color: $color-black;
+  }
 }
 
 .product__title > * {

@@ -2303,8 +2303,8 @@ button.shopify-payment-button__button--unbranded {
 .button:hover span .icon,
 .shopify-challenge__button:hover span .icon,
 .customer button:hover span .icon {
-  left: 3.5rem;
-  transform: translateY(-50%) translateX(0);
+  left: 0;
+  transform: translateY(-70%) translateX(0);
 }
 .button span,
 .shopify-challenge__button span,
@@ -2313,14 +2313,15 @@ button.shopify-payment-button__button--unbranded {
   align-items: center;
   padding-right: 2.5rem;
   transition: padding 0.3s ease-out;
+  position: relative;
 }
 .button span .icon,
 .shopify-challenge__button span .icon,
 .customer button span .icon {
   position: absolute;
   top: 50%;
-  left: calc(100% - 3.5rem);
-  transform: translateY(-50%) translateX(-100%);
+  left: 100%;
+  transform: translateY(-70%) translateX(-100%);
   transition: transform 0.3s ease-out, left 0.3s ease-out;
 }
 
