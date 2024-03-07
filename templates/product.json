@@ -43,48 +43,6 @@
             "show_dynamic_checkout": true,
             "show_gift_card_recipient": true
           }
-        },
-        "collapsible-row-0": {
-          "type": "collapsible_tab",
-          "settings": {
-            "heading": "Materials",
-            "icon": "leather",
-            "content": "",
-            "page": ""
-          }
-        },
-        "collapsible-row-1": {
-          "type": "collapsible_tab",
-          "settings": {
-            "heading": "Shipping & Returns",
-            "icon": "truck",
-            "content": "",
-            "page": ""
-          }
-        },
-        "collapsible-row-2": {
-          "type": "collapsible_tab",
-          "settings": {
-            "heading": "Dimensions",
-            "icon": "ruler",
-            "content": "",
-            "page": ""
-          }
-        },
-        "collapsible-row-3": {
-          "type": "collapsible_tab",
-          "settings": {
-            "heading": "Care Instructions",
-            "icon": "heart",
-            "content": "",
-            "page": ""
-          }
-        },
-        "share": {
-          "type": "share",
-          "settings": {
-            "share_label": "Share"
-          }
         }
       },
       "block_order": [
@@ -94,12 +52,7 @@
         "description",
         "quantity_selector",
         "variant_picker",
-        "buy_buttons",
-        "collapsible-row-0",
-        "collapsible-row-1",
-        "collapsible-row-2",
-        "collapsible-row-3",
-        "share"
+        "buy_buttons"
       ],
       "settings": {
         "enable_sticky_info": true,
@@ -117,40 +70,40 @@
         "padding_bottom": 12
       }
     },
-    "image-with-text": {
-      "type": "image-with-text",
+    "section_product_info_TgLfLV": {
+      "type": "section-product-info",
       "blocks": {
-        "image-with-text-0": {
-          "type": "heading",
+        "icon_text_DQp7hP": {
+          "type": "icon_text",
           "settings": {
-            "heading": "Image with text",
-            "heading_size": "h1"
+            "icon": "donut",
+            "heading": "24",
+            "caption": "Donuts"
           }
         },
-        "image-with-text-1": {
-          "type": "text",
+        "icon_text_HPw4xC": {
+          "type": "icon_text",
           "settings": {
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "text_style": "body"
+            "icon": "celebration",
+            "heading": "100%",
+            "caption": "Fun guaranteed"
+          }
+        },
+        "icon_text_qk83CW": {
+          "type": "icon_text",
+          "settings": {
+            "icon": "shipping",
+            "heading": "1-2",
+            "caption": "Days Shipping"
           }
         }
       },
       "block_order": [
-        "image-with-text-0",
-        "image-with-text-1"
+        "icon_text_DQp7hP",
+        "icon_text_HPw4xC",
+        "icon_text_qk83CW"
       ],
-      "disabled": true,
       "settings": {
-        "height": "small",
-        "desktop_image_width": "medium",
-        "layout": "text_first",
-        "desktop_content_position": "top",
-        "desktop_content_alignment": "left",
-        "content_layout": "no-overlap",
-        "section_color_scheme": "",
-        "color_scheme": "scheme-2",
-        "image_behavior": "none",
-        "mobile_content_alignment": "left",
         "padding_top": 36,
         "padding_bottom": 36
       }
@@ -234,7 +187,7 @@
   },
   "order": [
     "main",
-    "image-with-text",
+    "section_product_info_TgLfLV",
     "multicolumn",
     "sectionTestimonial",
     "related-products"
