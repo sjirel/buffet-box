@@ -1,4 +1,9 @@
 @import './mixins/helpers';
+.product-details {
+  > .gradient  {
+    background: radial-gradient(71.39% 71.39% at 50% 71.39%, #FFF3EA 0%, #FF9678 100%);
+  }
+}
 .product {
   margin: 0;
 }

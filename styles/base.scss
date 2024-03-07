@@ -636,9 +636,9 @@ blockquote {
 .field__input,
 .form__label,
 .select__select {
-  font-size: 1.3rem;
+  font-size: 1.6rem;
   line-height: calc(1 + 0.5 / var(--font-body-scale));
-  letter-spacing: 0.04rem;
+  font-weight: 600;
 }
 
 .color-foreground {
@@ -3619,12 +3619,17 @@ details-disclosure > details {
 
 .rte ul,
 .rte ol {
-  list-style-position: inside;
+  list-style-position: outside;
   padding-left: 2rem;
+  list-style-type: disc;
+  li::marker {
+    color: #B62940;
+  }
 }
 
 .rte li {
   list-style: inherit;
+  margin-bottom: 1.3rem;
 }
 
 .rte li:last-child {
