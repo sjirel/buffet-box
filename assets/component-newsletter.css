@@ -1,3 +1,8 @@
+/*
+* Mixin for easy media queries
+* @include bp(tablet-only) { SCSS here };
+* Default css is for mobile screens
+*/
 .newsletter-form {
   display: flex;
   flex-direction: column;
@@ -41,6 +46,12 @@
   right: var(--inputs-border-width);
   top: 0;
   z-index: 2;
+  background: linear-gradient(180deg, #B62940 0%, #ED4C66 80%);
+  color: #ffffff;
+  border: none;
+}
+.newsletter-form__button:hover {
+  background: linear-gradient(180deg, #ED4C66 0%, #B62940 80%);
 }
 
 .newsletter-form__button:focus-visible {

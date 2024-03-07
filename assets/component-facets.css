@@ -1,3 +1,8 @@
+/*
+* Mixin for easy media queries
+* @include bp(tablet-only) { SCSS here };
+* Default css is for mobile screens
+*/
 .facets-container {
   display: grid;
   grid-template-columns: repeat(2, auto);
@@ -25,8 +30,6 @@
 @media screen and (max-width: 989px) {
   .facets-container {
     grid-template-columns: auto minmax(0, max-content);
-    -moz-column-gap: 2rem;
-         column-gap: 2rem;
   }
 }
 .facet-filters {
@@ -208,7 +211,7 @@
 
 .facets__disclosure[open] .facets__summary,
 .facets__summary:hover {
-  color: rgb(var(--color-foreground));
+  color: black;
 }
 
 .facets__disclosure[open] .facets__summary .icon-caret {
@@ -272,7 +275,7 @@
   border-color: rgba(var(--color-foreground), var(--popup-border-opacity));
   border-radius: var(--popup-corner-radius);
   box-shadow: var(--popup-shadow-horizontal-offset) var(--popup-shadow-vertical-offset) var(--popup-shadow-blur-radius) rgba(var(--color-shadow), var(--popup-shadow-opacity));
-  background-color: rgb(var(--color-background));
+  background-color: white;
   position: absolute;
   top: calc(100% + 0.5rem);
   left: -1.2rem;
@@ -356,7 +359,7 @@
 
 /* Hover, active, and focus states */
 :is(.facets__label:hover, .facets__label.active, .facets__label:has(:focus-visible)) {
-  color: rgba(var(--color-foreground), 1);
+  color: black;
 }
 
 /* Focus states for older browsers */
@@ -400,7 +403,7 @@
 }
 
 .facet-checkbox > svg {
-  background-color: rgb(var(--color-background));
+  background-color: white;
   margin-right: 1.2rem;
   flex-shrink: 0;
 }
@@ -472,20 +475,28 @@ button.facets__button {
   width: 100%;
   grid-column: 1/-1;
   grid-row: 2;
-  margin-top: -0.5rem;
+  justify-content: center;
+}
+@media (min-width: 768px) {
+  .active-facets {
+    border-top: 1px solid rgba(31, 31, 31, 0.15);
+    margin-bottom: -1px;
+  }
 }
 
 .active-facets__button {
   display: block;
   margin-right: 1.5rem;
   margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
   padding-left: 0.2rem;
   padding-right: 0.2rem;
   text-decoration: none;
 }
 
 span.active-facets__button-inner {
-  color: rgb(var(--color-foreground));
+  color: black;
+  border: 1px solid rgba(31, 31, 31, 0.15);
   box-shadow: 0 0 0 0.1rem rgb(var(--color-foreground));
   border-radius: 2.6rem;
   font-size: 1rem;
@@ -494,6 +505,11 @@ span.active-facets__button-inner {
   padding: 0.5rem 1rem;
   display: flex;
   align-items: stretch;
+  height: auto;
+  text-shadow: none;
+  font-weight: normal;
+  font-family: "Roobert", sans-serif;
+  background: none;
 }
 
 span.active-facets__button-inner:before,
@@ -646,8 +662,11 @@ a.active-facets__button.focused .active-facets__button-inner,
 }
 
 .mobile-facets__wrapper {
-  margin-left: 0;
   display: flex;
+  justify-content: center;
+  margin: 1rem 0 3rem;
+  border-bottom: 1px solid rgba(31, 31, 31, 0.15);
+  padding-bottom: 1rem;
 }
 
 .mobile-facets__wrapper .disclosure-has-popup[open] > summary::before {
@@ -722,7 +741,7 @@ a.active-facets__button.focused .active-facets__button-inner,
   padding-bottom: 0.5rem;
   display: flex;
   align-items: center;
-  color: rgba(var(--color-link), var(--alpha-link));
+  color: black;
 }
 
 .mobile-facets__open:hover {
@@ -1041,6 +1060,8 @@ input.mobile-facets__checkbox {
   }
   .facets-wrapper {
     border: 1px solid rgba(31, 31, 31, 0.15);
+    background-color: white;
+    margin-bottom: 6rem;
   }
   .facets__display {
     top: 100%;

@@ -1,15 +1,23 @@
 @import './mixins/helpers';
 
 .product-card {
+    height: 100%;
     .link{
         display: flex;
         flex-direction: column;
         text-decoration: none;
         height: 100%;
-        .product-title {
-            transition: color 0.4s ease-in-out;
-            &:hover {
+        &:hover {
+            .product-title {
                 color: #ed4c66;
+            }
+            .product-image {
+                &__box {
+                    border-color: $color-white;
+                    img {
+                        transform: scale(1.2);
+                    }
+                }
             }
         }
     }
@@ -32,9 +40,14 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        border-radius: 50%;
+        overflow: hidden;
+        border: 0.3rem solid transparent;
+        transition: border 0.3s ease-in-out;
         img {
             width: 100%;
             border-radius: 50%;
+            transition: transform 0.3s ease-in-out;
         }
        }
     }
@@ -48,6 +61,7 @@
             margin-bottom: 1.5rem;
             font-size: 2rem;
             color: $color-black;
+            transition: color 0.3s ease-in-out;
             @include bp(md) {
                 font-size: 3.2rem;
                 margin-bottom: 1rem;

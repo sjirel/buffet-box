@@ -25,14 +25,36 @@
 .section-shop-occasion .swiper-creative .swiper-slide.swiper-slide-active .swiper-card .card-shadow {
   border-color: #F5724C;
 }
+.section-shop-occasion .swiper-creative .swiper-slide.swiper-slide-active .swiper-card .card-main .ico-holder {
+  background-color: #ffffff;
+  border-color: #ffffff;
+}
+.section-shop-occasion .swiper-creative .swiper-slide.swiper-slide-active .swiper-card .card-main .title {
+  bottom: 2rem;
+  transform: translateY(0);
+  color: #ffffff;
+}
+.section-shop-occasion .swiper-creative .swiper-slide.swiper-slide-active .swiper-card .card-main .image-holder {
+  height: 100%;
+}
+.section-shop-occasion .swiper-creative .swiper-slide.swiper-slide-active .swiper-card .card-main .image-holder:before {
+  opacity: 1;
+}
 .section-shop-occasion .swiper-creative .swiper-slide .swiper-card {
   margin: 0 auto;
-  width: 36.5rem;
+  width: 26.5rem;
+  height: 33.3rem;
   max-width: 100%;
   position: relative;
   z-index: 1;
   background-color: #ffffff;
   border-radius: 10rem;
+}
+@media (min-width: 768px) {
+  .section-shop-occasion .swiper-creative .swiper-slide .swiper-card {
+    width: 36.5rem;
+    height: 46rem;
+  }
 }
 .section-shop-occasion .swiper-creative .swiper-slide .swiper-card .floating-bg-image {
   position: absolute;
@@ -47,6 +69,7 @@
   border-radius: 6.8rem;
   overflow: hidden;
   transition: border 0.4s ease-in-out;
+  height: 100%;
 }
 @media (min-width: 768px) {
   .section-shop-occasion .swiper-creative .swiper-slide .swiper-card .card-shadow {
@@ -64,6 +87,8 @@
   border-radius: 4rem;
   padding-top: 2.5rem;
   overflow: hidden;
+  height: 100%;
+  position: relative;
 }
 .section-shop-occasion .swiper-creative .swiper-slide .swiper-card .card-main .ico-holder {
   border: 1px solid #504F51;
@@ -74,6 +99,9 @@
   min-height: 5rem;
   border-radius: 12px;
   margin-bottom: 0.5rem;
+  transition: all 0.4s ease-out;
+  position: relative;
+  z-index: 1;
 }
 @media (min-width: 768px) {
   .section-shop-occasion .swiper-creative .swiper-slide .swiper-card .card-main .ico-holder {
@@ -86,33 +114,58 @@
      object-fit: contain;
 }
 .section-shop-occasion .swiper-creative .swiper-slide .swiper-card .card-main .title {
-  color: #1F1F1F;
+  color: #1f1f1f;
   text-align: center;
   line-height: 1;
-  margin: 0 0 2.5rem;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: calc(100% - 0.5rem);
+  transform: translateY(-100%);
+  margin: 0;
+  font-size: 2.8rem;
+  transition: all 0.4s ease-out;
+  z-index: 2;
 }
 @media (min-width: 768px) {
   .section-shop-occasion .swiper-creative .swiper-slide .swiper-card .card-main .title {
-    margin-bottom: 2rem;
+    font-size: 3.2rem;
   }
 }
 .section-shop-occasion .swiper-creative .swiper-slide .swiper-card .card-main .image-holder {
-  width: 100%;
   flex-grow: 1;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: calc(100% - 14rem);
+  transition: height 0.4s ease-out;
+}
+@media (min-width: 768px) {
+  .section-shop-occasion .swiper-creative .swiper-slide .swiper-card .card-main .image-holder {
+    height: calc(100% - 16rem);
+  }
+}
+.section-shop-occasion .swiper-creative .swiper-slide .swiper-card .card-main .image-holder:before {
+  content: "";
+  z-index: 1;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  background: linear-gradient(180deg, rgba(237, 76, 102, 0) 10.78%, #F58864 100%);
+  opacity: 0;
+  transition: opacity 0.4s ease-out;
 }
 .section-shop-occasion .swiper-creative .swiper-slide .swiper-card .card-main .image-holder img {
   width: 100%;
-  height: 20rem;
+  height: 100%;
   -o-object-position: center;
      object-position: center;
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 2.5rem;
-}
-@media (min-width: 768px) {
-  .section-shop-occasion .swiper-creative .swiper-slide .swiper-card .card-main .image-holder img {
-    height: 29.5rem;
-  }
 }
 .section-shop-occasion .swiper-buttons {
   padding-bottom: 2rem;
