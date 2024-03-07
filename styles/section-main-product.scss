@@ -1,3 +1,9 @@
+@import './mixins/helpers';
+.product-details {
+  > .gradient  {
+    background: radial-gradient(71.39% 71.39% at 50% 71.39%, #FFF3EA 0%, #FF9678 100%);
+  }
+}
 .product {
   margin: 0;
 }
@@ -251,6 +257,9 @@ a.product__text {
 .product__title {
   word-break: break-word;
   margin-bottom: 1.5rem;
+  h1 {
+    color: $color-black;
+  }
 }
 
 .product__title > * {

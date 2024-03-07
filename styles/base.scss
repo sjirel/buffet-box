@@ -636,9 +636,9 @@ blockquote {
 .field__input,
 .form__label,
 .select__select {
-  font-size: 1.3rem;
+  font-size: 1.6rem;
   line-height: calc(1 + 0.5 / var(--font-body-scale));
-  letter-spacing: 0.04rem;
+  font-weight: 600;
 }
 
 .color-foreground {
@@ -1583,8 +1583,8 @@ button.shopify-payment-button__button--unbranded {
       padding-right: 0;
       padding-left: 2.5rem;
       .icon {
-        left: 3.5rem;
-        transform: translateY(-50%) translateX(0);
+        left: 0;
+        transform: translateY(-70%) translateX(0);
       }
     }
   }
@@ -1593,11 +1593,12 @@ button.shopify-payment-button__button--unbranded {
       align-items: center;
       padding-right: 2.5rem;
       transition: padding 0.3s ease-out;
+      position: relative;
       .icon {
           position: absolute;
           top: 50%;
-          left: calc(100% - 3.5rem);
-          transform: translateY(-50%) translateX(-100%);
+          left: 100%;
+          transform: translateY(-70%) translateX(-100%);
           transition: transform 0.3s ease-out, left 0.3s ease-out;
       }
   }
@@ -3618,12 +3619,17 @@ details-disclosure > details {
 
 .rte ul,
 .rte ol {
-  list-style-position: inside;
+  list-style-position: outside;
   padding-left: 2rem;
+  list-style-type: disc;
+  li::marker {
+    color: #B62940;
+  }
 }
 
 .rte li {
   list-style: inherit;
+  margin-bottom: 1.3rem;
 }
 
 .rte li:last-child {
