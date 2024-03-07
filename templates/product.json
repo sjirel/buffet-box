@@ -161,7 +161,7 @@
         "column-0": {
           "type": "column",
           "settings": {
-            "title": "Free Shipping",
+            "title": "Product Details",
             "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
             "link_label": "",
             "link": ""
@@ -170,7 +170,7 @@
         "column-1": {
           "type": "column",
           "settings": {
-            "title": "Hassle-Free Exchanges",
+            "title": "Nutrition & Ingredients",
             "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
             "link_label": "",
             "link": ""
@@ -179,7 +179,7 @@
         "column_mE7Gke": {
           "type": "column",
           "settings": {
-            "title": "Column",
+            "title": "Shipping Information",
             "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
             "link_label": "",
             "link": ""
