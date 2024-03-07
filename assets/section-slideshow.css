@@ -160,6 +160,8 @@
 }
 .hero-banner .outer-js-banner-product-main-slider .swiper-slide:nth-child(2n+2) .floating-composition {
   transform: translateY(-105%);
+  bottom: auto;
+  top: 0;
 }
 .hero-banner .outer-js-banner-product-main-slider .swiper-slide .main-image-with-price {
   width: 74rem;
@@ -322,9 +324,20 @@
   margin: 0 auto;
   transition: all 0.4s ease-in-out;
 }
+@media (max-width: 767px) {
+  .hero-banner .outer-js-banner-product-main-slider .swiper-slide-active:nth-child(2n+2) .floating-composition, .hero-banner .outer-js-banner-product-main-slider .swiper-slide-thumb-active:nth-child(2n+2) .floating-composition {
+    transform: translateY(20%) !important;
+  }
+}
 .hero-banner .outer-js-banner-product-main-slider .swiper-slide-active .floating-composition,
 .hero-banner .outer-js-banner-product-main-slider .swiper-slide-thumb-active .floating-composition {
-  transform: translateY(20%) !important;
+  transform: translateY(-20%) !important;
+}
+@media (min-width: 768px) {
+  .hero-banner .outer-js-banner-product-main-slider .swiper-slide-active .floating-composition,
+  .hero-banner .outer-js-banner-product-main-slider .swiper-slide-thumb-active .floating-composition {
+    transform: translateY(20%) !important;
+  }
 }
 .hero-banner .outer-js-banner-product-main-slider .swiper-slide-active ~ .swiper-slide .main-image-with-price .main-image {
   -webkit-clip-path: inset(0 0 0 0 100%);
