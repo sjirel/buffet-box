@@ -107,10 +107,7 @@
 		.swiper-slide:not(.swiper-slide-active) {
 			pointer-events: none;
 			.main-image-with-price { 
-				.main-image {
-					@include bp(below-md) {
-						padding: 0 1.5rem;
-					}
+				.main-image {					
 					img {
 						opacity: 0;
 						transition: opacity .1s ease-out .8s;
@@ -217,6 +214,9 @@
 					overflow: hidden;
 					position: relative;
 					z-index: 2;
+					@include bp(below-md) {
+						padding: 0 1.5rem;
+					}
 					img {
 						width: 100%;
 					}

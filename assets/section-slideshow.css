@@ -113,11 +113,6 @@
 .hero-banner .outer-js-banner-product-main-slider .swiper-slide:not(.swiper-slide-active) {
   pointer-events: none;
 }
-@media (max-width: 767px) {
-  .hero-banner .outer-js-banner-product-main-slider .swiper-slide:not(.swiper-slide-active) .main-image-with-price .main-image {
-    padding: 0 1.5rem;
-  }
-}
 .hero-banner .outer-js-banner-product-main-slider .swiper-slide:not(.swiper-slide-active) .main-image-with-price .main-image img {
   opacity: 0;
   transition: opacity 0.1s ease-out 0.8s;
@@ -192,6 +187,11 @@
   overflow: hidden;
   position: relative;
   z-index: 2;
+}
+@media (max-width: 767px) {
+  .hero-banner .outer-js-banner-product-main-slider .swiper-slide .main-image-with-price .main-image {
+    padding: 0 1.5rem;
+  }
 }
 .hero-banner .outer-js-banner-product-main-slider .swiper-slide .main-image-with-price .main-image img {
   width: 100%;
