@@ -3,13 +3,6 @@
     "main": {
       "type": "main-product",
       "blocks": {
-        "vendor": {
-          "type": "text",
-          "settings": {
-            "text": "{{ product.vendor }}",
-            "text_style": "uppercase"
-          }
-        },
         "title": {
           "type": "title",
           "settings": {
@@ -27,11 +20,9 @@
           "settings": {
           }
         },
-        "variant_picker": {
-          "type": "variant_picker",
+        "description": {
+          "type": "description",
           "settings": {
-            "picker_type": "button",
-            "swatch_shape": "circle"
           }
         },
         "quantity_selector": {
@@ -39,16 +30,18 @@
           "settings": {
           }
         },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "dropdown",
+            "swatch_shape": "circle"
+          }
+        },
         "buy_buttons": {
           "type": "buy_buttons",
           "settings": {
             "show_dynamic_checkout": true,
             "show_gift_card_recipient": true
-          }
-        },
-        "description": {
-          "type": "description",
-          "settings": {
           }
         },
         "collapsible-row-0": {
@@ -95,14 +88,13 @@
         }
       },
       "block_order": [
-        "vendor",
         "title",
         "caption",
         "price",
-        "variant_picker",
-        "quantity_selector",
-        "buy_buttons",
         "description",
+        "quantity_selector",
+        "variant_picker",
+        "buy_buttons",
         "collapsible-row-0",
         "collapsible-row-1",
         "collapsible-row-2",
@@ -147,6 +139,7 @@
         "image-with-text-0",
         "image-with-text-1"
       ],
+      "disabled": true,
       "settings": {
         "height": "small",
         "desktop_image_width": "medium",
@@ -168,7 +161,7 @@
         "column-0": {
           "type": "column",
           "settings": {
-            "title": "Free Shipping",
+            "title": "Product Details",
             "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
             "link_label": "",
             "link": ""
@@ -177,7 +170,16 @@
         "column-1": {
           "type": "column",
           "settings": {
-            "title": "Hassle-Free Exchanges",
+            "title": "Nutrition & Ingredients",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_mE7Gke": {
+          "type": "column",
+          "settings": {
+            "title": "Shipping Information",
             "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
             "link_label": "",
             "link": ""
@@ -186,14 +188,15 @@
       },
       "block_order": [
         "column-0",
-        "column-1"
+        "column-1",
+        "column_mE7Gke"
       ],
       "settings": {
         "title": "",
         "heading_size": "h1",
         "image_width": "full",
         "image_ratio": "adapt",
-        "columns_desktop": 2,
+        "columns_desktop": 3,
         "column_alignment": "left",
         "background_style": "none",
         "button_label": "",
