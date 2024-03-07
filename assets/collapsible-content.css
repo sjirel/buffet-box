@@ -92,6 +92,7 @@
   display: inline-block;
   margin-right: 1rem;
   color: var(--color-red);
+  margin-top: -0.5rem;
 }
 .collapsible-content .accordion details[open], .collapsible-content .accordion details[open] .accordion__count {
   border-color: var(--color-foreground);

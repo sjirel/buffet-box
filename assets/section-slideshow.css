@@ -4,16 +4,20 @@
 * Default css is for mobile screens
 */
 .hero-banner {
-  height: 92rem;
+  height: 69rem;
   position: relative;
   z-index: 1;
   line-height: 1;
   overflow: hidden;
 }
+@media (min-width: 768px) {
+  .hero-banner {
+    height: 92rem;
+  }
+}
 .hero-banner .outer-js-banner-big-product-title-slider {
   position: absolute;
-  left: 0;
-  right: 0;
+  left: 50%;
   top: 0;
   bottom: 0;
   line-height: 1;
@@ -22,6 +26,13 @@
   flex-direction: column;
   justify-content: center;
   text-align: center;
+  transform: translateX(-50%);
+}
+.hero-banner .outer-js-banner-big-product-title-slider .floating-papper-effect-mobile {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
 .hero-banner .outer-js-banner-big-product-title-slider .color-bg-orange {
   background: rgb(255, 243, 234);
@@ -60,17 +71,24 @@
   line-height: 1;
   margin: 0;
   color: #fff;
-  font-size: 26rem;
+  font-size: 8rem;
+  height: 6rem;
   text-transform: uppercase;
   font-family: "Founders Grotesk";
   position: relative;
-  top: -3rem;
+  top: -8rem;
   background: linear-gradient(180deg, #FFFFFF 63.73%, rgba(255, 255, 255, 0) 89.75%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   text-fill-color: transparent;
-  height: 16rem;
+}
+@media (min-width: 768px) {
+  .hero-banner .outer-js-banner-big-product-title-slider .swiper .swiper-slide h2 {
+    font-size: 26rem;
+    height: 16rem;
+    top: -3rem;
+  }
 }
 .hero-banner .outer-js-banner-product-main-slider {
   position: absolute;
@@ -91,6 +109,11 @@
 }
 .hero-banner .outer-js-banner-product-main-slider .swiper-slide:not(.swiper-slide-active) {
   pointer-events: none;
+}
+@media (max-width: 767px) {
+  .hero-banner .outer-js-banner-product-main-slider .swiper-slide:not(.swiper-slide-active) .main-image-with-price .main-image {
+    padding: 0 1.5rem;
+  }
 }
 .hero-banner .outer-js-banner-product-main-slider .swiper-slide:not(.swiper-slide-active) .main-image-with-price .main-image img {
   opacity: 0;
@@ -143,8 +166,14 @@
 .hero-banner .outer-js-banner-product-main-slider .swiper-slide .main-image-with-price {
   width: 74rem;
   position: relative;
-  margin: auto;
-  top: -7rem;
+  top: 25.5rem;
+  margin: 0 auto;
+}
+@media (min-width: 768px) {
+  .hero-banner .outer-js-banner-product-main-slider .swiper-slide .main-image-with-price {
+    top: -7rem;
+    margin: auto;
+  }
 }
 .hero-banner .outer-js-banner-product-main-slider .swiper-slide .main-image-with-price .box-image-shadow {
   position: absolute;
@@ -180,8 +209,12 @@
 }
 @media (max-width: 767px) {
   .hero-banner .outer-js-banner-product-main-slider .swiper-slide .main-image-with-price .price-section-wrapper {
-    position: static;
+    position: absolute;
     margin: 0 auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    transform: translateY(-93%);
   }
 }
 .hero-banner .outer-js-banner-product-main-slider .swiper-slide .main-image-with-price .price-section {
@@ -253,14 +286,21 @@
 }
 .hero-banner .outer-js-banner-product-main-slider .swiper-slide .slide-title-small {
   position: absolute;
-  left: 3rem;
-  max-width: 33.33%;
-  bottom: 3.4rem;
+  left: 1.5rem;
+  bottom: 10.5rem;
   transition: opacity 0.8s ease-out;
   font-weight: 600;
-  font-size: 3.2rem;
+  font-size: 2.4rem;
   color: #ED4C66;
   font-family: "Founders Grotesk";
+}
+@media (min-width: 768px) {
+  .hero-banner .outer-js-banner-product-main-slider .swiper-slide .slide-title-small {
+    left: 3rem;
+    bottom: 3.4rem;
+    font-size: 3.2rem;
+    max-width: 33.33%;
+  }
 }
 .hero-banner .outer-js-banner-product-main-slider .swiper-slide .floating-composition {
   position: absolute;
@@ -276,7 +316,6 @@
   right: 0;
   bottom: 3.4rem;
   width: 14rem;
-  height: 6rem;
   margin: 0 auto;
   transition: all 0.4s ease-in-out;
 }
@@ -296,24 +335,34 @@
   justify-content: space-between;
   align-items: center;
   position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 3.4rem;
-  z-index: 55;
-  margin: 0 3rem;
+  left: 1.5rem;
+  right: 1.5rem;
+  bottom: 4rem;
   z-index: 2;
   pointer-events: none;
 }
+@media (min-width: 768px) {
+  .hero-banner__footer {
+    left: 3rem;
+    right: 3rem;
+    bottom: 3.4rem;
+  }
+}
 .hero-banner__footer .swiper-pagination {
-  position: static;
   position: absolute;
   right: 0;
-  top: 50%;
+  top: 0;
+  transform: translateY(-100%);
   width: auto;
   left: auto;
   text-align: initial;
-  transform: translateY(-50%);
   color: rgba(31, 31, 31, 0.5);
+}
+@media (min-width: 768px) {
+  .hero-banner__footer .swiper-pagination {
+    top: 50%;
+    transform: translateY(-50%);
+  }
 }
 .hero-banner__footer .swiper-pagination .swiper-pagination-current {
   font-size: 2rem;

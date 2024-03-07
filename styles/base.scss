@@ -937,12 +937,16 @@ summary::-webkit-details-marker {
 .swiper-button-prev, .swiper-button-next { 
   border: none;
   background-color: $color-white;
-  width: 6rem;
-  height: 6rem;
+  width: 5rem;
+  height: 5rem;
   border-radius: 50%;
   box-shadow: 0 0 2.5rem #0000001a;
   font-weight: 500; 
   transition: background-color 0.3s ease-out, transform 0.3s ease-out;
+  @include bp(md) {
+    width: 6rem;
+    height: 6rem;
+  }
   &:hover {
     background-color: $color-red;
     transform: scale(1.05);
