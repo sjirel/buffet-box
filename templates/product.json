@@ -164,12 +164,15 @@
     "sectionTestimonial": {
       "type": "section-testimonial",
       "settings": {
+        "is_background": true,
+        "title": "Product Reviews",
+        "subtitle": ""
       }
     },
     "related-products": {
       "type": "related-products",
       "settings": {
-        "heading": "You may also like",
+        "heading": "Related Products",
         "heading_size": "h2",
         "products_to_show": 3,
         "columns_desktop": 3,

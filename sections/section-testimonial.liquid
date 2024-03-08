@@ -1,13 +1,15 @@
 {{ 'section-testimonials.css' | asset_url | stylesheet_tag }}
 
-<div class="testimonials">
+<div class="testimonials{% if section.settings.is_background %} has-bgArc{% endif %}">
+    {% if section.settings.is_background %}
     <div class="bgArcWrapper">
         <div class="bgArc">&nbsp;</div>
     </div>
+    {% endif %}
     <div class="page-width">
         <div class="section-heading">
-            <h5 class="title-helper">What People Are Saying</h5>
-            <h2>About Buffet Box</h2>
+            <h5 class="title-helper">{{ section.settings.subtitle }}</h5>
+            <h2>{{ section.settings.title }}</h2>
         </div>
     </div>
     <div class="swiper js-testimonials-slider-top">
@@ -256,7 +258,23 @@
 {
     "name": "Section: Testimonial",
     "settings": [
-        
+            {
+                "type": "checkbox",
+                "id": "is_background",
+                "label": "Have Background?"
+            },
+            {
+                "type": "text",
+                "id": "title",
+                "label": "Heading",
+                "placeholder": "Text Here...",
+                "info": "Text hewer"
+            },
+            {
+                "type": "text",
+                "id": "subtitle",
+                "label": "Sub Heading"
+            }
         ]
 }
 {% endschema %}
