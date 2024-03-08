@@ -6,10 +6,12 @@
 .testimonials {
   overflow: hidden;
   margin-bottom: 10rem;
+  position: relative;
 }
 @media (min-width: 768px) {
   .testimonials {
-    margin-bottom: 18rem;
+    margin-bottom: 9rem;
+    padding-bottom: 9rem;
   }
 }
 .testimonials .section-heading .title-helper {

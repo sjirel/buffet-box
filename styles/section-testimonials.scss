@@ -3,9 +3,14 @@
 .testimonials {
   overflow: hidden;
   margin-bottom: 10rem;
+  position: relative;
   @include bp(md) {
-    margin-bottom: 18rem;
+    margin-bottom: 9rem;
+    padding-bottom: 9rem;
   }
+  // .bgArcWrapper {
+  //   display: none;
+  // }
   .section-heading {
     .title-helper {
       color: #249FB7;
