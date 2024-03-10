@@ -155,6 +155,9 @@
     "sectionTestimonial": {
       "type": "section-testimonial",
       "settings": {
+        "is_background": false,
+        "title": "About Buffet Box",
+        "subtitle": "What People Are Saying"
       }
     },
     "findPerfectGift": {

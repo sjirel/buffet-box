@@ -131,7 +131,22 @@ var testimonialsSliderBtm = new swiper_bundle__WEBPACK_IMPORTED_MODULE_0__["defa
     pauseOnMouseEnter: true
   }
 });
-console.log('here lies your code');
+var swiper = new swiper_bundle__WEBPACK_IMPORTED_MODULE_0__["default"](".thumnail-slider", {
+  spaceBetween: 10,
+  slidesPerView: 4,
+  freeMode: true,
+  watchSlidesProgress: true
+});
+var swiper2 = new swiper_bundle__WEBPACK_IMPORTED_MODULE_0__["default"](".main-slider-with-thumb", {
+  spaceBetween: 10,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev"
+  },
+  thumbs: {
+    swiper: swiper
+  }
+});
 
 /***/ }),
 

@@ -1,7 +1,35 @@
 @import './mixins/helpers';
 .product-details {
+  margin-bottom: 9rem;
   > .gradient  {
     background: radial-gradient(71.39% 71.39% at 50% 71.39%, #FFF3EA 0%, #FF9678 100%);
+    position: relative;
+    z-index: 1;
+    padding-bottom: 17rem;
+  }
+  .floating-paper-effect {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    img {
+      max-height: 10rem;
+      object-fit: cover;
+      object-position: top center;
+    }
+  }
+  .select {
+    &:after {
+      display: none;
+    }
+  }
+  .select__select {
+    height: 3.6rem;
+    border: 2px solid #DED5D2;
+    color: black;
+    font-weight: bold;
+    font-size: 1.6rem;    
   }
 }
 .product {
@@ -238,6 +266,7 @@
 .product__info-container .product__description,
 .product__info-container .icon-with-text {
   margin: 2.5rem 0;
+  font-weight: 500;
 }
 
 .product__text {

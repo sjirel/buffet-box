@@ -1,0 +1,93 @@
+{{ 'section-slider-with-thumbnail.css' | asset_url | stylesheet_tag }}
+
+<div class="outer-js-slider-with-thumb">
+    <div class="swiper main-slider-with-thumb">
+        <div class="swiper-wrapper">
+            {% for block in section.blocks %}
+                <div class="swiper-slide ">
+                    {{ block.settings.slider_image | image_url: width: 1800 | image_tag: loading: 'eager' }}
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+    <div thumbsSlider="" class="swiper thumnail-slider">
+        <div class="swiper-wrapper">
+            {% for block in section.blocks %}
+                <div class="swiper-slide">
+                    {{ block.settings.slider_image | image_url: width: 180 | image_tag: loading: 'eager' }}
+                </div>
+            {% endfor %}
+        </div>
+      </div>
+</div>
+
+{% schema %}
+{
+    "name": "Slider with thumb",
+    "tag": "section",
+    "class": "section",    
+    "settings": [
+        {
+            "type": "header",
+            "content": "t:sections.all.padding.section_padding_heading"
+        },
+        {
+            "type": "range",
+            "id": "padding_top",
+            "min": 0,
+            "max": 100,
+            "step": 4,
+            "unit": "px",
+            "label": "t:sections.all.padding.padding_top",
+            "default": 36
+        },
+        {
+            "type": "range",
+            "id": "padding_bottom",
+            "min": 0,
+            "max": 100,
+            "step": 4,
+            "unit": "px",
+            "label": "t:sections.all.padding.padding_bottom",
+            "default": 36
+        }
+    ],
+    "blocks":[
+        {
+            "type": "slide",
+            "name": "t:sections.multicolumn.blocks.column.name",
+            "settings" :[              
+                {
+                    "type": "text",
+                    "id": "heading",
+                    "default": "Slide",
+                    "info": "t:sections.main-product.blocks.collapsible_tab.settings.heading.info",
+                    "label": "t:sections.main-product.blocks.collapsible_tab.settings.heading.label"
+                },
+                {
+                    "type": "image_picker",
+                    "id": "slider_image",
+                    "label": "Slider Image"
+                }                                
+            ]
+        }
+    ],    
+    "presets": [
+            {
+                "name": "Slider with thumb",
+                "blocks": [
+                    {
+                        "type": "slide"
+                    },
+                    {
+                        "type": "slide"
+                    },
+                    {
+                        "type": "slide"
+                    }
+                ]                
+            }
+            
+        ]        
+}
+{% endschema %}

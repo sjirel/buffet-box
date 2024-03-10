@@ -3,8 +3,38 @@
 * @include bp(tablet-only) { SCSS here };
 * Default css is for mobile screens
 */
+.product-details {
+  margin-bottom: 9rem;
+}
 .product-details > .gradient {
   background: radial-gradient(71.39% 71.39% at 50% 71.39%, #FFF3EA 0%, #FF9678 100%);
+  position: relative;
+  z-index: 1;
+  padding-bottom: 17rem;
+}
+.product-details .floating-paper-effect {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+.product-details .floating-paper-effect img {
+  max-height: 10rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top center;
+     object-position: top center;
+}
+.product-details .select:after {
+  display: none;
+}
+.product-details .select__select {
+  height: 3.6rem;
+  border: 2px solid #DED5D2;
+  color: black;
+  font-weight: bold;
+  font-size: 1.6rem;
 }
 
 .product {
@@ -226,6 +256,7 @@
 .product__info-container .product__description,
 .product__info-container .icon-with-text {
   margin: 2.5rem 0;
+  font-weight: 500;
 }
 
 .product__text {

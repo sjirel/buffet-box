@@ -128,4 +128,21 @@ let testimonialsSliderBtm = new Swiper('.js-testimonials-slider-btm', {
     },
 });
 
-console.log('here lies your code');
+
+
+var swiper = new Swiper(".thumnail-slider", {
+    spaceBetween: 10,
+    slidesPerView: 4,
+    freeMode: true,
+    watchSlidesProgress: true,
+  });
+var swiper2 = new Swiper(".main-slider-with-thumb", {
+    spaceBetween: 10,
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+    thumbs: {
+        swiper: swiper,
+    },
+});
