@@ -133,7 +133,7 @@
 
   .background-none .grid--2-col-tablet .multicolumn-list__item {
     margin-top: 4rem;
-  }
+  } 
 }
 
 .background-none .multicolumn-card-spacing {
@@ -224,5 +224,10 @@
 @media screen and (min-width: 990px) {
   .multicolumn-list__item--empty {
     display: list-item;
+  }
+  .grid--3-col-desktop .multicolumn-list__item:nth-child(3n+2) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 }
