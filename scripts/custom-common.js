@@ -130,19 +130,31 @@ let testimonialsSliderBtm = new Swiper('.js-testimonials-slider-btm', {
 
 
 
-var swiper = new Swiper(".thumnail-slider", {
+var thumnailSlider = new Swiper(".thumnail-slider", {
     spaceBetween: 10,
-    slidesPerView: 4,
+    slidesPerView: 2,
+    speed: 750,
     freeMode: true,
     watchSlidesProgress: true,
-  });
-var swiper2 = new Swiper(".main-slider-with-thumb", {
+    breakpoints: {
+        750: {
+            slidesPerView: 4,
+            spaceBetween: 15,
+        },
+        990: {
+            slidesPerView: 5,
+            spaceBetween: 23,
+        }
+    },
+});
+var mainSliderWithThumb = new Swiper(".main-slider-with-thumb", {
     spaceBetween: 10,
+    speed: 750,
     navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
+        nextEl: ".outer-thumnail-slider .swiper-button-next",
+        prevEl: ".outer-thumnail-slider .swiper-button-prev",
     },
     thumbs: {
-        swiper: swiper,
+        swiper: thumnailSlider,
     },
 });

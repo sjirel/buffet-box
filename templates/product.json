@@ -108,41 +108,6 @@
         "padding_bottom": 36
       }
     },
-    "section_slider_with_thumbnails_rcAcyt": {
-      "type": "section-slider-with-thumbnails",
-      "blocks": {
-        "slide_EjjjQg": {
-          "type": "slide",
-          "settings": {
-            "heading": "Regular",
-            "slider_image": "shopify:\/\/shop_images\/img.png"
-          }
-        },
-        "slide_mgBJd6": {
-          "type": "slide",
-          "settings": {
-            "heading": "Regular",
-            "slider_image": "shopify:\/\/shop_images\/img.png"
-          }
-        },
-        "slide_QCjiAE": {
-          "type": "slide",
-          "settings": {
-            "heading": "Regular",
-            "slider_image": "shopify:\/\/shop_images\/img.png"
-          }
-        }
-      },
-      "block_order": [
-        "slide_EjjjQg",
-        "slide_mgBJd6",
-        "slide_QCjiAE"
-      ],
-      "settings": {
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
     "multicolumn": {
       "type": "multicolumn",
       "blocks": {
@@ -193,7 +158,42 @@
         "columns_mobile": "1",
         "swipe_on_mobile": false,
         "padding_top": 0,
-        "padding_bottom": 60
+        "padding_bottom": 64
+      }
+    },
+    "section_slider_with_thumbnails_rcAcyt": {
+      "type": "section-slider-with-thumbnails",
+      "blocks": {
+        "slide_EjjjQg": {
+          "type": "slide",
+          "settings": {
+            "heading": "Regular Box",
+            "slider_image": "shopify:\/\/shop_images\/regularbox.jpg"
+          }
+        },
+        "slide_mgBJd6": {
+          "type": "slide",
+          "settings": {
+            "heading": "Regular",
+            "slider_image": "shopify:\/\/shop_images\/regularbox.jpg"
+          }
+        },
+        "slide_QCjiAE": {
+          "type": "slide",
+          "settings": {
+            "heading": "Regular",
+            "slider_image": "shopify:\/\/shop_images\/regularbox.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "slide_EjjjQg",
+        "slide_mgBJd6",
+        "slide_QCjiAE"
+      ],
+      "settings": {
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     },
     "sectionTestimonial": {
@@ -226,8 +226,8 @@
   "order": [
     "main",
     "section_product_info_TgLfLV",
-    "section_slider_with_thumbnails_rcAcyt",
     "multicolumn",
+    "section_slider_with_thumbnails_rcAcyt",
     "sectionTestimonial",
     "related-products"
   ]

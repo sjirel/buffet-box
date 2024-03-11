@@ -1,25 +1,35 @@
 {{ 'section-slider-with-thumbnail.css' | asset_url | stylesheet_tag }}
 
 <div class="outer-js-slider-with-thumb">
-    <div class="swiper main-slider-with-thumb">
-        <div class="swiper-wrapper">
-            {% for block in section.blocks %}
-                <div class="swiper-slide ">
-                    {{ block.settings.slider_image | image_url: width: 1800 | image_tag: loading: 'eager' }}
-                    <span>{{block.settings.heading}}</span>
-                </div>
-            {% endfor %}
+    <div class="page-width">
+        <div class="swiper main-slider-with-thumb">
+            <div class="swiper-wrapper">
+                {% for block in section.blocks %}
+                    <div class="swiper-slide ">
+                        {{ block.settings.slider_image | image_url: width: 1800 | image_tag: loading: 'eager' }}
+                        <span class="label">{{block.settings.heading}}</span>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="outer-thumnail-slider">
+            <div thumbsSlider="" class="swiper thumnail-slider">
+                <div class="swiper-wrapper">
+                    {% for block in section.blocks %}
+                        <div class="swiper-slide">
+                            {{ block.settings.slider_image | image_url: width: 180 | image_tag: loading: 'eager' }}
+                        </div>
+                    {% endfor %}
+                </div>                
+            </div>
+            <button class="swiper-button-prev">
+                {% render 'icon-arrow-left' %}
+            </button>
+            <button class="swiper-button-next">
+                {% render 'icon-arrow-right' %}
+            </button>
         </div>
     </div>
-    <div thumbsSlider="" class="swiper thumnail-slider">
-        <div class="swiper-wrapper">
-            {% for block in section.blocks %}
-                <div class="swiper-slide">
-                    {{ block.settings.slider_image | image_url: width: 180 | image_tag: loading: 'eager' }}
-                </div>
-            {% endfor %}
-        </div>
-      </div>
 </div>
 
 {% schema %}
