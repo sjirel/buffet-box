@@ -131,19 +131,29 @@ var testimonialsSliderBtm = new swiper_bundle__WEBPACK_IMPORTED_MODULE_0__["defa
     pauseOnMouseEnter: true
   }
 });
-var swiper = new swiper_bundle__WEBPACK_IMPORTED_MODULE_0__["default"](".thumnail-slider", {
-  spaceBetween: 23,
-  slidesPerView: 5,
+var thumnailSlider = new swiper_bundle__WEBPACK_IMPORTED_MODULE_0__["default"](".thumnail-slider", {
+  spaceBetween: 10,
+  slidesPerView: 2,
   speed: 750,
   freeMode: true,
-  watchSlidesProgress: true
+  watchSlidesProgress: true,
+  breakpoints: {
+    750: {
+      slidesPerView: 4,
+      spaceBetween: 15
+    },
+    990: {
+      slidesPerView: 5,
+      spaceBetween: 23
+    }
+  }
 });
-var swiper2 = new swiper_bundle__WEBPACK_IMPORTED_MODULE_0__["default"](".main-slider-with-thumb", {
+var mainSliderWithThumb = new swiper_bundle__WEBPACK_IMPORTED_MODULE_0__["default"](".main-slider-with-thumb", {
   spaceBetween: 10,
   speed: 750,
   navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev"
+    nextEl: ".outer-thumnail-slider .swiper-button-next",
+    prevEl: ".outer-thumnail-slider .swiper-button-prev"
   },
   thumbs: {
     swiper: swiper

@@ -74,7 +74,7 @@
 
 .multicolumn-list h3,
 .multicolumn-list p {
-  margin: 0 0 2.2rem;
+  margin: 0 0 1rem;
 }
 
 .multicolumn-card-spacing {
@@ -84,7 +84,7 @@
 }
 
 .multicolumn-card__info > :nth-child(2) {
-  margin-top: 2.5rem;
+  margin-top: 1rem;
 }
 
 .multicolumn-list__item.center .media--adapt,
@@ -101,6 +101,7 @@
   .multicolumn-list {
     margin: 0;
     width: 100%;
+    text-align: center;
   }
   .multicolumn-list:not(.slider) {
     padding-left: 1.5rem;
@@ -121,6 +122,13 @@
   .multicolumn-list__item,
   .grid--4-col-desktop .multicolumn-list__item {
     padding-bottom: 0;
+  }
+  .multicolumn-list h3,
+  .multicolumn-list p {
+    margin: 0 0 2.5rem;
+  }
+  .multicolumn-card__info > :nth-child(2) {
+    margin-top: 2.5rem;
   }
   .background-none .grid--2-col-tablet .multicolumn-list__item {
     margin-top: 4rem;

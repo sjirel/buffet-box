@@ -4,7 +4,12 @@
 * Default css is for mobile screens
 */
 .product-details {
-  margin-bottom: 9rem;
+  margin-bottom: 6rem;
+}
+@media (min-width: 768px) {
+  .product-details {
+    margin-bottom: 9rem;
+  }
 }
 .product-details > .gradient {
   background: radial-gradient(71.39% 71.39% at 50% 71.39%, #FFF3EA 0%, #FF9678 100%);

@@ -1,26 +1,26 @@
 @import './mixins/helpers';
 
 .outer-js-slider-with-thumb {
-    margin-bottom: 18rem;
+    margin-bottom: 10rem;
 }
 .main-slider-with-thumb {
     margin-bottom: 1.5rem;
-    border-radius: 10rem;
+    border-radius: 5rem;
     .swiper-slide {
         position: relative;
         img {
-            border-radius: 10rem;
+            border-radius: 5rem;
         }
         .label {
             position: absolute;
-            top: 5rem;
-            left: 5rem;
-            font-size: 1.8rem;
+            top: 2rem;
+            left: 2rem;
+            font-size: 1.6rem;
             font-weight: bold;
             line-height: 1;
             color: black;
             background-color: white;
-            padding: .6rem 3rem 1rem;
+            padding: .6rem 2rem 1rem;
             border-radius: 10rem;
             display: inline-block;
         }
@@ -28,7 +28,10 @@
 }
 .outer-thumnail-slider {
     position: relative;
-    padding: 0 8.3rem;
+    padding: 0 6rem;
+    @media screen and (min-width: 750px) { 
+        padding: 0 8.3rem;
+    }
     .swiper-button-prev {
         left: 0;
     }
@@ -39,12 +42,11 @@
 .thumnail-slider {
     padding: 0.5rem 0;
     .swiper-slide {
-        border-radius: 2.5rem;
+        border-radius: 1.5rem;
         background-color: black;
         cursor: pointer;
         overflow: hidden;
         img {
-            border-radius: 2rem;
             opacity: 0.5;
         }
         &.swiper-slide-thumb-active {
@@ -54,4 +56,30 @@
             }
         }
     }   
+}
+
+@media screen and (min-width: 750px) {  
+    .outer-js-slider-with-thumb {
+        margin-bottom: 18rem;
+    }
+    .main-slider-with-thumb {
+        border-radius: 10rem;
+        .swiper-slide {
+            position: relative;
+            img {
+                border-radius: 10rem;
+            }
+            .label {
+                top: 5rem;
+                left: 5rem;
+                font-size: 1.8rem;
+                padding: .6rem 3rem 1rem;
+            }
+        }
+    }
+    .thumnail-slider {
+        .swiper-slide {
+            border-radius: 2.5rem;
+        }   
+    }
 }
