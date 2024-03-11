@@ -1,0 +1,63 @@
+/*
+* Mixin for easy media queries
+* @include bp(tablet-only) { SCSS here };
+* Default css is for mobile screens
+*/
+.outer-js-slider-with-thumb {
+  margin-bottom: 18rem;
+}
+
+.main-slider-with-thumb {
+  margin-bottom: 1.5rem;
+  border-radius: 10rem;
+}
+.main-slider-with-thumb .swiper-slide {
+  position: relative;
+}
+.main-slider-with-thumb .swiper-slide img {
+  border-radius: 10rem;
+}
+.main-slider-with-thumb .swiper-slide .label {
+  position: absolute;
+  top: 5rem;
+  left: 5rem;
+  font-size: 1.8rem;
+  font-weight: bold;
+  line-height: 1;
+  color: black;
+  background-color: white;
+  padding: 0.6rem 3rem 1rem;
+  border-radius: 10rem;
+  display: inline-block;
+}
+
+.outer-thumnail-slider {
+  position: relative;
+  padding: 0 8.3rem;
+}
+.outer-thumnail-slider .swiper-button-prev {
+  left: 0;
+}
+.outer-thumnail-slider .swiper-button-next {
+  right: 0;
+}
+
+.thumnail-slider {
+  padding: 0.5rem 0;
+}
+.thumnail-slider .swiper-slide {
+  border-radius: 2.5rem;
+  background-color: black;
+  cursor: pointer;
+  overflow: hidden;
+}
+.thumnail-slider .swiper-slide img {
+  border-radius: 2rem;
+  opacity: 0.5;
+}
+.thumnail-slider .swiper-slide.swiper-slide-thumb-active {
+  border: 0.3rem solid #ED4C66;
+}
+.thumnail-slider .swiper-slide.swiper-slide-thumb-active img {
+  opacity: 1;
+}

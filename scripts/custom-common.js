@@ -131,13 +131,15 @@ let testimonialsSliderBtm = new Swiper('.js-testimonials-slider-btm', {
 
 
 var swiper = new Swiper(".thumnail-slider", {
-    spaceBetween: 10,
-    slidesPerView: 4,
+    spaceBetween: 23,
+    slidesPerView: 5,
+    speed: 750,
     freeMode: true,
     watchSlidesProgress: true,
   });
 var swiper2 = new Swiper(".main-slider-with-thumb", {
     spaceBetween: 10,
+    speed: 750,
     navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
