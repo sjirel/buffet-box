@@ -156,7 +156,7 @@ var mainSliderWithThumb = new swiper_bundle__WEBPACK_IMPORTED_MODULE_0__["defaul
     prevEl: ".outer-thumnail-slider .swiper-button-prev"
   },
   thumbs: {
-    swiper: swiper
+    swiper: thumnailSlider
   }
 });
 

@@ -155,6 +155,6 @@ var mainSliderWithThumb = new Swiper(".main-slider-with-thumb", {
         prevEl: ".outer-thumnail-slider .swiper-button-prev",
     },
     thumbs: {
-        swiper: swiper,
+        swiper: thumnailSlider,
     },
 });
