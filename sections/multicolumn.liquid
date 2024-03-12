@@ -120,7 +120,7 @@
               {%- endif -%}
               <div class="multicolumn-card__info">
                 {%- if block.settings.title != blank -%}
-                  <h3 class="inline-richtext">{{ block.settings.title }}</h3>
+                <h3 class="inline-richtext">{% if section.settings.ordered_list %}<span class="order-value">{{forloop.index}}</span>{% endif %}{{ block.settings.title }}</h3>
                 {%- endif -%}
                 {%- if block.settings.text != blank -%}
                   <div class="rte">{{ block.settings.text }}</div>
@@ -322,6 +322,12 @@
       "id": "button_link",
       "label": "t:sections.multicolumn.settings.button_link.label"
     },
+    {
+      "type": "checkbox",
+      "id": "ordered_list",
+      "default": false,
+      "label": "Show list in numbers"
+    },    
     {
       "type": "color_scheme",
       "id": "color_scheme",
