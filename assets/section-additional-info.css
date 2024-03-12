@@ -8,6 +8,11 @@
 }
 .product-additional__info .grid__item {
   display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.product-additional__info .grid__item .box {
+  display: flex;
   align-items: center;
 }
 .product-additional__info .grid__item .icon {
@@ -26,6 +31,9 @@
   font-weight: bold;
   color: #1F1F1F;
   margin-bottom: 0.2rem;
+}
+.product-additional__info .grid__item h3.accordion__title {
+  max-width: initial;
 }
 .product-additional__info .grid__item .caption {
   text-transform: capitalize;

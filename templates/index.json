@@ -112,6 +112,22 @@
             "image": "shopify:\/\/shop_images\/loved.png",
             "title": "Love"
           }
+        },
+        "card_a9EAhx": {
+          "type": "card",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/icon-gift.png",
+            "image": "shopify:\/\/shop_images\/gift_and_more.png",
+            "title": "Gifts & More"
+          }
+        },
+        "card_6LPGaU": {
+          "type": "card",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/icon-employee.png",
+            "image": "shopify:\/\/shop_images\/employee.png",
+            "title": "Employee"
+          }
         }
       },
       "block_order": [
@@ -121,7 +137,9 @@
         "card_cDwni3",
         "card_zH4Wqh",
         "card_yYqknf",
-        "card_QMeDam"
+        "card_QMeDam",
+        "card_a9EAhx",
+        "card_6LPGaU"
       ],
       "settings": {
         "title": "Shop By <br> Occasion",

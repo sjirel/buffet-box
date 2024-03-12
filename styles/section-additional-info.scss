@@ -4,7 +4,12 @@
     margin-bottom: 4rem;
     .grid__item {
         display: flex;
-        align-items: center;        
+        flex-direction: column;
+        align-items: center;   
+        .box {
+            display: flex;
+            align-items: center;     
+        }
         .icon {
             background: white;
             color: $color-red;
@@ -21,6 +26,9 @@
             font-weight: bold;
             color: $color-black;
             margin-bottom: 0.2rem;
+            &.accordion__title {
+                max-width: initial;
+            }
         }
         .caption {
             text-transform: capitalize;
