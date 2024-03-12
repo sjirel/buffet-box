@@ -36,6 +36,26 @@
     border-radius: 10rem;
   }
 }
+.product__info-wrapper {
+  .online-exclusive {
+    color: $color-red;
+    background-color: $color-white;
+    font-size: 1.1rem;
+    line-height: 1;
+    font-weight: bold;
+    padding: 0.8rem 1.8rem;
+    border-radius: 10rem;
+    display: inline-block;
+    margin: 0 0 1.5rem;
+    text-transform: uppercase;
+  }
+  .guaranteed-satisfaction {
+    text-align: center;
+    font-weight: 600;
+    font-size: 1.4rem;
+    margin-top: -1.5rem;
+  }
+}
 .product {
   margin: 0;
 }

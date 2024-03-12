@@ -82,7 +82,9 @@
         class="product__info-container{% if section.settings.enable_sticky_info %} product__column-sticky{% endif %}"
       >
         {% if product.metafields.custom.online_exclusive  %}  
-          <h5 class="h5 online-exclusive"> online exclusive</h5>
+          <div class="online-exclusive-wrapper">
+            <h5 class="h5 online-exclusive"> online exclusive</h5>
+          </div>
         {% endif %}
         {%- assign product_form_id = 'product-form-' | append: section.id -%}
 
