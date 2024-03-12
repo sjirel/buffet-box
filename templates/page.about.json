@@ -1,0 +1,78 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "multicolumn_4X9ptp": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_Hzzk3E": {
+          "type": "column",
+          "settings": {
+            "title": "Diverse Selection",
+            "text": "<p>Explore a world of flavor with our diverse selection of Buffet Boxes. From the classic allure of donuts to the crispy goodness of churros, the creamy indulgence of ice cream, and more – each box is a treasure trove of taste sensations.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_c6pJMf": {
+          "type": "column",
+          "settings": {
+            "title": "Quality Ingredients",
+            "text": "<p>We source the finest ingredients to create our treats, ensuring that every bite is a moment of bliss. Our commitment to quality extends to the materials used in our card boxes, making them not only delicious but also eco-friendly.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_Q93jyB": {
+          "type": "column",
+          "settings": {
+            "title": "Convenience Redefined",
+            "text": "<p>Embrace the simplicity of Buffet Box. No need for elaborate setups or lengthy preparations – just open the box, and the feast begins. It's the perfect solution for those who crave premium treats without the fuss.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_UbNxek": {
+          "type": "column",
+          "settings": {
+            "title": "Perfect for Every Occasion",
+            "text": "<p>Whether it's a birthday, a workplace celebration, or a cozy night in, Buffet Box adds a touch of sweetness to every moment. Our thoughtfully curated selections cater to a variety of tastes, ensuring there's a perfect box for every palate.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_Hzzk3E",
+        "column_c6pJMf",
+        "column_Q93jyB",
+        "column_UbNxek"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h2",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 2,
+        "column_alignment": "left",
+        "background_style": "none",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "main",
+    "multicolumn_4X9ptp"
+  ]
+}

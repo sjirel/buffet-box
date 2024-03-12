@@ -81,6 +81,9 @@
         data-url="{{ product.url }}"
         class="product__info-container{% if section.settings.enable_sticky_info %} product__column-sticky{% endif %}"
       >
+        {% if product.metafields.custom.online_exclusive  %}  
+          <h5 class="h5 online-exclusive"> online exclusive</h5>
+        {% endif %}
         {%- assign product_form_id = 'product-form-' | append: section.id -%}
 
         {%- for block in section.blocks -%}
@@ -417,6 +420,9 @@
               {% render 'product-variant-picker', product: product, block: block, product_form_id: product_form_id %}
             {%- when 'buy_buttons' -%}
               {%- render 'buy-buttons', block: block, product: product, product_form_id: product_form_id, section_id: section.id, show_pickup_availability: true -%}
+              <div class="guaranteed-satisfaction">
+                {% render 'icon-satisfaction' %} <span>satisfaction Guaranteed</span>
+              </div>
             {%- when 'rating' -%}
               {%- if product.metafields.reviews.rating.value != blank -%}
                 {% liquid
