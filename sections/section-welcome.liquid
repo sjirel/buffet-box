@@ -13,10 +13,7 @@
     }
 {%- endstyle -%}
 
-<div class="section-welcome">
-    <div class="floating-bg-image">
-        {{ section.settings.small_image | image_url: width: 1000 | image_tag }}
-    </div>
+<div class="section-welcome section-{{ section.id }}-padding">
     <div class="page-width">
         <div class="inner-page-width">
             <div class="section-heading">

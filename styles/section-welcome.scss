@@ -3,11 +3,6 @@
 .section-welcome {
     position: relative;
     z-index: 1;
-    padding-top: 6rem;
-    margin-bottom: 18rem;
-    @include bp(md) {
-        margin-bottom: 33.5rem;
-    }
     .inner-page-width {
         @include bp(lg) {
             max-width: 96.2rem;
@@ -15,13 +10,13 @@
             margin-right: auto;
         }
     }
-    .floating-bg-image {
-        position: absolute;
-        left: 0;
-        right: 0;
-        top: 0;
-        z-index: -1;
-    }   
+    // .floating-bg-image {
+    //     position: absolute;
+    //     left: 0;
+    //     right: 0;
+    //     top: 0;
+    //     z-index: -1;
+    // }   
     .image-section {
         position: relative;
         .large-image {

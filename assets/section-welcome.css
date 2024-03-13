@@ -6,13 +6,6 @@
 .section-welcome {
   position: relative;
   z-index: 1;
-  padding-top: 6rem;
-  margin-bottom: 18rem;
-}
-@media (min-width: 768px) {
-  .section-welcome {
-    margin-bottom: 33.5rem;
-  }
 }
 @media (min-width: 992px) {
   .section-welcome .inner-page-width {
@@ -20,13 +13,6 @@
     margin-left: auto;
     margin-right: auto;
   }
-}
-.section-welcome .floating-bg-image {
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  z-index: -1;
 }
 .section-welcome .image-section {
   position: relative;
