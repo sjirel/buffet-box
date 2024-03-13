@@ -16,29 +16,17 @@
             "text": "Share the love with friends and family, and your special someone this Valentine’s Day.",
             "text_style": "body"
           }
-        },
-        "buttons_i7qzp8": {
-          "type": "buttons",
-          "settings": {
-            "button_label_1": "",
-            "button_link_1": "",
-            "button_style_secondary_1": false,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
-          }
         }
       },
       "block_order": [
         "heading_DpTaaz",
-        "text_dKz9LA",
-        "buttons_i7qzp8"
+        "text_dKz9LA"
       ],
       "settings": {
         "image": "{{ collection.image }}",
         "image_overlay_opacity": 0,
         "image_height": "large",
-        "desktop_content_position": "middle-left",
+        "desktop_content_position": "middle-center",
         "show_text_box": true,
         "desktop_content_alignment": "left",
         "color_scheme": "",
