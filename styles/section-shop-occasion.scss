@@ -1,10 +1,6 @@
 @import './mixins/helpers';
 
 .section-shop-occasion {
-  margin-bottom: 8rem;
-  @include bp(md) {
-    margin-bottom: 16rem;
-  }
   .swiper-creative {
     .swiper-wrapper {
       padding-bottom: 7.8rem;

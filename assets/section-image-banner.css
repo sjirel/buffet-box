@@ -104,6 +104,11 @@
     flex-direction: column;
   }
 }
+.page-about .banner .media {
+  background-color: transparent;
+  background: linear-gradient(180deg, #F0E9D7 0%, rgba(240, 233, 215, 0) 46.24%);
+}
+
 .banner__media {
   height: 100%;
   position: absolute;
@@ -120,6 +125,10 @@
   top: 0;
   width: 100%;
   background: linear-gradient(74.39deg, #B62940 12.89%, rgba(237, 76, 102, 0) 51.65%);
+  display: none !important;
+}
+.banner--with-gradient .banner__media:before {
+  display: block !important;
 }
 
 .banner__media-half {
@@ -272,7 +281,6 @@
   height: -moz-fit-content;
   height: fit-content;
   align-items: center;
-  text-align: initial;
   width: 100%;
   word-wrap: break-word;
   z-index: 1;
@@ -339,8 +347,21 @@
     max-width: 44.5rem;
   }
 }
+.subtitle {
+  font-size: 2rem;
+  line-height: 1;
+  margin-bottom: 2rem;
+}
+@media screen and (min-width: 750px) {
+  .subtitle {
+    font-size: 3.2rem;
+  }
+}
+
 .banner__heading {
   margin-bottom: 0;
+}
+.template-collection .banner__heading {
   color: #fff;
 }
 

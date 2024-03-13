@@ -3,14 +3,6 @@
 * @include bp(tablet-only) { SCSS here };
 * Default css is for mobile screens
 */
-.section-shop-occasion {
-  margin-bottom: 8rem;
-}
-@media (min-width: 768px) {
-  .section-shop-occasion {
-    margin-bottom: 16rem;
-  }
-}
 .section-shop-occasion .swiper-creative .swiper-wrapper {
   padding-bottom: 7.8rem;
 }
