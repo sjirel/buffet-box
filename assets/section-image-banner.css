@@ -1,10 +1,20 @@
+/*
+* Mixin for easy media queries
+* @include bp(tablet-only) { SCSS here };
+* Default css is for mobile screens
+*/
 .banner {
   display: flex;
   position: relative;
   flex-direction: column;
   z-index: auto;
   isolation: isolate;
-  min-height: 62rem;
+  min-height: 60rem;
+}
+
+.page-about .media > *:not(.zoom):not(.deferred-media__poster-button), .page-about .media model-viewer {
+  top: 6.5rem;
+  height: calc(100% - 6.5rem);
 }
 
 .banner__box {
@@ -347,19 +357,25 @@
     max-width: 44.5rem;
   }
 }
-.subtitle {
+.banner .subtitle {
   font-size: 2rem;
   line-height: 1;
   margin-bottom: 2rem;
+  color: #ED4C66;
+  text-transform: uppercase;
+  font-weight: normal;
 }
 @media screen and (min-width: 750px) {
-  .subtitle {
+  .banner .subtitle {
     font-size: 3.2rem;
   }
 }
 
 .banner__heading {
   margin-bottom: 0;
+}
+.page-about .banner__heading {
+  max-width: 35rem;
 }
 .template-collection .banner__heading {
   color: #fff;

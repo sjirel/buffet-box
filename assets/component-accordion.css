@@ -2,7 +2,12 @@
   display: flex;
   position: relative;
   line-height: 1;
-  padding: 3rem 3rem 2rem;
+  padding: 2.5rem 3rem 2.5rem 2rem;
+}
+@media screen and (min-width: 750px) {
+  .accordion summary {
+    padding: 3rem 3rem 2rem;
+  }
 }
 
 .accordion .summary__title {
@@ -30,7 +35,12 @@
   margin: 0;
   word-break: break-word;
   color: rgb(var(--color-foreground));
-  font-size: 2rem;
+  font-size: 1.8rem;
+}
+@media screen and (min-width: 750px) {
+  .accordion__title {
+    font-size: 2rem;
+  }
 }
 
 .accordion .icon-accordion {

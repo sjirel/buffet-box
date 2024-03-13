@@ -1,3 +1,4 @@
+@import "./mixins/helpers";
 .banner {
   display: flex;
   position: relative;
@@ -6,7 +7,12 @@
   isolation: isolate;
   min-height: 60rem;
 }
-
+.media>*:not(.zoom):not(.deferred-media__poster-button), .media model-viewer {
+  .page-about & {
+    top: 6.5rem;
+    height: calc(100% - 6.5rem);
+  }
+}
 .banner__box {
   text-align: center;
   color: #fff;
@@ -410,6 +416,9 @@
 }
 .banner__heading {
   margin-bottom: 0;  
+  .page-about & {
+    max-width: 35rem;
+  }
   .template-collection & {
     color: #fff;
   }

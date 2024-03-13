@@ -7,8 +7,13 @@
   --ratio-percent: 56.25%;
   position: relative;
   padding-bottom: calc(var(--ratio-percent) - var(--media-border-width));
-  border-radius: 10rem;
+  border-radius: 5rem;
   overflow: hidden !important;
+}
+@media only screen and (min-width: 750px) {
+  .video-section__media {
+    border-radius: 10rem;
+  }
 }
 .video-section__media:before {
   content: "";
