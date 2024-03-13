@@ -20,6 +20,7 @@
     "/assets/section-main-product.css": "/assets/section-main-product.css",
     "/assets/section-main-page.css": "/assets/section-main-page.css",
     "/assets/section-main-blog.css": "/assets/section-main-blog.css",
+    "/assets/section-image-banner.css": "/assets/section-image-banner.css",
     "/assets/section-footer.css": "/assets/section-footer.css",
     "/assets/section-find-perfect-gift.css": "/assets/section-find-perfect-gift.css",
     "/assets/section-featured-product.css": "/assets/section-featured-product.css",
@@ -74,6 +75,5 @@
     "/assets/component-cart-notification.css": "/assets/component-cart-notification.css",
     "/assets/component-cart-items.css": "/assets/component-cart-items.css",
     "/assets/component-cart-drawer.css": "/assets/component-cart-drawer.css",
-    "/assets/component-card.css": "/assets/component-card.css",
-    "/assets/section-image-banner.css": "/assets/section-image-banner.css"
+    "/assets/component-card.css": "/assets/component-card.css"
 }

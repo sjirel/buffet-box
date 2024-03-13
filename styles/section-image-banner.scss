@@ -6,11 +6,9 @@
   z-index: auto;
   isolation: isolate;
   min-height: 60rem;
-}
-.media>*:not(.zoom):not(.deferred-media__poster-button), .media model-viewer {
   .page-about & {
-    top: 6.5rem;
-    height: calc(100% - 6.5rem);
+    background: linear-gradient(180deg, #f0e9d7, #f0e9d700 46.24%);
+    padding-top: 6rem;
   }
 }
 .banner__box {
@@ -137,6 +135,10 @@
   left: 0;
   top: 0;
   width: 100%;
+  .page-about & {
+    height: calc(100% - 6rem);
+    top: 6rem;
+  }
   &:before {
     z-index: 1;
     content: "";
@@ -417,7 +419,11 @@
 .banner__heading {
   margin-bottom: 0;  
   .page-about & {
-    max-width: 35rem;
+    max-width: 20rem;
+    margin: 0 auto;
+    @media screen and (min-width: 750px) { 
+      max-width: 35rem;
+    }
   }
   .template-collection & {
     color: #fff;
