@@ -1,14 +1,31 @@
+/*
+* Mixin for easy media queries
+* @include bp(tablet-only) { SCSS here };
+* Default css is for mobile screens
+*/
+.main-page-intro-section {
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
 .page-title {
   margin-top: 0;
 }
 
 .main-page-title {
-  margin-bottom: 3rem;
+  font-size: 2rem;
 }
 
 @media screen and (min-width: 750px) {
+  .main-page-intro-section {
+    font-size: 1.8rem;
+  }
   .main-page-title {
-    margin-bottom: 4rem;
+    margin-bottom: 2.5rem;
+    font-size: 2.4rem;
+    color: #1F1F1F;
   }
 }
 .page-placeholder-wrapper {

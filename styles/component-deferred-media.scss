@@ -67,15 +67,17 @@
 }
 
 .deferred-media__poster-button {
-  background-color: rgb(var(--color-background));
-  border: 0.1rem solid rgba(var(--color-foreground), 0.1);
+  // background-color: rgb(var(--color-background));
+  background: linear-gradient(42.53deg, #FF5D3B 17.88%, #FFB9A3 83.32%);
+  // border: 0.1rem solid rgba(var(--color-foreground), 0.1);
   border-radius: 50%;
-  color: rgb(var(--color-foreground));
+  // color: rgb(var(--color-foreground));
+  color: white;
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 6.2rem;
-  width: 6.2rem;
+  height: 8rem;
+  width: 8rem;
   position: absolute;
   left: 50%;
   top: 50%;

@@ -1,3 +1,4 @@
+@import './mixins/helpers';
 .multicolumn .title {
   margin: 0;
 }
@@ -52,7 +53,23 @@
   margin-bottom: 0;
   padding: 0;
 }
-
+.multicolumn-list { 
+  .order-value {
+    height: 4.8rem;
+    width: 4.8rem;
+    border-radius: 50%;
+    background-color: $color-white;
+    color: $color-red;
+    font-size: 2rem;
+    line-height: 1;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0.5rem 5rem rgba(75, 29, 10, 0.25);
+    margin-right: 2rem;
+  }
+}
 .multicolumn-list__item:only-child {
   max-width: 72rem;
 }
