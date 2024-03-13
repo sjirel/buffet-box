@@ -53,9 +53,7 @@
         "large_image": "shopify:\/\/shop_images\/welcome-large_1e271964-9d5f-4b8e-ac90-bf9c225c4461.png",
         "small_image": "shopify:\/\/shop_images\/welcome.png",
         "padding_top": 56,
-        "padding_bottom": 200,
-        "padding_top_mobile": 80,
-        "padding_bottom_mobile": 110
+        "padding_bottom": 200
       }
     },
     "rich_text": {
@@ -147,11 +145,7 @@
       ],
       "settings": {
         "title": "Shop By <br> Occasion",
-        "show_arrow": false,
-        "padding_top": 150,
-        "padding_bottom": 160,
-        "padding_top_mobile": 0,
-        "padding_bottom_mobile": 80
+        "show_arrow": false
       }
     },
     "featured_collection": {
