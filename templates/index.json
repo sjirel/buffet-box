@@ -88,7 +88,7 @@
         "card_RWdUty": {
           "type": "card",
           "settings": {
-            "icon": "shopify:\/\/shop_images\/loved_ones_card-ico.svg",
+            "icon": "shopify:\/\/shop_images\/loved_ones_ico.svg",
             "image": "shopify:\/\/shop_images\/loved_ones_card-image.jpg",
             "title": "Loved Ones"
           }
