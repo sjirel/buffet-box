@@ -14,14 +14,15 @@
     </div>
     <div class="swiper js-testimonials-slider-top">
         <div class="swiper-wrapper">
+            {% for testimonial in shop.metaobjects.testimonials.values %}
             <div class="swiper-slide">
                 <div class="elems-top">
                     <div class="thumb-img">
-                        <img src="{{ 'sparkle.gif' | asset_url }}" alt="">
+                        {{ testimonial.image | image_url: width: 60 | image_tag }}
                     </div>
                     <div class="elems-top__right">
-                        <div class="name">Cath P.</div>
-                        <div class="address">New York City, New York</div>
+                        <div class="name">{{ testimonial.name }}</div>
+                        <div class="address">{{ testimonial.location }}</div>
                     </div>
                 </div>
                 <div class="elems-btm">
@@ -29,223 +30,78 @@
                         <div class="floating-quote">
                             {%- render 'icon-quote' -%}
                         </div>
-                        Just discovered this site online. Fantastic flavors, charming packaging, and quick delivery. My new sweet haven!
+                        {{ testimonial.content | metafield_tag }}
                     </blockquote>
                 </div>
             </div>
-            <div class="swiper-slide">
-                <div class="elems-top">
-                    <div class="thumb-img">
-                        <img src="{{ 'sparkle.gif' | asset_url }}" alt="">
-                    </div>
-                    <div class="elems-top__right">
-                        <div class="name">Cath P.</div>
-                        <div class="address">New York City, New York</div>
-                    </div>
-                </div>
-                <div class="elems-btm">
-                    <blockquote>
-                        <div class="floating-quote">
-                            {%- render 'icon-quote' -%}
+            {% endfor %}
+            {% for testimonial in shop.metaobjects.testimonials.values %}
+                <div class="swiper-slide">
+                    <div class="elems-top">
+                        <div class="thumb-img">
+                            {{ testimonial.image | image_url: width: 60 | image_tag }}
                         </div>
-                        Just discovered this site online. Fantastic flavors, charming packaging, and quick delivery. My new sweet haven!
-                    </blockquote>
-                </div>
-            </div>
-            <div class="swiper-slide">
-                <div class="elems-top">
-                    <div class="thumb-img">
-                        <img src="{{ 'sparkle.gif' | asset_url }}" alt="">
-                    </div>
-                    <div class="elems-top__right">
-                        <div class="name">Cath P.</div>
-                        <div class="address">New York City, New York</div>
-                    </div>
-                </div>
-                <div class="elems-btm">
-                    <blockquote>
-                        <div class="floating-quote">
-                            {%- render 'icon-quote' -%}
+                        <div class="elems-top__right">
+                            <div class="name">{{ testimonial.name }}</div>
+                            <div class="address">{{ testimonial.location }}</div>
                         </div>
-                        Just discovered this site online. Fantastic flavors, charming packaging, and quick delivery. My new sweet haven!
-                    </blockquote>
-                </div>
-            </div>
-            <div class="swiper-slide">
-                <div class="elems-top">
-                    <div class="thumb-img">
-                        <img src="{{ 'sparkle.gif' | asset_url }}" alt="">
                     </div>
-                    <div class="elems-top__right">
-                        <div class="name">Cath P.</div>
-                        <div class="address">New York City, New York</div>
+                    <div class="elems-btm">
+                        <blockquote>
+                            <div class="floating-quote">
+                                {%- render 'icon-quote' -%}
+                            </div>
+                            {{ testimonial.content | metafield_tag }}
+                        </blockquote>
                     </div>
                 </div>
-                <div class="elems-btm">
-                    <blockquote>
-                        <div class="floating-quote">
-                            {%- render 'icon-quote' -%}
-                        </div>
-                        Just discovered this site online. Fantastic flavors, charming packaging, and quick delivery. My new sweet haven!
-                    </blockquote>
-                </div>
-            </div>
-            <div class="swiper-slide">
-                <div class="elems-top">
-                    <div class="thumb-img">
-                        <img src="{{ 'sparkle.gif' | asset_url }}" alt="">
-                    </div>
-                    <div class="elems-top__right">
-                        <div class="name">Cath P.</div>
-                        <div class="address">New York City, New York</div>
-                    </div>
-                </div>
-                <div class="elems-btm">
-                    <blockquote>
-                        <div class="floating-quote">
-                            {%- render 'icon-quote' -%}
-                        </div>
-                        Just discovered this site online. Fantastic flavors, charming packaging, and quick delivery. My new sweet haven!
-                    </blockquote>
-                </div>
-            </div>
-            <div class="swiper-slide">
-                <div class="elems-top">
-                    <div class="thumb-img">
-                        <img src="{{ 'sparkle.gif' | asset_url }}" alt="">
-                    </div>
-                    <div class="elems-top__right">
-                        <div class="name">Cath P.</div>
-                        <div class="address">New York City, New York</div>
-                    </div>
-                </div>
-                <div class="elems-btm">
-                    <blockquote>
-                        <div class="floating-quote">
-                            {%- render 'icon-quote' -%}
-                        </div>
-                        Just discovered this site online. Fantastic flavors, charming packaging, and quick delivery. My new sweet haven!
-                    </blockquote>
-                </div>
-            </div>
+            {% endfor %}
         </div>
     </div>
     <div class="swiper js-testimonials-slider-btm">
         <div class="swiper-wrapper">
-            <div class="swiper-slide">
-                <div class="elems-top">
-                    <div class="thumb-img">
-                        <img src="{{ 'sparkle.gif' | asset_url }}" alt="">
-                    </div>
-                    <div class="elems-top__right">
-                        <div class="name">Cath P.</div>
-                        <div class="address">New York City, New York</div>
-                    </div>
-                </div>
-                <div class="elems-btm">
-                    <blockquote>
-                        <div class="floating-quote">
-                            {%- render 'icon-quote' -%}
+            {% for testimonial in shop.metaobjects.testimonials.values %}
+                <div class="swiper-slide">
+                    <div class="elems-top">
+                        <div class="thumb-img">
+                            {{ testimonial.image | image_url: width: 60 | image_tag }}
                         </div>
-                        Just discovered this site online. Fantastic flavors, charming packaging, and quick delivery. My new sweet haven!
-                    </blockquote>
-                </div>
-            </div>
-            <div class="swiper-slide">
-                <div class="elems-top">
-                    <div class="thumb-img">
-                        <img src="{{ 'sparkle.gif' | asset_url }}" alt="">
-                    </div>
-                    <div class="elems-top__right">
-                        <div class="name">Cath P.</div>
-                        <div class="address">New York City, New York</div>
-                    </div>
-                </div>
-                <div class="elems-btm">
-                    <blockquote>
-                        <div class="floating-quote">
-                            {%- render 'icon-quote' -%}
+                        <div class="elems-top__right">
+                            <div class="name">{{ testimonial.name }}</div>
+                            <div class="address">{{ testimonial.location }}</div>
                         </div>
-                        Just discovered this site online. Fantastic flavors, charming packaging, and quick delivery. My new sweet haven!
-                    </blockquote>
-                </div>
-            </div>
-            <div class="swiper-slide">
-                <div class="elems-top">
-                    <div class="thumb-img">
-                        <img src="{{ 'sparkle.gif' | asset_url }}" alt="">
                     </div>
-                    <div class="elems-top__right">
-                        <div class="name">Cath P.</div>
-                        <div class="address">New York City, New York</div>
+                    <div class="elems-btm">
+                        <blockquote>
+                            <div class="floating-quote">
+                                {%- render 'icon-quote' -%}
+                            </div>
+                            {{ testimonial.content | metafield_tag }}
+                        </blockquote>
                     </div>
                 </div>
-                <div class="elems-btm">
-                    <blockquote>
-                        <div class="floating-quote">
-                            {%- render 'icon-quote' -%}
+                {% endfor %}
+                {% for testimonial in shop.metaobjects.testimonials.values %}
+                    <div class="swiper-slide">
+                        <div class="elems-top">
+                            <div class="thumb-img">
+                                {{ testimonial.image | image_url: width: 60 | image_tag }}
+                            </div>
+                            <div class="elems-top__right">
+                                <div class="name">{{ testimonial.name }}</div>
+                                <div class="address">{{ testimonial.location }}</div>
+                            </div>
                         </div>
-                        Just discovered this site online. Fantastic flavors, charming packaging, and quick delivery. My new sweet haven!
-                    </blockquote>
-                </div>
-            </div>
-            <div class="swiper-slide">
-                <div class="elems-top">
-                    <div class="thumb-img">
-                        <img src="{{ 'sparkle.gif' | asset_url }}" alt="">
-                    </div>
-                    <div class="elems-top__right">
-                        <div class="name">Cath P.</div>
-                        <div class="address">New York City, New York</div>
-                    </div>
-                </div>
-                <div class="elems-btm">
-                    <blockquote>
-                        <div class="floating-quote">
-                            {%- render 'icon-quote' -%}
+                        <div class="elems-btm">
+                            <blockquote>
+                                <div class="floating-quote">
+                                    {%- render 'icon-quote' -%}
+                                </div>
+                                {{ testimonial.content | metafield_tag }}
+                            </blockquote>
                         </div>
-                        Just discovered this site online. Fantastic flavors, charming packaging, and quick delivery. My new sweet haven!
-                    </blockquote>
-                </div>
-            </div>
-            <div class="swiper-slide">
-                <div class="elems-top">
-                    <div class="thumb-img">
-                        <img src="{{ 'sparkle.gif' | asset_url }}" alt="">
                     </div>
-                    <div class="elems-top__right">
-                        <div class="name">Cath P.</div>
-                        <div class="address">New York City, New York</div>
-                    </div>
-                </div>
-                <div class="elems-btm">
-                    <blockquote>
-                        <div class="floating-quote">
-                            {%- render 'icon-quote' -%}
-                        </div>
-                        Just discovered this site online. Fantastic flavors, charming packaging, and quick delivery. My new sweet haven!
-                    </blockquote>
-                </div>
-            </div>
-            <div class="swiper-slide">
-                <div class="elems-top">
-                    <div class="thumb-img">
-                        <img src="{{ 'sparkle.gif' | asset_url }}" alt="">
-                    </div>
-                    <div class="elems-top__right">
-                        <div class="name">Cath P.</div>
-                        <div class="address">New York City, New York</div>
-                    </div>
-                </div>
-                <div class="elems-btm">
-                    <blockquote>
-                        <div class="floating-quote">
-                            {%- render 'icon-quote' -%}
-                        </div>
-                        Just discovered this site online. Fantastic flavors, charming packaging, and quick delivery. My new sweet haven!
-                    </blockquote>
-                </div>
-            </div>
+                    {% endfor %}
         </div>
     </div>
     
