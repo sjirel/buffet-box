@@ -139,14 +139,18 @@
           "icecreambox",
           "copy-of-churrobox",
           "copy-of-donutbox"
-        ]
+        ],
+        "padding_top": 0,
+        "padding_bottom": 180,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 0
       }
     },
     "collage": {
       "type": "banner-with-product",
       "settings": {
         "save_value": "Save up to 35%",
-        "title": "Churros <br> Extravaganza",
+        "title": "Churros  Extravaganza",
         "product": "churrobox",
         "desc": "<p>Indulge your sweet tooth and make every moment memorable with the magic of BuffetBox Churros!<\/p>",
         "custom_img": "shopify:\/\/shop_images\/img-pill.png"

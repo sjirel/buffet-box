@@ -4,14 +4,8 @@
 * Default css is for mobile screens
 */
 .section-best-seller {
-  margin-bottom: 8.5rem;
   overflow: hidden;
   position: relative;
-}
-@media (min-width: 768px) {
-  .section-best-seller {
-    margin-bottom: 18rem;
-  }
 }
 .section-best-seller .best-seller-slider {
   position: relative;
