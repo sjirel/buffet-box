@@ -153,7 +153,11 @@
         "title": "Churros  Extravaganza",
         "product": "churrobox",
         "desc": "<p>Indulge your sweet tooth and make every moment memorable with the magic of BuffetBox Churros!<\/p>",
-        "custom_img": "shopify:\/\/shop_images\/img-pill.png"
+        "custom_img": "shopify:\/\/shop_images\/img-pill.png",
+        "padding_top": 270,
+        "padding_bottom": 205,
+        "padding_top_mobile": 100,
+        "padding_bottom_mobile": 100
       }
     },
     "sectionTestimonial": {
@@ -161,12 +165,20 @@
       "settings": {
         "is_background": false,
         "title": "About Buffet Box",
-        "subtitle": "What People Are Saying"
+        "subtitle": "What People Are Saying",
+        "padding_top": 0,
+        "padding_bottom": 90,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 0
       }
     },
     "findPerfectGift": {
       "type": "section-find-perfect-gift",
       "settings": {
+        "padding_top": 180,
+        "padding_bottom": 180,
+        "padding_top_mobile": 60,
+        "padding_bottom_mobile": 100
       }
     }
   },

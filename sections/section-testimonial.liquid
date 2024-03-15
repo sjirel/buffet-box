@@ -1,6 +1,20 @@
 {{ 'section-testimonials.css' | asset_url | stylesheet_tag }}
+{%- style -%}
+    .section-{{ section.id }}-padding-mobile {
+        padding-top: {{ section.settings.padding_top_mobile }}px;
+        padding-bottom: {{ section.settings.padding_bottom_mobile }}px;
+    }
 
-<div class="testimonials{% if section.settings.is_background %} has-bgArc{% endif %}">
+    @media screen and (min-width: 750px) {
+        .section-{{ section.id }}-padding-desktop {
+            padding-top: {{ section.settings.padding_top }}px;
+            padding-bottom: {{ section.settings.padding_bottom }}px;
+        }
+    }
+{%- endstyle -%}
+
+
+<div class="testimonials{% if section.settings.is_background %} has-bgArc{% endif %}  section-{{ section.id }}-padding-desktop section-{{ section.id }}-padding-mobile">
     {% if section.settings.is_background %}
     <div class="bgArcWrapper">
         <div class="bgArc">&nbsp;</div>
@@ -130,7 +144,48 @@
                 "type": "text",
                 "id": "subtitle",
                 "label": "Sub Heading"
-            }
+            },
+            {
+                "type": "range",
+                "id": "padding_top",
+                "min": 0,
+                "max": 300,
+                "step": 5,
+                "unit": "px",
+                "label": "t:sections.all.padding.padding_top",
+                "default": 0
+            },
+            {
+                "type": "range",
+                "id": "padding_bottom",
+                "min": 0,
+                "max": 300,
+                "step": 5,
+                "unit": "px",
+                "label": "t:sections.all.padding.padding_bottom",
+                "default": 0
+            },        
+
+            {
+                "type": "range",
+                "id": "padding_top_mobile",
+                "min": 0,
+                "max": 300,
+                "step": 5,
+                "unit": "px",
+                "label": "Top Padding: Mobile",
+                "default": 0
+            },
+            {
+                "type": "range",
+                "id": "padding_bottom_mobile",
+                "min": 0,
+                "max": 300,
+                "step": 5,
+                "unit": "px",
+                "label": "Bottom Padding: Mobile",
+                "default": 0
+            }  
         ]
 }
 {% endschema %}

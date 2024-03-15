@@ -6,13 +6,9 @@
   position: relative;
   @include bp(md) {
     margin-bottom: 9rem;
-    padding-bottom: 9rem;
   }
   &.has-bgArc {
-    padding-top: 10rem;
     @include bp(md) {
-      padding-top: 17.5rem;
-      padding-bottom: 13rem;
       margin-bottom: 8rem;
     }
   }

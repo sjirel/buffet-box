@@ -150,15 +150,19 @@
         "image_width": "full",
         "image_ratio": "adapt",
         "columns_desktop": 3,
+        "narrow_width": false,
         "column_alignment": "left",
         "background_style": "none",
         "button_label": "",
         "button_link": "",
+        "ordered_list": false,
         "color_scheme": "scheme-5",
         "columns_mobile": "1",
         "swipe_on_mobile": false,
         "padding_top": 0,
-        "padding_bottom": 64
+        "padding_bottom": 64,
+        "padding_top_mobile": 40,
+        "padding_bottom_mobile": 52
       }
     },
     "section_slider_with_thumbnails_rcAcyt": {
@@ -201,7 +205,11 @@
       "settings": {
         "is_background": true,
         "title": "Product Reviews",
-        "subtitle": ""
+        "subtitle": "",
+        "padding_top": 175,
+        "padding_bottom": 130,
+        "padding_top_mobile": 100,
+        "padding_bottom_mobile": 0
       }
     },
     "related-products": {

@@ -4,14 +4,8 @@
 * Default css is for mobile screens
 */
 .find-perfect-gift {
-  padding: 6rem 0 10rem;
   position: relative;
   overflow: hidden;
-}
-@media (min-width: 768px) {
-  .find-perfect-gift {
-    padding: 18rem 0;
-  }
 }
 .find-perfect-gift .bgArc {
   background: linear-gradient(180deg, #FFDEE3 0%, rgba(255, 255, 255, 0.555) 41.31%, rgba(255, 222, 227, 0) 76.5%);

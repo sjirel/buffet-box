@@ -2,10 +2,6 @@
 
 .banner-with-product {
     position: relative;
-    padding: 10rem 0;    
-    @include bp(md) {
-        padding: 27rem 0 20.5rem;    
-    }   
     .floating-bg-image {
         position: absolute;
         left: 0;

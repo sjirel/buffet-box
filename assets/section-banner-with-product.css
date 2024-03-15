@@ -5,12 +5,6 @@
 */
 .banner-with-product {
   position: relative;
-  padding: 10rem 0;
-}
-@media (min-width: 768px) {
-  .banner-with-product {
-    padding: 27rem 0 20.5rem;
-  }
 }
 .banner-with-product .floating-bg-image {
   position: absolute;

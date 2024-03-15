@@ -1,6 +1,19 @@
 {{ 'section-find-perfect-gift.css' | asset_url | stylesheet_tag }}
+{%- style -%}
+    .section-{{ section.id }}-padding-mobile {
+        padding-top: {{ section.settings.padding_top_mobile }}px;
+        padding-bottom: {{ section.settings.padding_bottom_mobile }}px;
+    }
 
-<div class="find-perfect-gift">
+    @media screen and (min-width: 750px) {
+        .section-{{ section.id }}-padding-desktop {
+            padding-top: {{ section.settings.padding_top }}px;
+            padding-bottom: {{ section.settings.padding_bottom }}px;
+        }
+    }
+{%- endstyle -%}
+
+<div class="find-perfect-gift section-{{ section.id }}-padding-desktop section-{{ section.id }}-padding-mobile">
     <div class="bgArc">&nbsp;</div>
     <div class="page-width">
         <div class="section-heading">
@@ -47,7 +60,47 @@
     {
         "name": "Section: Perfect Gift",
         "settings": [
-            
-            ]
+            {
+                "type": "range",
+                "id": "padding_top",
+                "min": 0,
+                "max": 200,
+                "step": 2,
+                "unit": "px",
+                "label": "t:sections.all.padding.padding_top",
+                "default": 60
+            },
+            {
+                "type": "range",
+                "id": "padding_bottom",
+                "min": 0,
+                "max": 200,
+                "step": 2,
+                "unit": "px",
+                "label": "t:sections.all.padding.padding_bottom",
+                "default": 60
+            },        
+
+            {
+                "type": "range",
+                "id": "padding_top_mobile",
+                "min": 0,
+                "max": 200,
+                "step": 2,
+                "unit": "px",
+                "label": "Top Padding: Mobile",
+                "default": 60
+            },
+            {
+                "type": "range",
+                "id": "padding_bottom_mobile",
+                "min": 0,
+                "max": 200,
+                "step": 2,
+                "unit": "px",
+                "label": "Bottom Padding: Mobile",
+                "default": 60
+            }  
+        ]
     }
 {% endschema %}
