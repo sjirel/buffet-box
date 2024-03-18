@@ -1,22 +1,19 @@
 {{ 'section-welcome.css' | asset_url | stylesheet_tag }}
 {%- style -%}
-    .section-{{ section.id }}-padding {
-        padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
-        padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+    .section-{{ section.id }}-padding-mobile {
+        padding-top: {{ section.settings.padding_top_mobile }}px;
+        padding-bottom: {{ section.settings.padding_bottom_mobile }}px;
     }
 
     @media screen and (min-width: 750px) {
-        .section-{{ section.id }}-padding {
-        padding-top: {{ section.settings.padding_top }}px;
-        padding-bottom: {{ section.settings.padding_bottom }}px;
+        .section-{{ section.id }}-padding-desktop {
+            padding-top: {{ section.settings.padding_top }}px;
+            padding-bottom: {{ section.settings.padding_bottom }}px;
         }
     }
 {%- endstyle -%}
 
-<div class="section-welcome section-{{ section.id }}-padding">
-    <div class="floating-bg-image">
-        {{ section.settings.small_image | image_url: width: 1000 | image_tag }}
-    </div>
+<div class="section-welcome section-{{ section.id }}-padding-desktop section-{{ section.id }}-padding-mobile">
     <div class="page-width">
         <div class="inner-page-width">
             <div class="section-heading">
@@ -65,7 +62,7 @@
             "id": "padding_top",
             "min": 0,
             "max": 200,
-            "step": 4,
+            "step": 2,
             "unit": "px",
             "label": "t:sections.all.padding.padding_top",
             "default": 40
@@ -75,11 +72,32 @@
             "id": "padding_bottom",
             "min": 0,
             "max": 200,
-            "step": 4,
+            "step": 2,
             "unit": "px",
             "label": "t:sections.all.padding.padding_bottom",
             "default": 52
-        }        
+        },        
+
+        {
+            "type": "range",
+            "id": "padding_top_mobile",
+            "min": 0,
+            "max": 200,
+            "step": 2,
+            "unit": "px",
+            "label": "Top Padding: Mobile",
+            "default": 40
+        },
+        {
+            "type": "range",
+            "id": "padding_bottom_mobile",
+            "min": 0,
+            "max": 200,
+            "step": 2,
+            "unit": "px",
+            "label": "Bottom Padding: Mobile",
+            "default": 52
+        }     
     ]
 }
 {% endschema %}

@@ -6,7 +6,7 @@
 .product-details {
   margin-bottom: 6rem;
 }
-@media (min-width: 768px) {
+@media (min-width: 750px) {
   .product-details {
     margin-bottom: 9rem;
   }

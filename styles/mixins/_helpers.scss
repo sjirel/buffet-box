@@ -94,7 +94,7 @@ $image-path: '{{ asset_url }}' !default;
       @media (max-width: 767px) { @content; }
   }
   @if $point == below-lg {
-      @media (max-width: 991px) { @content; }
+      @media (max-width: 989px) { @content; }
   }
   @if $point == below-xl {
       @media (max-width: 1199px) { @content; }
@@ -103,19 +103,19 @@ $image-path: '{{ asset_url }}' !default;
       @media (min-width: 576px) { @content; }
   } 
   @if $point == md {
-      @media (min-width: 768px) { @content; }
+      @media (min-width: 750px) { @content; }
   }    
   @if $point == lg {
-      @media (min-width: 992px) { @content; }
+      @media (min-width: 990px) { @content; }
   }
   @if $point == md-lg {
-      @media (min-width: 768px) and (max-width: 991px) { @content; }
+      @media (min-width: 750px) and (max-width: 989px) { @content; }
   }
   @if $point == md-xl {
-      @media (min-width: 768px) and (max-width: 1199px) { @content; }
+      @media (min-width: 750px) and (max-width: 1199px) { @content; }
   }
   @if $point == lg-xl {
-      @media (min-width: 992px) and (max-width: 1199px) { @content; }
+      @media (min-width: 990px) and (max-width: 1199px) { @content; }
   }
   @if $point == xl {
       @media (min-width: 1200px) { @content; }

@@ -1,11 +1,7 @@
 @import './mixins/helpers';
 .section-best-seller {
-    margin-bottom: 8.5rem;
     overflow: hidden;
     position: relative;
-    @include bp(md) {
-        margin-bottom: 18rem;
-    }
     .best-seller-slider {
         position: relative;
         overflow: initial;

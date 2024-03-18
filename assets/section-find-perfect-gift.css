@@ -4,14 +4,8 @@
 * Default css is for mobile screens
 */
 .find-perfect-gift {
-  padding: 6rem 0 10rem;
   position: relative;
   overflow: hidden;
-}
-@media (min-width: 768px) {
-  .find-perfect-gift {
-    padding: 18rem 0;
-  }
 }
 .find-perfect-gift .bgArc {
   background: linear-gradient(180deg, #FFDEE3 0%, rgba(255, 255, 255, 0.555) 41.31%, rgba(255, 222, 227, 0) 76.5%);
@@ -32,7 +26,7 @@
     margin: 0;
   }
 }
-@media (min-width: 768px) {
+@media (min-width: 750px) {
   .find-perfect-gift .find-perfect-gift-form .elems-top {
     display: flex;
     flex-wrap: wrap;
@@ -48,7 +42,7 @@
   max-width: 100%;
   padding: 0 0 3rem;
 }
-@media (min-width: 768px) {
+@media (min-width: 750px) {
   .find-perfect-gift .find-perfect-gift-form .form-group {
     padding: 0 2rem;
     flex-shrink: 0;
@@ -65,7 +59,7 @@
   margin-left: 2.5rem;
   line-height: 1;
 }
-@media (min-width: 768px) {
+@media (min-width: 750px) {
   .find-perfect-gift .find-perfect-gift-form .form-group label {
     font-size: 2rem;
   }

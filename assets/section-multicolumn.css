@@ -119,6 +119,16 @@
 }
 
 @media screen and (max-width: 749px) {
+  .multicolumn-list__item .rte ul {
+    text-align: initial;
+    display: inline-block;
+  }
+  .multicolumn-list__item .rte ul li {
+    margin-bottom: 1rem;
+  }
+}
+
+@media screen and (max-width: 749px) {
   .multicolumn-list {
     margin: 0;
     width: 100%;

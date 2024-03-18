@@ -51,68 +51,16 @@
         "title": "Welcome to Buffet Box",
         "subtxt": "Food & Fun For Friends And Family",
         "large_image": "shopify:\/\/shop_images\/welcome-large_1e271964-9d5f-4b8e-ac90-bf9c225c4461.png",
-        "small_image": "shopify:\/\/shop_images\/welcome-inner.png"
+        "small_image": "shopify:\/\/shop_images\/welcome.png",
+        "padding_top": 56,
+        "padding_bottom": 200,
+        "padding_top_mobile": 80,
+        "padding_bottom_mobile": 110
       }
     },
     "rich_text": {
       "type": "section-shop-occasion",
       "blocks": {
-        "card_VxXKma": {
-          "type": "card",
-          "settings": {
-            "icon": "shopify:\/\/shop_images\/heart.png",
-            "image": "shopify:\/\/shop_images\/loved.png",
-            "title": "Loved Ones"
-          }
-        },
-        "card_4KaDcN": {
-          "type": "card",
-          "settings": {
-            "icon": "shopify:\/\/shop_images\/ring.png",
-            "image": "shopify:\/\/shop_images\/loved.png",
-            "title": "Wdding"
-          }
-        },
-        "card_HGdMiJ": {
-          "type": "card",
-          "settings": {
-            "icon": "shopify:\/\/shop_images\/balloon.png",
-            "image": "shopify:\/\/shop_images\/loved.png",
-            "title": "Birthday"
-          }
-        },
-        "card_cDwni3": {
-          "type": "card",
-          "settings": {
-            "icon": "shopify:\/\/shop_images\/heart.png",
-            "image": "shopify:\/\/shop_images\/loved.png",
-            "title": "Lover"
-          }
-        },
-        "card_zH4Wqh": {
-          "type": "card",
-          "settings": {
-            "icon": "shopify:\/\/shop_images\/balloon.png",
-            "image": "shopify:\/\/shop_images\/loved.png",
-            "title": "Bday"
-          }
-        },
-        "card_yYqknf": {
-          "type": "card",
-          "settings": {
-            "icon": "shopify:\/\/shop_images\/ring.png",
-            "image": "shopify:\/\/shop_images\/loved.png",
-            "title": "Wed"
-          }
-        },
-        "card_QMeDam": {
-          "type": "card",
-          "settings": {
-            "icon": "shopify:\/\/shop_images\/heart.png",
-            "image": "shopify:\/\/shop_images\/loved.png",
-            "title": "Love"
-          }
-        },
         "card_a9EAhx": {
           "type": "card",
           "settings": {
@@ -128,22 +76,55 @@
             "image": "shopify:\/\/shop_images\/employee.png",
             "title": "Employee"
           }
+        },
+        "card_RpmXTe": {
+          "type": "card",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/personal_card_ico.svg",
+            "image": "shopify:\/\/shop_images\/personal_card_image.jpg",
+            "title": "Personal"
+          }
+        },
+        "card_RWdUty": {
+          "type": "card",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/loved_ones_ico.svg",
+            "image": "shopify:\/\/shop_images\/loved_ones_card-image.jpg",
+            "title": "Loved Ones"
+          }
+        },
+        "card_XU7nRE": {
+          "type": "card",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/holidays_card-ico.svg",
+            "image": "shopify:\/\/shop_images\/holidays_card-image.jpg",
+            "title": "Holidays"
+          }
+        },
+        "card_DazUT4": {
+          "type": "card",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/occasions_card-ico.svg",
+            "image": "shopify:\/\/shop_images\/occasions_card-image.jpg",
+            "title": "Occasions"
+          }
         }
       },
       "block_order": [
-        "card_VxXKma",
-        "card_4KaDcN",
-        "card_HGdMiJ",
-        "card_cDwni3",
-        "card_zH4Wqh",
-        "card_yYqknf",
-        "card_QMeDam",
         "card_a9EAhx",
-        "card_6LPGaU"
+        "card_6LPGaU",
+        "card_RpmXTe",
+        "card_RWdUty",
+        "card_XU7nRE",
+        "card_DazUT4"
       ],
       "settings": {
         "title": "Shop By <br> Occasion",
-        "show_arrow": false
+        "show_arrow": false,
+        "padding_top": 150,
+        "padding_bottom": 160,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 80
       }
     },
     "featured_collection": {
@@ -158,17 +139,25 @@
           "icecreambox",
           "copy-of-churrobox",
           "copy-of-donutbox"
-        ]
+        ],
+        "padding_top": 0,
+        "padding_bottom": 180,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 0
       }
     },
     "collage": {
       "type": "banner-with-product",
       "settings": {
         "save_value": "Save up to 35%",
-        "title": "Churros <br> Extravaganza",
+        "title": "Churros  Extravaganza",
         "product": "churrobox",
         "desc": "<p>Indulge your sweet tooth and make every moment memorable with the magic of BuffetBox Churros!<\/p>",
-        "custom_img": "shopify:\/\/shop_images\/img-pill.png"
+        "custom_img": "shopify:\/\/shop_images\/img-pill.png",
+        "padding_top": 270,
+        "padding_bottom": 205,
+        "padding_top_mobile": 100,
+        "padding_bottom_mobile": 100
       }
     },
     "sectionTestimonial": {
@@ -176,12 +165,20 @@
       "settings": {
         "is_background": false,
         "title": "About Buffet Box",
-        "subtitle": "What People Are Saying"
+        "subtitle": "What People Are Saying",
+        "padding_top": 0,
+        "padding_bottom": 90,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 0
       }
     },
     "findPerfectGift": {
       "type": "section-find-perfect-gift",
       "settings": {
+        "padding_top": 180,
+        "padding_bottom": 180,
+        "padding_top_mobile": 60,
+        "padding_bottom_mobile": 100
       }
     }
   },

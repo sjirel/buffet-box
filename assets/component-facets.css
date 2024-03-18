@@ -477,7 +477,7 @@ button.facets__button {
   grid-row: 2;
   justify-content: center;
 }
-@media (min-width: 768px) {
+@media (min-width: 750px) {
   .active-facets {
     border-top: 1px solid rgba(31, 31, 31, 0.15);
     margin-bottom: -1px;

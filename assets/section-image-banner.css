@@ -1,10 +1,19 @@
+/*
+* Mixin for easy media queries
+* @include bp(tablet-only) { SCSS here };
+* Default css is for mobile screens
+*/
 .banner {
   display: flex;
   position: relative;
   flex-direction: column;
   z-index: auto;
   isolation: isolate;
-  min-height: 62rem;
+  min-height: 60rem;
+}
+.page-about .banner {
+  background: linear-gradient(180deg, #f0e9d7, rgba(240, 233, 215, 0) 46.24%);
+  padding-top: 6rem;
 }
 
 .banner__box {
@@ -104,12 +113,21 @@
     flex-direction: column;
   }
 }
+.page-about .banner .media {
+  background-color: transparent;
+  background: linear-gradient(180deg, #F0E9D7 0%, rgba(240, 233, 215, 0) 46.24%);
+}
+
 .banner__media {
   height: 100%;
   position: absolute;
   left: 0;
   top: 0;
   width: 100%;
+}
+.page-about .banner__media {
+  height: calc(100% - 6rem);
+  top: 6rem;
 }
 .banner__media:before {
   z-index: 1;
@@ -120,6 +138,10 @@
   top: 0;
   width: 100%;
   background: linear-gradient(74.39deg, #B62940 12.89%, rgba(237, 76, 102, 0) 51.65%);
+  display: none !important;
+}
+.banner--with-gradient .banner__media:before {
+  display: block !important;
 }
 
 .banner__media-half {
@@ -272,7 +294,6 @@
   height: -moz-fit-content;
   height: fit-content;
   align-items: center;
-  text-align: initial;
   width: 100%;
   word-wrap: break-word;
   z-index: 1;
@@ -339,8 +360,33 @@
     max-width: 44.5rem;
   }
 }
+.banner .subtitle {
+  font-size: 2rem;
+  line-height: 1;
+  margin-bottom: 2rem;
+  color: #ED4C66;
+  text-transform: uppercase;
+  font-weight: normal;
+}
+@media screen and (min-width: 750px) {
+  .banner .subtitle {
+    font-size: 3.2rem;
+  }
+}
+
 .banner__heading {
   margin-bottom: 0;
+}
+.page-about .banner__heading {
+  max-width: 20rem;
+  margin: 0 auto;
+}
+@media screen and (min-width: 750px) {
+  .page-about .banner__heading {
+    max-width: 35rem;
+  }
+}
+.template-collection .banner__heading {
   color: #fff;
 }
 

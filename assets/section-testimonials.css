@@ -8,19 +8,13 @@
   margin-bottom: 10rem;
   position: relative;
 }
-@media (min-width: 768px) {
+@media (min-width: 750px) {
   .testimonials {
     margin-bottom: 9rem;
-    padding-bottom: 9rem;
   }
 }
-.testimonials.has-bgArc {
-  padding-top: 10rem;
-}
-@media (min-width: 768px) {
+@media (min-width: 750px) {
   .testimonials.has-bgArc {
-    padding-top: 17.5rem;
-    padding-bottom: 13rem;
     margin-bottom: 8rem;
   }
 }
@@ -97,12 +91,15 @@
 .testimonials .swiper .swiper-slide blockquote .floating-quote img, .testimonials .swiper .swiper-slide blockquote .floating-quote svg {
   width: 100%;
 }
+.testimonials .swiper .swiper-slide .metafield-rich_text_field > *:last-child {
+  margin-bottom: 0;
+}
 .testimonials .swiper.js-testimonials-slider-btm {
   margin-top: -6.5rem;
   position: relative;
   z-index: 2;
 }
-@media (min-width: 768px) {
+@media (min-width: 750px) {
   .testimonials .swiper.js-testimonials-slider-btm {
     margin-top: -4rem;
   }
@@ -111,7 +108,7 @@
   text-align: center;
   margin-top: -4rem;
 }
-@media (min-width: 768px) {
+@media (min-width: 750px) {
   .testimonials .btn-wrapper {
     margin-top: -2rem;
   }

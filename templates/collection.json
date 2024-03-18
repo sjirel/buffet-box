@@ -26,8 +26,9 @@
         "image": "{{ collection.image }}",
         "image_overlay_opacity": 0,
         "image_height": "large",
-        "desktop_content_position": "middle-center",
+        "desktop_content_position": "middle-left",
         "show_text_box": true,
+        "show_gradient": false,
         "desktop_content_alignment": "left",
         "color_scheme": "",
         "image_behavior": "none",
@@ -173,7 +174,9 @@
         "image_ratio": "adapt",
         "desktop_layout": "image_second",
         "padding_top": 100,
-        "padding_bottom": 100
+        "padding_bottom": 100,
+        "padding_top_mobile": 40,
+        "padding_bottom_mobile": 52
       }
     }
   },

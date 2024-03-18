@@ -117,7 +117,15 @@
   left: 50%;
   transform: translateX(-50%);
 }
-
+.multicolumn-list__item .rte ul {
+  @media screen and (max-width: 749px) { 
+    text-align: initial;
+    display: inline-block;
+    li {
+      margin-bottom: 1rem;
+    }
+  }
+}
 @media screen and (max-width: 749px) {
   .multicolumn-list {
     margin: 0;

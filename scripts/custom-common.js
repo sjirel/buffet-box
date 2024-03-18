@@ -1,6 +1,13 @@
 import Swiper from 'swiper/bundle';
 // import 'swiper/css/bundle';
 
+let relatedProductItemsSlider = new Swiper('.js-related-products-slider', {
+    loop: true,
+    spaceBetween: 30,
+    slidesPerView: 3,
+    speed: 8000,    
+});
+
 const heroBannerProductMainSlider = new Swiper('.js-banner-product-main-slider', {
     slidesPerView: 1,
     speed: 1500, 

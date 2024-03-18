@@ -6,27 +6,13 @@
 .section-welcome {
   position: relative;
   z-index: 1;
-  padding-top: 6rem;
-  margin-bottom: 18rem;
 }
-@media (min-width: 768px) {
-  .section-welcome {
-    margin-bottom: 33.5rem;
-  }
-}
-@media (min-width: 992px) {
+@media (min-width: 990px) {
   .section-welcome .inner-page-width {
     max-width: 96.2rem;
     margin-left: auto;
     margin-right: auto;
   }
-}
-.section-welcome .floating-bg-image {
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  z-index: -1;
 }
 .section-welcome .image-section {
   position: relative;
@@ -39,7 +25,7 @@
      object-position: center;
   border-radius: 3rem;
 }
-@media (min-width: 768px) {
+@media (min-width: 750px) {
   .section-welcome .image-section .large-image img {
     border-radius: 10rem;
   }
@@ -54,7 +40,7 @@
   right: -2rem;
   transform: translateY(38%);
 }
-@media (min-width: 768px) {
+@media (min-width: 750px) {
   .section-welcome .image-section .small-image-sideload {
     left: -8rem;
     right: -4rem;
