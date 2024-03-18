@@ -1,3 +1,4 @@
+@import "./mixins/helpers";
 slider-component {
   --desktop-margin-left-first-item: max(
     5rem,
@@ -260,6 +261,24 @@ slider-component.slider-component-full-width {
   display: flex;
   justify-content: center;
   min-width: 4.4rem;
+  font-size: 1.6rem;
+  align-items: baseline;
+  gap: 0.5rem;
+  color: rgba(#1F1F1F, 0.5);
+  .product--thumbnail_slider & {
+    position: absolute;
+    left: 2rem;
+    bottom: 3rem;
+    @include bp(md) {
+      left: 3rem;
+      bottom: 4rem;
+    }
+    .slider-counter--current {
+      font-size: 2.4rem;
+      color: $color-black;
+      font-weight: 600;
+    }
+  }
 }
 
 @media screen and (min-width: 750px) {
@@ -330,6 +349,17 @@ slider-component.slider-component-full-width {
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 1rem;
+  .product__media-wrapper & {
+    position: absolute;
+    right: 2rem;
+    bottom: 2rem;
+    z-index: 2;
+    @include bp(md) {
+      right: 3rem;
+      bottom: 3rem;
+    }
+  }
 }
 
 @media screen and (min-width: 990px) {
@@ -351,15 +381,45 @@ slider-component.slider-component-full-width {
 }
 
 .slider-button {
-  color: rgba(var(--color-foreground), 0.75);
-  background: transparent;
   border: none;
-  cursor: pointer;
-  width: 44px;
-  height: 44px;
-  display: flex;
-  align-items: center;
+  background-color: $color-white;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  box-shadow: 0 0 2.5rem #0000001a;
+  font-weight: 500; 
+  transition: background-color 0.3s ease-out, transform 0.3s ease-out;
+  display: inline-flex;
   justify-content: center;
+  align-items: center;   
+  outline: none;
+  cursor: pointer;
+  @include bp(md) {
+    width: 6rem;
+    height: 6rem;
+  }
+  &[disabled] {
+    opacity: .35;
+    cursor: auto;
+    pointer-events: none;
+  }
+  &:hover {
+    background-color: $color-red;
+    transform: scale(1.05);
+    svg path {
+      fill: $color-white;
+    }
+  }
+  @include bp(md) {
+    width: 6rem;
+    height: 6rem;
+  }
+  svg, img {
+    width: 1.5rem;
+  }
+  &:after {
+    content: none;
+  }
 }
 
 .slider-button:not([disabled]):hover {
