@@ -7,7 +7,7 @@
   position: relative;
   z-index: 1;
 }
-@media (min-width: 992px) {
+@media (min-width: 990px) {
   .section-welcome .inner-page-width {
     max-width: 96.2rem;
     margin-left: auto;
@@ -25,7 +25,7 @@
      object-position: center;
   border-radius: 3rem;
 }
-@media (min-width: 768px) {
+@media (min-width: 750px) {
   .section-welcome .image-section .large-image img {
     border-radius: 10rem;
   }
@@ -40,7 +40,7 @@
   right: -2rem;
   transform: translateY(38%);
 }
-@media (min-width: 768px) {
+@media (min-width: 750px) {
   .section-welcome .image-section .small-image-sideload {
     left: -8rem;
     right: -4rem;

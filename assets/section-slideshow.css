@@ -10,7 +10,7 @@
   line-height: 1;
   overflow: hidden;
 }
-@media (min-width: 768px) {
+@media (min-width: 750px) {
   .hero-banner {
     height: 92rem;
   }
@@ -74,14 +74,14 @@
   background-clip: text;
   text-fill-color: transparent;
 }
-@media (min-width: 768px) {
+@media (min-width: 750px) {
   .hero-banner .outer-js-banner-big-product-title-slider .swiper .swiper-slide h2 {
     font-size: 14rem;
     height: 14rem;
     top: -3rem;
   }
 }
-@media (min-width: 992px) {
+@media (min-width: 990px) {
   .hero-banner .outer-js-banner-big-product-title-slider .swiper .swiper-slide h2 {
     font-size: 22rem;
     height: 15rem;
@@ -169,7 +169,7 @@
   top: 25.5rem;
   margin: 0 auto;
 }
-@media (min-width: 768px) {
+@media (min-width: 750px) {
   .hero-banner .outer-js-banner-product-main-slider .swiper-slide .main-image-with-price {
     top: -7rem;
     margin: auto;
@@ -299,7 +299,7 @@
   color: #ED4C66;
   font-family: "Founders Grotesk";
 }
-@media (min-width: 768px) {
+@media (min-width: 750px) {
   .hero-banner .outer-js-banner-product-main-slider .swiper-slide .slide-title-small {
     left: 3rem;
     bottom: 3.4rem;
@@ -333,7 +333,7 @@
 .hero-banner .outer-js-banner-product-main-slider .swiper-slide-thumb-active .floating-composition {
   transform: translateY(-20%) !important;
 }
-@media (min-width: 768px) {
+@media (min-width: 750px) {
   .hero-banner .outer-js-banner-product-main-slider .swiper-slide-active .floating-composition,
   .hero-banner .outer-js-banner-product-main-slider .swiper-slide-thumb-active .floating-composition {
     transform: translateY(20%) !important;
@@ -357,7 +357,7 @@
   z-index: 2;
   pointer-events: none;
 }
-@media (min-width: 768px) {
+@media (min-width: 750px) {
   .hero-banner__footer {
     left: 3rem;
     right: 3rem;
@@ -374,7 +374,7 @@
   text-align: initial;
   color: rgba(31, 31, 31, 0.5);
 }
-@media (min-width: 768px) {
+@media (min-width: 750px) {
   .hero-banner__footer .swiper-pagination {
     top: 50%;
     transform: translateY(-50%);
