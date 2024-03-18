@@ -13,6 +13,12 @@ __webpack_require__.r(__webpack_exports__);
 
 // import 'swiper/css/bundle';
 
+var relatedProductItemsSlider = new swiper_bundle__WEBPACK_IMPORTED_MODULE_0__["default"]('.js-related-products-slider', {
+  loop: true,
+  spaceBetween: 30,
+  slidesPerView: 3,
+  speed: 8000
+});
 var heroBannerProductMainSlider = new swiper_bundle__WEBPACK_IMPORTED_MODULE_0__["default"]('.js-banner-product-main-slider', {
   slidesPerView: 1,
   speed: 1500,

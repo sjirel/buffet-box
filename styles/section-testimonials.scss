@@ -83,6 +83,11 @@
           }
         }
       }
+      .metafield-rich_text_field {
+        > *:last-child {
+          margin-bottom: 0;
+        }
+      }
     }
     &.js-testimonials-slider-btm {
       margin-top: -6.5rem;
