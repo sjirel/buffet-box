@@ -20,6 +20,16 @@
           "settings": {
           }
         },
+        "tags_nADhWb": {
+          "type": "tags",
+          "settings": {
+          }
+        },
+        "rating_FfBcy7": {
+          "type": "rating",
+          "settings": {
+          }
+        },
         "description": {
           "type": "description",
           "settings": {
@@ -49,6 +59,8 @@
         "title",
         "caption",
         "price",
+        "tags_nADhWb",
+        "rating_FfBcy7",
         "description",
         "quantity_selector",
         "variant_picker",
@@ -108,19 +120,10 @@
         "padding_bottom": 36
       }
     },
-    "multicolumn": {
-      "type": "multicolumn",
+    "main_product_details_x9cJdM": {
+      "type": "main-product-details",
       "blocks": {
-        "column-0": {
-          "type": "column",
-          "settings": {
-            "title": "Product Details",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column-1": {
+        "column_Jn8BdW": {
           "type": "column",
           "settings": {
             "title": "Nutrition & Ingredients",
@@ -129,7 +132,7 @@
             "link": ""
           }
         },
-        "column_mE7Gke": {
+        "column_wF7Qti": {
           "type": "column",
           "settings": {
             "title": "Shipping Information",
@@ -140,9 +143,8 @@
         }
       },
       "block_order": [
-        "column-0",
-        "column-1",
-        "column_mE7Gke"
+        "column_Jn8BdW",
+        "column_wF7Qti"
       ],
       "settings": {
         "title": "",
@@ -156,11 +158,11 @@
         "button_label": "",
         "button_link": "",
         "ordered_list": false,
-        "color_scheme": "scheme-5",
+        "color_scheme": "scheme-1",
         "columns_mobile": "1",
         "swipe_on_mobile": false,
-        "padding_top": 0,
-        "padding_bottom": 64,
+        "padding_top": 36,
+        "padding_bottom": 36,
         "padding_top_mobile": 40,
         "padding_bottom_mobile": 52
       }
@@ -234,7 +236,7 @@
   "order": [
     "main",
     "section_product_info_TgLfLV",
-    "multicolumn",
+    "main_product_details_x9cJdM",
     "section_slider_with_thumbnails_rcAcyt",
     "sectionTestimonial",
     "related-products"
