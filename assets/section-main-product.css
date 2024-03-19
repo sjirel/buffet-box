@@ -42,6 +42,10 @@
   border-radius: 10rem;
 }
 
+.product-grid-container-wrapper.gradient {
+  background: none;
+}
+
 .product__info-wrapper .online-exclusive {
   color: #ED4C66;
   background-color: #ffffff;
