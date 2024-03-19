@@ -54,9 +54,9 @@ var shopoccasion = new Swiper(".shop-occasion-slider", {
     slidesPerView: 1.32,
     spaceBetween: 0,
     speed: 750,
-    // autoplay: {
-    //     delay: 5000,
-    // },
+    autoplay: {
+        delay: 5000,
+    },
     effect: "creative",
     initialSlide: '3',
     creativeEffect: {

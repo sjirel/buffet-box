@@ -1,12 +1,29 @@
 @charset "UTF-8";
+/*
+* Mixin for easy media queries
+* @include bp(tablet-only) { SCSS here };
+* Default css is for mobile screens
+*/
 .rating {
   display: inline-block;
   margin: 0;
 }
 
+.product__info-wrapper .rating {
+  grid-column: span 1;
+  margin-bottom: 2.5rem;
+  position: relative;
+  top: 0.1rem;
+}
+@media (min-width: 750px) {
+  .product__info-wrapper .rating {
+    margin-bottom: 3.5rem;
+  }
+}
+
 .product .rating-star {
-  --letter-spacing: 0.8;
-  --font-size: 1.7;
+  --letter-spacing: 0.1;
+  --font-size: 2.1;
 }
 
 .card-wrapper .rating-star {
@@ -15,7 +32,7 @@
 }
 
 .rating-star {
-  --color-rating-star: rgb(var(--color-foreground));
+  --color-rating-star: #FB7210;
   --percent: calc(
     (
         var(--rating) / var(--rating-max) + var(--rating-decimal) * var(--font-size) /
@@ -44,6 +61,23 @@
 .rating-count {
   display: inline-block;
   margin: 0;
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+@media screen and (min-width: 750px) {
+  .rating-count {
+    font-size: 1.6rem;
+  }
+}
+
+.product__info-wrapper .rating-count {
+  grid-column: 2/span 1;
+  margin-bottom: 2.5rem;
+}
+@media (min-width: 750px) {
+  .product__info-wrapper .rating-count {
+    margin-bottom: 3.5rem;
+  }
 }
 
 @media (forced-colors: active) {

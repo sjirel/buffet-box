@@ -1,3 +1,8 @@
+/*
+* Mixin for easy media queries
+* @include bp(tablet-only) { SCSS here };
+* Default css is for mobile screens
+*/
 slider-component {
   --desktop-margin-left-first-item: max(
     5rem,
@@ -228,6 +233,26 @@ slider-component.slider-component-full-width {
   display: flex;
   justify-content: center;
   min-width: 4.4rem;
+  font-size: 1.6rem;
+  align-items: baseline;
+  gap: 0.5rem;
+  color: rgba(31, 31, 31, 0.5);
+}
+.product--thumbnail_slider .slider-counter {
+  position: absolute;
+  left: 2rem;
+  bottom: 3rem;
+}
+@media (min-width: 750px) {
+  .product--thumbnail_slider .slider-counter {
+    left: 3rem;
+    bottom: 4rem;
+  }
+}
+.product--thumbnail_slider .slider-counter .slider-counter--current {
+  font-size: 2.4rem;
+  color: #1F1F1F;
+  font-weight: 600;
 }
 
 @media screen and (min-width: 750px) {
@@ -295,6 +320,19 @@ slider-component.slider-component-full-width {
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 1rem;
+}
+.product__media-wrapper .slider-buttons {
+  position: absolute;
+  right: 2rem;
+  bottom: 2rem;
+  z-index: 2;
+}
+@media (min-width: 750px) {
+  .product__media-wrapper .slider-buttons {
+    right: 3rem;
+    bottom: 3rem;
+  }
 }
 
 @media screen and (min-width: 990px) {
@@ -313,15 +351,49 @@ slider-component.slider-component-full-width {
   }
 }
 .slider-button {
-  color: rgba(var(--color-foreground), 0.75);
-  background: transparent;
   border: none;
-  cursor: pointer;
-  width: 44px;
-  height: 44px;
-  display: flex;
-  align-items: center;
+  background-color: #ffffff;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  box-shadow: 0 0 2.5rem rgba(0, 0, 0, 0.1019607843);
+  font-weight: 500;
+  transition: background-color 0.3s ease-out, transform 0.3s ease-out;
+  display: inline-flex;
   justify-content: center;
+  align-items: center;
+  outline: none;
+  cursor: pointer;
+}
+@media (min-width: 750px) {
+  .slider-button {
+    width: 6rem;
+    height: 6rem;
+  }
+}
+.slider-button[disabled] {
+  opacity: 0.35;
+  cursor: auto;
+  pointer-events: none;
+}
+.slider-button:hover {
+  background-color: #ED4C66;
+  transform: scale(1.05);
+}
+.slider-button:hover svg path {
+  fill: #ffffff;
+}
+@media (min-width: 750px) {
+  .slider-button {
+    width: 6rem;
+    height: 6rem;
+  }
+}
+.slider-button svg, .slider-button img {
+  width: 1.5rem;
+}
+.slider-button:after {
+  content: none;
 }
 
 .slider-button:not([disabled]):hover {

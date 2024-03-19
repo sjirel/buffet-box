@@ -579,14 +579,14 @@ h5,
 
 h6,
 .h6 {
-  color: rgba(var(--color-foreground), 0.75);
+  color: rgba(var(--color-foreground));
   margin-block-start: 1.67em;
   margin-block-end: 1.67em;
 }
 
 blockquote {
   font-style: italic;
-  color: rgba(var(--color-foreground), 0.75);
+  color: rgba(var(--color-foreground));
   border-left: 0.2rem solid rgba(var(--color-foreground), 0.2);
   padding-left: 1rem;
 }
@@ -733,7 +733,7 @@ h6:empty {
 }
 
 .link--text:hover {
-  color: rgba(var(--color-foreground), 0.75);
+  color: rgba(var(--color-foreground));
 }
 
 .link-with-icon {
@@ -970,15 +970,12 @@ summary::-webkit-details-marker {
 .swiper-buttons {
   display: flex;
   align-items: center;
-  justify-content: center;
   gap: 1rem;
-  .swiper-button-prev, .swiper-button-next {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;   
-    outline: none;
-    position: static;
-    margin: 0;
+  justify-content: center;
+  .product__media-wrapper & {
+    position: absolute;
+    right: 3rem;
+    bottom: 3rem;
   }
 }
 
@@ -1552,7 +1549,7 @@ button.shopify-payment-button__button--unbranded {
   transition: box-shadow var(--duration-short) ease;
   appearance: none;
   height: 5rem;
-  min-width: 16.7rem;
+  min-width: 16rem;
   border-radius: 10rem;
   background: linear-gradient(180deg, #ED4C66 16.67%, #F58864 80.83%);
   box-shadow: inset 0 0.4rem 3rem #EC4864;
@@ -1862,7 +1859,7 @@ details[open] > .share-button__fallback {
 }
 
 .share-button__fallback button:hover {
-  color: rgba(var(--color-foreground), 0.75);
+  color: rgba(var(--color-foreground));
 }
 
 .share-button__close:not(.hidden) + .share-button__copy {
@@ -2011,7 +2008,7 @@ details[open] > .share-button__fallback {
   font-style: var(--font-body-style);
   font-weight: var(--font-body-weight);
   font-size: 1.2rem;
-  color: rgba(var(--color-foreground), 0.75);
+  color: rgba(var(--color-foreground));
 }
 
 .field:hover.field:after,
@@ -2303,8 +2300,7 @@ input[type='checkbox'] {
   font-style: var(--font-body-style);
   font-weight: var(--font-body-weight);
   font-size: 1.6rem;
-  font-weight: 500;
-  opacity: 0.85;
+  font-weight: 600;
   text-align: center;
   background-color: transparent;
   border: 0;
@@ -2312,7 +2308,7 @@ input[type='checkbox'] {
   width: 100%;
   flex-grow: 1;
   -webkit-appearance: none;
-  appearance: none;
+  appearance: none;  
 }
 
 .quantity__button {
@@ -2903,7 +2899,7 @@ product-info .loading__spinner:not(.hidden) ~ *,
 
 .header__heading-link .h2 {
   line-height: 1;
-  color: rgba(var(--color-foreground), 0.75);
+  color: rgba(var(--color-foreground));
 }
 
 .header__heading-logo {
@@ -3258,7 +3254,7 @@ details[open] > .header__submenu {
 .header__menu-item {
   padding: 1.5rem;
   text-decoration: none;
-  color: rgba(var(--color-foreground), 0.75);
+  color: rgba(var(--color-foreground));
 }
 
 .header__menu-item:hover {
