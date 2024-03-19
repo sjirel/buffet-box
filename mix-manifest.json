@@ -74,5 +74,6 @@
     "/assets/component-cart-notification.css": "/assets/component-cart-notification.css",
     "/assets/component-cart-items.css": "/assets/component-cart-items.css",
     "/assets/component-cart-drawer.css": "/assets/component-cart-drawer.css",
-    "/assets/component-card.css": "/assets/component-card.css"
+    "/assets/component-card.css": "/assets/component-card.css",
+    "/assets/component-rating.css": "/assets/component-rating.css"
 }
