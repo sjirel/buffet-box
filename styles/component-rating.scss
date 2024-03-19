@@ -5,6 +5,8 @@
 .product__info-wrapper .rating {
   grid-column: span 1;
   margin-bottom: 2.5rem;
+  position: relative;
+  top: 0.1rem;
   @include bp(md) {
     margin-bottom: 3.5rem;
   }
