@@ -137,7 +137,7 @@
           "type": "collapsible_row",
           "settings": {
             "heading": "How can I place an order?",
-            "row_content": "<p>You can place your order through our website <a href=\"https:\/\/www.buffetbox.com\" title=\"buffetbox.com\">www.buffetbox.com<\/a><br\/>For corporate or larger orders, feel free to email us <a href=\"mailto:order@buffetbox.com\" title=\"order@buffetbox.com\">order@buffetbox.com<\/a> <\/p><p>or WhatsApp us at 1-866-283-3382 <br\/><\/p>",
+            "row_content": "<p>You can place your order through our website www.buffetbox.com<br\/>For corporate or larger orders, feel free to email us order@buffetbox.com or WhatsApp us at 1-866-283-3382 <br\/><\/p>",
             "page": ""
           }
         },
