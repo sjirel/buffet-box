@@ -18,7 +18,9 @@
         "heading_size": "h1",
         "color_scheme": "scheme-5",
         "padding_top": 0,
-        "padding_bottom": 0
+        "padding_bottom": 0,
+        "padding_top_mobile": 40,
+        "padding_bottom_mobile": 52
       }
     },
     "collapsible_content_Jkrij8": {
@@ -28,23 +30,23 @@
           "type": "collapsible_row",
           "settings": {
             "heading": "What is BuffetBox?",
-            "row_content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer suscipit libero mi, vel ultrices ipsum commodo ac.<\/p>",
+            "row_content": "<p>We’ve created the most Interactive, exciting and amazing way to Gift, Party and enjoy any occasion,  All our boxes are presented in a Buffet style packaging making it very fun to display everywhere. Buffet Box is  a unique gifting company that caters to all ages. We offer a variety of seasonal and year round Buffet Boxes for you to enjoy. from Desserts, Snacks, Activity and so much more. Our slogan says it all “Food & Fun For Friends & Family” <\/p>",
             "page": ""
           }
         },
         "collapsible_row_3WenNC": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "How can I place an order?",
-            "row_content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer suscipit libero mi, vel ultrices ipsum commodo ac.<\/p>",
+            "heading": "What occasions can Buffet Box be used for?",
+            "row_content": "<p>For each and every occasion such as, Birthdays, Just Because, Corporate, Holidays, the list goes on forever. <\/p>",
             "page": ""
           }
         },
         "collapsible_row_rPVitB": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "What types of BuffetBoxes do y ou offer?",
-            "row_content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer suscipit libero mi, vel ultrices ipsum commodo ac.<\/p>",
+            "heading": "What types of BuffetBoxes do you offer?",
+            "row_content": "<p>We offer all different kinds of boxes that are available year round. As well as exclusive seasonal boxes. <\/p>",
             "page": ""
           }
         },
@@ -52,7 +54,7 @@
           "type": "collapsible_row",
           "settings": {
             "heading": "Can I customize the contents of my BuffetBox?",
-            "row_content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer suscipit libero mi, vel ultrices ipsum commodo ac.<\/p>",
+            "row_content": "<p>As of now, we do not offer custom boxes. For special orders, reach out to our team. <\/p>",
             "page": ""
           }
         },
@@ -60,39 +62,39 @@
           "type": "collapsible_row",
           "settings": {
             "heading": "Is Buffetbox available for special occasions or events?",
-            "row_content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer suscipit libero mi, vel ultrices ipsum commodo ac.<\/p>",
+            "row_content": "<p>Yes! We cater to all your event needs. <\/p>",
             "page": ""
           }
         },
         "collapsible_row_4x3bhr": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Do you accomodate dietary restrictions?",
-            "row_content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer suscipit libero mi, vel ultrices ipsum commodo ac.<\/p>",
+            "heading": "Can Buffet Box accommodate dietary restrictions?",
+            "row_content": "<p>Buffet Box contents differ from box to box. Allergy warnings are noted on each box.<\/p>",
             "page": ""
           }
         },
         "collapsible_row_wFEBWr": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "How is BuffetBox pasckaged and delivered?",
-            "row_content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer suscipit libero mi, vel ultrices ipsum commodo ac.<\/p>",
+            "heading": "How is Buffet Box packaged and delivered?",
+            "row_content": "<p>With extreme care and precision.<\/p>",
             "page": ""
           }
         },
         "collapsible_row_mpdBGN": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "What is the shelf life of BuffetBox treats?",
-            "row_content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer suscipit libero mi, vel ultrices ipsum commodo ac.<\/p>",
+            "heading": "What is the shelf life of Buffet Box?",
+            "row_content": "<p>Depending on the box you choose, there might be ingredients that have a shorter shelf life or that need to be refrigerated.<\/p>",
             "page": ""
           }
         },
-        "collapsible_row_YncXhq": {
+        "collapsible_row_RegNLq": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Can I track my BuffetBox deliver?",
-            "row_content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer suscipit libero mi, vel ultrices ipsum commodo ac.<\/p>",
+            "heading": "How can I place an order?",
+            "row_content": "<p>You can place your order through our website <a href=\"https:\/\/www.buffetbox.com\" title=\"buffetbox.com\">buffetbox.com<\/a><br\/>For corporate or larger orders, feel free to email us <a href=\"mailto:order@buffetbox.com\" title=\"order@buffetbox.com\">order@buffetbox.com<\/a> or WhatsApp us at 1-866-283-3382 <\/p>",
             "page": ""
           }
         },
@@ -100,7 +102,39 @@
           "type": "collapsible_row",
           "settings": {
             "heading": "What should I do if there's an issue with my order?",
-            "row_content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer suscipit libero mi, vel ultrices ipsum commodo ac.<\/p>",
+            "row_content": "<p>Please reach out to us immediately, so that we can resolve the issue smoothly.<\/p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_YncXhq": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "I would like my order to ship out on a future date. Do you offer that option?",
+            "row_content": "<p>If you would like the shipment of your order to be delayed, please choose the desired delivery date on the calendar during the checkout process.<\/p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_DrFBTR": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How can I be sure that my order went through?",
+            "row_content": "<p>Once you have completed the order process you will receive an order confirmation number. If you do not receive a confirmation number this means that your order did not go through. Additionally, you will receive an e-mail notification confirming your order. Please note: If your e-mail address was not entered correctly, you will receive an order confirmation number, however you will not receive the e-mail confirmation.<\/p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_dq9Fjh": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Can I check the status of my order online?",
+            "row_content": "<p>Once our carrier has picked up the order, you will be able to track the shipment of your order by logging in to your account or by tracking your package using the tracking number that was emailed to you on UPS.com.<br\/><\/p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_pbcb9X": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Are Buffet Box products guaranteed for quality and freshness?",
+            "row_content": "<p>We guarantee 100% satisfaction on all our products: If you are less than satisfied with the quality or freshness of a product, we will either reship the item or refund you for the total value (within 30 days of receipt). Just call or email customer service and we'll make it right! We are open Mon-Fri -9-5pm EST.<\/p>",
             "page": ""
           }
         }
@@ -114,8 +148,12 @@
         "collapsible_row_4x3bhr",
         "collapsible_row_wFEBWr",
         "collapsible_row_mpdBGN",
+        "collapsible_row_RegNLq",
+        "collapsible_row_c46Fdt",
         "collapsible_row_YncXhq",
-        "collapsible_row_c46Fdt"
+        "collapsible_row_DrFBTR",
+        "collapsible_row_dq9Fjh",
+        "collapsible_row_pbcb9X"
       ],
       "settings": {
         "caption": "FAQ's",
