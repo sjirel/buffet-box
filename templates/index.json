@@ -66,7 +66,8 @@
           "settings": {
             "icon": "shopify:\/\/shop_images\/icon-gift.png",
             "image": "shopify:\/\/shop_images\/gift_and_more.png",
-            "title": "Gifts & More"
+            "title": "Gifts & More",
+            "collection_link": "gift-more"
           }
         },
         "card_6LPGaU": {
@@ -74,7 +75,8 @@
           "settings": {
             "icon": "shopify:\/\/shop_images\/icon-employee.png",
             "image": "shopify:\/\/shop_images\/employee.png",
-            "title": "Employee"
+            "title": "Employee",
+            "collection_link": "employee-1"
           }
         },
         "card_RpmXTe": {
@@ -82,7 +84,8 @@
           "settings": {
             "icon": "shopify:\/\/shop_images\/personal_card_ico.svg",
             "image": "shopify:\/\/shop_images\/personal_card_image.jpg",
-            "title": "Personal"
+            "title": "Personal",
+            "collection_link": "personal"
           }
         },
         "card_RWdUty": {
@@ -90,7 +93,8 @@
           "settings": {
             "icon": "shopify:\/\/shop_images\/loved_ones_ico.svg",
             "image": "shopify:\/\/shop_images\/loved_ones_card-image.jpg",
-            "title": "Loved Ones"
+            "title": "Loved Ones",
+            "collection_link": "loved-ones"
           }
         },
         "card_XU7nRE": {
@@ -98,7 +102,8 @@
           "settings": {
             "icon": "shopify:\/\/shop_images\/holidays_card-ico.svg",
             "image": "shopify:\/\/shop_images\/holidays_card-image.jpg",
-            "title": "Holidays"
+            "title": "Holidays",
+            "collection_link": "holidays"
           }
         },
         "card_DazUT4": {
@@ -106,7 +111,8 @@
           "settings": {
             "icon": "shopify:\/\/shop_images\/occasions_card-ico.svg",
             "image": "shopify:\/\/shop_images\/occasions_card-image.jpg",
-            "title": "Occasions"
+            "title": "Occasions",
+            "collection_link": "occasions"
           }
         }
       },
