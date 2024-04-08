@@ -18,6 +18,22 @@
     }
 {%- endstyle -%}
 
+{% assign pricerange = '' | split: '  ' %}
+{% assign recipientType = '' | split: '  ' %}
+{% for product in collections.all.products %}
+    {% assign pricerangeName = product.metafields.custom.price_range | append:"," | split: '  ' %}
+    {% assign pricerange = pricerange | concat: pricerangeName %}
+    
+    {% assign recipientName = product.metafields.custom.recipient_type.value %}
+    {% for recipient in recipientName %}
+        {% assign rec = recipient | append:"," | split: '  ' %}
+        {% assign recipientType = recipientType | concat: rec %}
+    {% endfor %}
+{% endfor %}
+
+{% assign pricerangeFinal =   pricerange | uniq | sort_natural %}
+{% assign recipientFinal =   recipientType | uniq %}
+
 <div class="find-perfect-gift section-{{ section.id }}-padding-desktop section-{{ section.id }}-padding-mobile">
     <div class="bgArc">&nbsp;</div>
     <div class="page-width">
@@ -26,46 +42,76 @@
             <h2>Find The Perfect Box</h2>
         </div>
         <div class="find-perfect-gift-form-wrapper">
-            <form action="" class="find-perfect-gift-form">
+            <div class="find-perfect-gift-form">
+                <input class="mainUrl" type="hidden" value="anniversary">
+                <input class="filterprice" type="hidden" value="$100 to $200">
+                <input class="whofor" type="hidden" value="Family">
                 <div class="elems-top">
                     <div class="form-group">
                         <label>Who is this for?</label>
-                        <select class="form-control">
-                            <option value="">Family</option>
-                            <option value="">Friend</option>
-                            <option value="">Boss</option>
-                            <option value="">Colleague</option>
-                            <option value="">Employee</option>
-                            <option value="">Loved One</option>
-                            <option value="">Personal</option>
+                        <select class="form-control elems-top-who">
+                            {% for item in recipientFinal %}
+                                {% assign itemrec = item | split: ',' %}
+                                <option value="{{ itemrec[0] }}">{{ itemrec[0] }}</option>
+                            {% endfor %}
                         </select>
                     </div>
                     <div class="form-group">
                         <label>What's the occasion?</label>
-                        <select class="form-control">
-                            <option value="">Congratulations</option>
-                            <option value="">Holiday</option>
-                            <option value="">Birthday</option>
-                            <option value="">Anniversary</option>
-                            <option value="">Gift</option>
+                        <select class="form-control elems-top-what">
+                            {% for collection in collections %}
+                                {% unless collection.title == 'Sale' %}
+                                    <option value="{{ collection.handle }}">{{ collection.title }}</option>
+                                {% endunless %}
+                            {% endfor %}
                         </select>
                     </div>
                     <div class="form-group">
                         <label>What's your budget?</label>
-                        <select class="form-control">
-                            <option value="">$90 to $120</option>
-                            <option value="">$90 to $120</option>
-                            <option value="">$90 to $120</option>
+                        <select class="form-control elems-top-budget">
+                            {% for priceitem in pricerangeFinal %}
+                                {% assign itemprice = priceitem | split: ',' %}
+                                <option value="{{ itemprice[0] }}">{{ itemprice[0] }}</option>
+                            {% endfor %}
                         </select>
                     </div>
                 </div>
                 <div class="submit-button-wrapper">
-                    <button class="btn btn-red-gradient">Find The Perfect Gift</button>
+                    <button class="btn btn-red-gradient perfectbox__button">Find The Perfect Gift</button>
                 </div>
-            </form>
+            </div>
         </div>
     </div>
 </div>
+
+<script>
+    const formMain = document.querySelector('.find-perfect-gift-form');
+    const formSelector = document.querySelectorAll('.form-control');
+    const submitBtn = formMain.querySelector('.perfectbox__button');
+
+    const mainUrl = formMain.querySelector('.mainUrl');
+    const filterprice = formMain.querySelector('.filterprice');
+    const whofor = formMain.querySelector('.whofor');
+
+    formSelector.forEach((selector)=> {
+        selector.addEventListener('change',function(e){
+            if(selector.classList.contains('elems-top-budget')){
+                filterprice.value = this.value;
+            }
+            else if(selector.classList.contains('elems-top-who')){
+                whofor.value = this.value;
+            }
+            else {
+                mainUrl.value = this.value;
+            }
+        })
+    })
+
+    submitBtn.addEventListener('click',(e)=>{
+        let colUrl = `{{ shop.url }}/collections/${mainUrl.value}?filter.p.m.custom.price_range=${encodeURI(filterprice.value)}&filter.p.m.custom.recipient_type=${encodeURI(whofor.value)}`;
+        window.location = colUrl;
+    })
+</script>
 
 {% schema %}
     {
