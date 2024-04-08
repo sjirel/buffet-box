@@ -38,17 +38,12 @@
 }
 .edd-body {
     .edd-option {
-        background: #ffffff;
-        height: 4.8rem;
         &:first-child {
-            border-radius: 2.5rem 2.5rem 0 0;
+            border-radius: 1.4rem 1.4rem 0 0;
         }
         &:last-child {
-            border-radius: 0 0 2.5rem 2.5rem;
+            border-radius: 0 0 1.4rem 1.4rem;
         }
-    }
-    .edd-option-selected {
-
     }
 }
 
@@ -169,9 +164,13 @@
 }
 
 .edd-option {
-    padding: 6px 10px;
-    border-bottom: 1px solid #eee;
+    padding: 1.6rem 2.2rem;
+    line-height: 1;
+    background-color: #fff;    
     transition: background-color 250ms, color 250ms, border-color 250ms;
+    &:not(:last-child) {
+        border-bottom: 1px solid #eee;
+    }
 }
 
 .edd-group-has-label .edd-option {
@@ -180,13 +179,15 @@
 
 .edd-option-selected {
     font-weight: 400;
-    color: #ED4C66;
+    background-repeat: no-repeat;
+    background-position: right 2rem center;
+    background-size: 1.2rem auto;
+    background-color: #ED4C66;
+    color: white !important;
 }
 
 .edd-option-focused:not(.edd-option-disabled) {
-    background: #ED4C66;
-    border-bottom-color: #ED4C66;
-    color: white;
+    color: #ED4C66;
 }
 
 .edd-option-disabled,
