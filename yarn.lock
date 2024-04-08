@@ -2285,6 +2285,11 @@ csso@^4.2.0:
   dependencies:
     css-tree "^1.1.2"
 
+custom-event-polyfill@1.0.6:
+  version "1.0.6"
+  resolved "https://registry.yarnpkg.com/custom-event-polyfill/-/custom-event-polyfill-1.0.6.tgz#6b026e81cd9f7bc896bd6b016a427407bb068db1"
+  integrity sha512-3FxpFlzGcHrDykwWu+xWVXZ8PfykM/9/bI3zXb953sh+AjInZWcQmrnmvPoZgiqNjmbtTm10PWvYqvRW527x6g==
+
 debug@2.6.9:
   version "2.6.9"
   resolved "https://registry.yarnpkg.com/debug/-/debug-2.6.9.tgz#5d128515df134ff327e90a4c93f4e077a536341f"
@@ -2439,6 +2444,14 @@ dotenv@^10.0.0:
   version "10.0.0"
   resolved "https://registry.yarnpkg.com/dotenv/-/dotenv-10.0.0.tgz#3d4227b8fb95f81096cdd2b66653fb2c7085ba81"
   integrity sha512-rlBi9d8jpv9Sf1klPjNfFAuWDjKLwTIJJ/VxtoTwIR6hnZxcEOQCZg2oIL3MWBYw5GpUDKOEnND7LXTbIpQ03Q==
+
+easydropdown@^4.2.0:
+  version "4.2.0"
+  resolved "https://registry.yarnpkg.com/easydropdown/-/easydropdown-4.2.0.tgz#9d4b9ac5c24cf0aa9b364e7d25c94cd5492f55ea"
+  integrity sha512-oicfb/8VT2e9s1nCqzBEB2qCXvuJl4nQnHT6ej+HG8Ot6vNkymxKOL9qE1G4h2uMe16xFW9NF1/WiOIF6yX00g==
+  dependencies:
+    custom-event-polyfill "1.0.6"
+    helpful-merge "0.2.0"
 
 ee-first@1.1.1:
   version "1.1.1"
@@ -2935,6 +2948,11 @@ he@^1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/he/-/he-1.2.0.tgz#84ae65fa7eafb165fddb61566ae14baf05664f0f"
   integrity sha512-F/1DnUGPopORZi0ni+CvrCgHQ5FyEAHRLSApuYWMmrbSwoN2Mn/7k+Gl38gJnR7yyDZk6WLXwiGod1JOWNDKGw==
+
+helpful-merge@0.2.0:
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/helpful-merge/-/helpful-merge-0.2.0.tgz#24f5829ef1b8fe78698e5a0432da281f79e1615b"
+  integrity sha512-lqbBl4TU15okBJ4C8hx7PBEcqtaxxsWLOypdhpsZbRvBTaibNqTXWpG6W59S0FTBeL7hx3K4MXdz8EJVcZ3CCQ==
 
 hmac-drbg@^1.0.1:
   version "1.0.1"

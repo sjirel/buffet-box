@@ -138,7 +138,13 @@
           <div class="collection{% if section.settings.filter_type != 'vertical' %} page-width{% endif %}">
             <div class="loading-overlay gradient"></div>
             <div class="section-heading">
-              <h1>Shop All Valentine’s Boxes</h1>
+              <h1>Shop 
+                {% if collection.handle == 'all' %}
+                  All 
+                {% else %}
+                  {{ collection.title }}
+                {% endif %}
+              </h1>
             </div>
             <ul
               id="product-grid"

@@ -9,6 +9,7 @@
     "build": "npx mix --production"
   },
   "devDependencies": {
+    "easydropdown": "^4.2.0",
     "laravel-mix": "^6.0.49",
     "resolve-url-loader": "5.0.0",
     "sass": "^1.71.0",

@@ -1,5 +1,12 @@
 import Swiper from 'swiper/bundle';
+import easydropdown from 'easydropdown';
 // import 'swiper/css/bundle';
+
+let pdpDropdn = document.querySelectorAll('.product-form__input .select__select');
+
+pdpDropdn.forEach((item)=>{
+    easydropdown(item);
+});
 
 let relatedProductItemsSlider = new Swiper('.js-related-products-slider', {
     loop: true,
