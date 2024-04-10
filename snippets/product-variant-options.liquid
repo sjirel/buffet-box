@@ -128,7 +128,13 @@
         {{- 'products.product.value_unavailable' | t: option_value: value -}}
       {%- else -%}
         {{- value -}}
-      {%- endif %}
+        {%- for variant  in product.variants -%}
+          {%- if variant.title == value and variant.metafields.custom.people  != blank -%}
+            <span class="people">&nbsp;({{ variant.metafields.custom.people }})</span>
+          {%- endif -%}
+        {%- endfor -%}
+      {%- endif -%}
     </option>
   {%- endif -%}
 {%- endfor -%}
+

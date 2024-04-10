@@ -66,7 +66,8 @@
           "settings": {
             "icon": "shopify:\/\/shop_images\/icon-gift.png",
             "image": "shopify:\/\/shop_images\/gift_and_more.png",
-            "title": "Gifts & More"
+            "title": "Gifts & More",
+            "collection_link": "gift-more"
           }
         },
         "card_6LPGaU": {
@@ -74,7 +75,8 @@
           "settings": {
             "icon": "shopify:\/\/shop_images\/icon-employee.png",
             "image": "shopify:\/\/shop_images\/employee.png",
-            "title": "Employee"
+            "title": "Employee",
+            "collection_link": "congratulations"
           }
         },
         "card_RpmXTe": {
@@ -82,7 +84,8 @@
           "settings": {
             "icon": "shopify:\/\/shop_images\/personal_card_ico.svg",
             "image": "shopify:\/\/shop_images\/personal_card_image.jpg",
-            "title": "Personal"
+            "title": "Personal",
+            "collection_link": "anniversary"
           }
         },
         "card_RWdUty": {
@@ -90,7 +93,8 @@
           "settings": {
             "icon": "shopify:\/\/shop_images\/loved_ones_ico.svg",
             "image": "shopify:\/\/shop_images\/loved_ones_card-image.jpg",
-            "title": "Loved Ones"
+            "title": "Loved Ones",
+            "collection_link": "loved-ones"
           }
         },
         "card_XU7nRE": {
@@ -98,7 +102,8 @@
           "settings": {
             "icon": "shopify:\/\/shop_images\/holidays_card-ico.svg",
             "image": "shopify:\/\/shop_images\/holidays_card-image.jpg",
-            "title": "Holidays"
+            "title": "Holidays",
+            "collection_link": "holiday"
           }
         },
         "card_DazUT4": {
@@ -106,7 +111,8 @@
           "settings": {
             "icon": "shopify:\/\/shop_images\/occasions_card-ico.svg",
             "image": "shopify:\/\/shop_images\/occasions_card-image.jpg",
-            "title": "Occasions"
+            "title": "Occasions",
+            "collection_link": "birthday"
           }
         }
       },
@@ -136,9 +142,9 @@
           "donutbox",
           "hamantoshenbox",
           "churrobox",
-          "icecreambox",
-          "copy-of-churrobox",
-          "copy-of-donutbox"
+          "smores-box",
+          "strawberry-short-cake-box",
+          "booze-box"
         ],
         "padding_top": 0,
         "padding_bottom": 180,
@@ -167,7 +173,7 @@
         "title": "About Buffet Box",
         "subtitle": "What People Are Saying",
         "padding_top": 0,
-        "padding_bottom": 90,
+        "padding_bottom": 0,
         "padding_top_mobile": 0,
         "padding_bottom_mobile": 0
       }
@@ -175,10 +181,10 @@
     "findPerfectGift": {
       "type": "section-find-perfect-gift",
       "settings": {
-        "padding_top": 180,
-        "padding_bottom": 180,
+        "padding_top": 60,
+        "padding_bottom": 60,
         "padding_top_mobile": 60,
-        "padding_bottom_mobile": 100
+        "padding_bottom_mobile": 60
       }
     }
   },

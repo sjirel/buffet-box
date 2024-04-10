@@ -48,7 +48,9 @@
 }
 .product-card .product-image__box img {
   width: 100%;
-  border-radius: 50%;
+  transform: scale(0.9);
+  position: relative;
+  left: -3.5%;
   transition: transform 0.3s ease-in-out;
 }
 .product-card .product-content {

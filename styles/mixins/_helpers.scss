@@ -126,7 +126,6 @@ $image-path: '{{ asset_url }}' !default;
   @if $point == xxxl {
       @media (min-width: 1600px) { @content; }
   }
-
 }
 
 

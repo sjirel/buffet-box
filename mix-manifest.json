@@ -48,6 +48,7 @@
     "/assets/component-slider.css": "/assets/component-slider.css",
     "/assets/component-show-more.css": "/assets/component-show-more.css",
     "/assets/component-search.css": "/assets/component-search.css",
+    "/assets/component-rating.css": "/assets/component-rating.css",
     "/assets/component-product-variant-picker.css": "/assets/component-product-variant-picker.css",
     "/assets/component-product-model.css": "/assets/component-product-model.css",
     "/assets/component-price.css": "/assets/component-price.css",
@@ -74,6 +75,5 @@
     "/assets/component-cart-notification.css": "/assets/component-cart-notification.css",
     "/assets/component-cart-items.css": "/assets/component-cart-items.css",
     "/assets/component-cart-drawer.css": "/assets/component-cart-drawer.css",
-    "/assets/component-card.css": "/assets/component-card.css",
-    "/assets/component-rating.css": "/assets/component-rating.css"
+    "/assets/component-card.css": "/assets/component-card.css"
 }

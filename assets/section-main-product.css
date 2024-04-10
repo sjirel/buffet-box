@@ -42,6 +42,10 @@
   border-radius: 10rem;
 }
 
+.product-grid-container-wrapper.gradient {
+  background: none;
+}
+
 .product__info-wrapper .online-exclusive {
   color: #ED4C66;
   background-color: #ffffff;
@@ -325,9 +329,15 @@
   width: 38px;
   max-width: 38px;
   margin: 0 0.5rem;
+  font-size: 2.4rem;
+  font-family: "Roobert", sans-serif;
 }
 .product__info-container .quantity__input:focus {
   background-color: transparent;
+}
+
+.product__info-container .quantity {
+  min-height: 3.6rem;
 }
 
 .product__info-container .quantity__button {
@@ -1552,6 +1562,7 @@ a.product__text {
   margin: 0;
   padding: 0;
   display: flex;
+  align-items: center;
   flex-wrap: wrap;
   font-size: 1.4rem;
   line-height: 1;

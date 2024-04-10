@@ -46,7 +46,8 @@
         transition: border 0.3s ease-in-out;
         img {
             width: 100%;
-            border-radius: 50%;
+            transform: scale(0.75);
+            position: relative;
             transition: transform 0.3s ease-in-out;
         }
        }

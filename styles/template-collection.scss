@@ -1,3 +1,4 @@
+@import './mixins/helpers';
 @media screen and (max-width: 749px) {
   .collection .grid__item:only-child {
     flex: 0 0 100%;
@@ -68,7 +69,17 @@
 }
 
 .collection__title.title-wrapper {
-  margin-bottom: 2.5rem;
+  margin-bottom: 4rem;
+  text-align: center;
+  @include bp(md) {
+    margin-bottom: 6rem;
+  }
+  .h1 {
+    font-size: calc(var(--font-heading-scale)* 4rem);
+    @include bp(md) {
+      font-size: calc(var(--font-heading-scale)* 6.4rem);
+    }
+  }
 }
 
 .collection__title .title:not(:only-child) {
@@ -84,9 +95,9 @@
     padding: 0 5rem;
   }
 
-  .collection slider-component:not(.page-width-desktop) {
-    padding: 0;
-  }
+  // .collection slider-component:not(.page-width-desktop) {
+  //   padding: 0;
+  // }
 
   .collection--full-width slider-component:not(.slider-component-desktop) {
     padding: 0 1.5rem;
