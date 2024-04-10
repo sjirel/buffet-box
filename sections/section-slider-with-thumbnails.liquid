@@ -4,10 +4,12 @@
     <div class="page-width">
         <div class="swiper main-slider-with-thumb">
             <div class="swiper-wrapper">
-                {% for block in section.blocks %}
+                {% for image in product.metafields.arena.gallery_image %}
                     <div class="swiper-slide ">
-                        {{ block.settings.slider_image | image_url: width: 1800 | image_tag: loading: 'eager' }}
-                        <span class="label">{{block.settings.heading}}</span>
+                        {% assign imageUrl = image | split: "/" | last | prepend: "files/" %}
+                        {% assign imageUrlFInal = imageUrl | split: "?" | first %}
+                        <image src="{{image}}" alt="">
+                        <span class="label">{{product.metafields.arena.image_title[forloop.index0]}}</span>                     
                     </div>
                 {% endfor %}
             </div>
@@ -15,9 +17,9 @@
         <div class="outer-thumnail-slider">
             <div thumbsSlider="" class="swiper thumnail-slider">
                 <div class="swiper-wrapper">
-                    {% for block in section.blocks %}
+                    {% for image in product.metafields.arena.gallery_image %}
                         <div class="swiper-slide">
-                            {{ block.settings.slider_image | image_url: width: 180 | image_tag: loading: 'eager' }}
+                            <image src="{{image}}" alt="">
                         </div>
                     {% endfor %}
                 </div>                
@@ -63,40 +65,10 @@
             "default": 36
         }
     ],
-    "blocks":[
-        {
-            "type": "slide",
-            "name": "t:sections.multicolumn.blocks.column.name",
-            "settings" :[              
-                {
-                    "type": "text",
-                    "id": "heading",
-                    "default": "Slide",
-                    "info": "t:sections.main-product.blocks.collapsible_tab.settings.heading.info",
-                    "label": "t:sections.main-product.blocks.collapsible_tab.settings.heading.label"
-                },
-                {
-                    "type": "image_picker",
-                    "id": "slider_image",
-                    "label": "Slider Image"
-                }                                
-            ]
-        }
-    ],    
+
     "presets": [
             {
-                "name": "Slider with thumb",
-                "blocks": [
-                    {
-                        "type": "slide"
-                    },
-                    {
-                        "type": "slide"
-                    },
-                    {
-                        "type": "slide"
-                    }
-                ]                
+                "name": "Slider with thumb"              
             }
             
         ]        

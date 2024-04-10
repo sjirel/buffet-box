@@ -65,15 +65,15 @@
             <li 
             id="Slide-{{ section.id }}-{{forloop.index}}{{ id_append }}"
             class="grid__item slider__slide">
-              {% comment %} {% render 'card-product',
+             {% comment %} {% render 'card-product',
                 card_product: recommendation,
                 media_aspect_ratio: section.settings.image_ratio,
                 image_shape: section.settings.image_shape,
                 show_secondary_image: section.settings.show_secondary_image,
                 show_vendor: section.settings.show_vendor,
                 show_rating: section.settings.show_rating
-              %}{% endcomment %}
-              {% render 'item-card-product', product: product %}
+              %} {% endcomment %}
+              {% render 'item-card-product-recommended', card_product: recommendation %} 
             </li>
           {% endfor %}
         </ul>

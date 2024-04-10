@@ -477,6 +477,14 @@ a.product__text {
 
 .product-form__quantity .form__label {
   margin-bottom: 0.6rem;
+  position: relative;
+}
+
+.product-form__quantity .form__label .quantity__rules-cart {
+  position: absolute;
+  left: 0;
+  transform: translateY(-90%);
+  font-size: 12px;
 }
 
 .price-per-item__label.form__label {

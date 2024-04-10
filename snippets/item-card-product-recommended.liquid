@@ -1,0 +1,32 @@
+{{ 'product-card.css' | asset_url | stylesheet_tag }}
+
+<div class="product-card">
+    <a class="link" href="{{ card_product.url }}">
+    <div class="product-image">
+        <div class="product-image__box">
+            {{ card_product.featured_media |  image_url: width: 450 |  image_tag: loading: 'lazy' }}
+        </div>
+    </div>
+    <div class="product-content">
+        {%- assign product_form_id = 'product-form-' | append: block.id -%}
+        <h2 class="product-title">{{ card_product.title |  prepend: '#' }}</h2>
+        <div class="product-price"><span class="currency">{{ cart.currency.symbol }}</span>{{ card_product.price | money_without_currency }}</div>        
+    </div>
+    <div class="product-content-footer">
+        {%- if card_product != blank -%}
+            <div {{ block.shopify_attributes }}>
+                {%- form 'product', card_product -%}
+                    <input type="hidden" name="id" value="{{ card_product.selected_or_first_available_variant.id }}">
+                    {{ form | payment_terms }}
+                {%- endform -%}
+            </div>
+            {%- render 'buy-buttons-all-ajax',
+                block: block,
+                product: card_product,
+                product_form_id: product_form_id,
+                section_id: section.id
+            -%}
+        {%- endif -%}
+       </div>
+    </a>
+</div>
