@@ -16,6 +16,9 @@
   color: #fff;
   width: 100%;
   line-height: 1.5;
+  &.dark-text {
+    color: #1f1f1f;
+  }
 }
 
 /* Needed for gradient continuity with or without animation, the transform scopes the gradient to its container which happens already when animation are turned on */
@@ -427,6 +430,9 @@
   }
   .template-collection & {
     color: #fff;
+  }
+  .template-collection .dark-text & {
+    color: #1f1f1f;
   }
 }
 

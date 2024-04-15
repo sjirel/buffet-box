@@ -22,6 +22,9 @@
   width: 100%;
   line-height: 1.5;
 }
+.banner__box.dark-text {
+  color: #1f1f1f;
+}
 
 /* Needed for gradient continuity with or without animation, the transform scopes the gradient to its container which happens already when animation are turned on */
 .banner__box.gradient {
@@ -388,6 +391,9 @@
 }
 .template-collection .banner__heading {
   color: #fff;
+}
+.template-collection .dark-text .banner__heading {
+  color: #1f1f1f;
 }
 
 .banner__box .banner__heading + * {
