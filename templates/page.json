@@ -4,7 +4,9 @@
       "type": "main-page",
       "settings": {
         "padding_top": 28,
-        "padding_bottom": 28
+        "padding_bottom": 28,
+        "padding_top_mobile": 40,
+        "padding_bottom_mobile": 52
       }
     }
   },
