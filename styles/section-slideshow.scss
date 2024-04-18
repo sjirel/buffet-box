@@ -29,19 +29,22 @@
 			bottom: 0;
 		}
         .color-bg-orange {
-            background: $bg-orange;
             background: $bg-radial-orange;
         }
-        
+		.color-bg-blue {
+            background: $bg-radial-blue;
+        }        
         .color-bg-pink {
-            background: $bg-pink;
             background: $bg-radial-pink;
         }
-        
-        .color-bg-blue {
-            background: $bg-blue;
-            background: $bg-radial-blue;
+		.color-bg-light-brown {
+            background: $bg-radial-light-brown;
         }
+		.color-bg-green {
+            background: $bg-radial-green;
+        }
+        
+        
 
 		.swiper {
 			height: 100%;
@@ -122,9 +125,21 @@
                     color: $color-orange;
                 }
             }
+        }        
+            
+        .color-bg-blue {        
+            .price-section-wrapper {
+                .title {
+                    color: $color-blue;
+                }
+    
+                img {
+                    filter: hue-rotate(170deg);
+                }
+            }
         }
-        
-        .color-bg-pink {
+
+		.color-bg-pink {
             .price-section-wrapper {
                 .title {
                     color: $color-red;
@@ -135,16 +150,27 @@
                 }
             }
         }
-        
-        .color-bg-blue {
-        
+
+		.color-bg-light-brown {
             .price-section-wrapper {
                 .title {
-                    color: $color-blue;
+                    color: #8D5C3B;
                 }
     
                 img {
-                    filter: hue-rotate(170deg);
+                    filter: hue-rotate(320deg);
+                }
+            }
+        }
+
+		.color-bg-green {
+            .price-section-wrapper {
+                .title {
+                    color: #9E9145;
+                }
+    
+                img {
+                    filter: hue-rotate(320deg);
                 }
             }
         }
@@ -391,6 +417,9 @@
 		.swiper-slide-shadow {
 			display: none !important;
 		}
+	}
+	.form-details {
+		display: none;
 	}
 
 	&__footer {
