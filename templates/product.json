@@ -79,9 +79,9 @@
         "hide_variants": false,
         "enable_video_looping": false,
         "padding_top": 80,
-        "padding_bottom": 170,
-        "padding_top_mobile": 20,
-        "padding_bottom_mobile": 86
+        "padding_bottom": 100,
+        "padding_top_mobile": 40,
+        "padding_bottom_mobile": 52
       }
     },
     "section_product_info_TgLfLV": {
@@ -92,7 +92,7 @@
           "settings": {
             "icon": "donut",
             "heading": "24",
-            "caption": "Donuts"
+            "caption": ""
           }
         },
         "icon_text_HPw4xC": {
@@ -129,7 +129,7 @@
           "type": "column",
           "settings": {
             "title": "Nutrition & Ingredients",
-            "text": "<ul><li>Selection of fluffy donuts (24)<\/li><li>Chocolate sauce<\/li><li>Sugar<\/li><li>Colorful sugary sprinkles<\/li><li>Cinnamon powder<\/li><\/ul>",
+            "text": "",
             "link_label": "",
             "link": ""
           }
@@ -171,34 +171,6 @@
     },
     "section_slider_with_thumbnails_rcAcyt": {
       "type": "section-slider-with-thumbnails",
-      "blocks": {
-        "slide_EjjjQg": {
-          "type": "slide",
-          "settings": {
-            "heading": "Regular Box",
-            "slider_image": "shopify:\/\/shop_images\/regularbox.jpg"
-          }
-        },
-        "slide_mgBJd6": {
-          "type": "slide",
-          "settings": {
-            "heading": "Regular",
-            "slider_image": "shopify:\/\/shop_images\/regularbox.jpg"
-          }
-        },
-        "slide_QCjiAE": {
-          "type": "slide",
-          "settings": {
-            "heading": "Regular",
-            "slider_image": "shopify:\/\/shop_images\/regularbox.jpg"
-          }
-        }
-      },
-      "block_order": [
-        "slide_EjjjQg",
-        "slide_mgBJd6",
-        "slide_QCjiAE"
-      ],
       "settings": {
         "padding_top": 36,
         "padding_bottom": 36
