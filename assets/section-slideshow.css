@@ -15,6 +15,9 @@
     height: 92rem;
   }
 }
+.hero-banner shopify-payment-terms {
+  display: none;
+}
 .hero-banner .outer-js-banner-big-product-title-slider {
   position: absolute;
   left: 0;
@@ -363,9 +366,6 @@
 }
 .hero-banner .outer-js-banner-product-main-slider .swiper-slide-shadow {
   display: none !important;
-}
-.hero-banner .form-details {
-  display: none;
 }
 .hero-banner__footer {
   display: flex;

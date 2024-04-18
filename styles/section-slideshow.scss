@@ -9,7 +9,9 @@
 	@include bp(md) {
 		height: 92rem;
 	}
-
+	shopify-payment-terms {
+		display: none;
+	}
 	.outer-js-banner-big-product-title-slider {
 		position: absolute;
 		left: 0;
@@ -418,9 +420,7 @@
 			display: none !important;
 		}
 	}
-	.form-details {
-		display: none;
-	}
+
 
 	&__footer {
 		display: flex;
