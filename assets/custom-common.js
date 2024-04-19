@@ -70,7 +70,7 @@ var shopoccasion = new swiper_bundle__WEBPACK_IMPORTED_MODULE_0__["default"](".s
   autoplay: {
     delay: 5000
   },
-  // effect: "creative",
+  effect: "creative",
   initialSlide: '3',
   creativeEffect: {
     perspective: true,
