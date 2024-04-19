@@ -66,20 +66,20 @@ var shopoccasion = new Swiper(".shop-occasion-slider", {
     },
     effect: "creative",
     initialSlide: '3',
-    creativeEffect: {
-        perspective: true,
-        limitProgress: 10,
-        prev: {
-            translate: ['-90%', 30, -60],
-            rotate: [0, 0, -5],
-            origin: "center"
-        },
-        next: {
-            translate: ['90%', 30, -60],
-            rotate: [0, 0, 5],
-            origin: "center"
-        },
-    },
+    // creativeEffect: {
+    //     perspective: true,
+    //     limitProgress: 10,
+    //     prev: {
+    //         translate: ['-90%', 30, -60],
+    //         rotate: [0, 0, -5],
+    //         origin: "center"
+    //     },
+    //     next: {
+    //         translate: ['90%', 30, -60],
+    //         rotate: [0, 0, 5],
+    //         origin: "center"
+    //     },
+    // },
     breakpoints: {
         768: {
             spaceBetween: 65,

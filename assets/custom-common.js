@@ -72,20 +72,20 @@ var shopoccasion = new swiper_bundle__WEBPACK_IMPORTED_MODULE_0__["default"](".s
   },
   effect: "creative",
   initialSlide: '3',
-  creativeEffect: {
-    perspective: true,
-    limitProgress: 10,
-    prev: {
-      translate: ['-90%', 30, -60],
-      rotate: [0, 0, -5],
-      origin: "center"
-    },
-    next: {
-      translate: ['90%', 30, -60],
-      rotate: [0, 0, 5],
-      origin: "center"
-    }
-  },
+  // creativeEffect: {
+  //     perspective: true,
+  //     limitProgress: 10,
+  //     prev: {
+  //         translate: ['-90%', 30, -60],
+  //         rotate: [0, 0, -5],
+  //         origin: "center"
+  //     },
+  //     next: {
+  //         translate: ['90%', 30, -60],
+  //         rotate: [0, 0, 5],
+  //         origin: "center"
+  //     },
+  // },
   breakpoints: {
     768: {
       spaceBetween: 65,
