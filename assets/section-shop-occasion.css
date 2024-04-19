@@ -14,6 +14,10 @@
 .section-shop-occasion .swiper-creative .swiper-slide {
   overflow: initial;
 }
+.section-shop-occasion .swiper-creative .swiper-slide .linkbox {
+  display: block;
+  border: 5px solid black;
+}
 .section-shop-occasion .swiper-creative .swiper-slide.swiper-slide-active .swiper-card .card-shadow, .section-shop-occasion .swiper-creative .swiper-slide:hover .swiper-card .card-shadow {
   border-color: #F5724C;
 }
