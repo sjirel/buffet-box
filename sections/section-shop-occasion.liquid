@@ -21,7 +21,7 @@
 
 <div class="section-shop-occasion section-{{ section.id }}-padding-desktop section-{{ section.id }}-padding-mobile">
     <div class="section-heading">
-        <h2><a href="google.com">{{ section.settings.title }}</a></h2>
+        <h2>{{ section.settings.title }}</h2>
     </div>
     <div class="shop-carousel">
         <div class="swiper shop-occasion-slider">
@@ -29,7 +29,7 @@
                 {% for block in section.blocks %}
                     <div class="swiper-slide">
                       <a class="linkbox" href="{{ block.settings.collection_link.url }}">
-                        {% comment %} <div class="swiper-card">
+                        <div class="swiper-card">
                             <div class="floating-bg-image">
                                 <img class="w-100" src="{{ 'paper-texture.png' | asset_url }}" alt="">
                             </div>
@@ -46,8 +46,7 @@
                                     </div>
                                 </div>
                             </div>
-                        </div> {% endcomment %}
-                        test
+                        </div>
                       </a>
                     </div>
                 {% endfor %}
