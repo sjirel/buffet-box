@@ -12,9 +12,6 @@
       overflow: initial;
       .linkbox {
         display: block;
-        border: 5px solid green;
-        position: relative;
-        z-index: 1;
       }
       &.swiper-slide-active,&:hover {
         .swiper-card {
@@ -67,7 +64,6 @@
           overflow: hidden;        
           transition: border 0.4s ease-in-out;  
           height: 100%;
-          display: none;
           @include bp(md) {
             border: 0.6rem solid $color-white;
             border-radius: 10rem;

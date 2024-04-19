@@ -29,7 +29,7 @@
                 {% for block in section.blocks %}
                     <div class="swiper-slide">
                       <a class="linkbox" href="{{ block.settings.collection_link.url }}">
-                        <div class="swiper-card">
+                        {% comment %} <div class="swiper-card">
                             <div class="floating-bg-image">
                                 <img class="w-100" src="{{ 'paper-texture.png' | asset_url }}" alt="">
                             </div>
@@ -46,7 +46,8 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div> {% endcomment %}
+                        test
                       </a>
                     </div>
                 {% endfor %}
