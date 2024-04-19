@@ -1,153 +1,151 @@
 @import './mixins/helpers';
 
 .section-shop-occasion {
-  .swiper-creative {
-    .swiper-wrapper {
-      padding-bottom: 7.8rem;
-      @include bp(md) {
-        padding-bottom: 6rem;
-      }
-    } 
-    .swiper-slide {
-      overflow: initial;
-      .linkbox {
-        display: block;
-      }
-      &.swiper-slide-active,&:hover {
-        .swiper-card {
-          .card-shadow {
-            border-color: $color-orange;     
-          }
-          .card-main {
-            .ico-holder {
-              background-color: $color-white;
-              border-color: $color-white;
-            }
-            .title { 
-              bottom: 2rem;
-              transform: translateY(0);
-              color: $color-white;
-            }
-            .image-holder {
-              height: 100%;
-              &:before {
-                opacity: 1;
-              }
-            }
-          }
-        }
-      }
+  .swiper-wrapper {
+    padding-bottom: 7.8rem;
+    @include bp(md) {
+      padding-bottom: 6rem;
+    }
+  } 
+  .swiper-slide {
+    overflow: initial;
+    .linkbox {
+      display: block;
+    }
+    &.swiper-slide-active,&:hover {
       .swiper-card {
-        margin: 0 auto;
-        width: 26.5rem;
-        height: 33.3rem;
-        max-width: 100%;
-        position: relative;
-        z-index: 1;
-        background-color: $color-white;
-        border-radius: 10rem;
-        @include bp(md) {
-          width: 36.5rem;
-          height: 46rem;
+        .card-shadow {
+          border-color: $color-orange;     
         }
-        .floating-bg-image {
+        .card-main {
+          .ico-holder {
+            background-color: $color-white;
+            border-color: $color-white;
+          }
+          .title { 
+            bottom: 2rem;
+            transform: translateY(0);
+            color: $color-white;
+          }
+          .image-holder {
+            height: 100%;
+            &:before {
+              opacity: 1;
+            }
+          }
+        }
+      }
+    }
+    .swiper-card {
+      margin: 0 auto;
+      width: 26.5rem;
+      height: 33.3rem;
+      max-width: 100%;
+      position: relative;
+      z-index: 1;
+      background-color: $color-white;
+      border-radius: 10rem;
+      @include bp(md) {
+        width: 36.5rem;
+        height: 46rem;
+      }
+      .floating-bg-image {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        z-index: -1; 
+      }
+      .card-shadow {
+        box-shadow: 0 2.5rem 5rem rgba(75, 29, 10, 0.25);          
+        border: 0.2rem solid $color-white;
+        border-radius: 6.8rem;
+        overflow: hidden;        
+        transition: border 0.4s ease-in-out;  
+        height: 100%;
+        @include bp(md) {
+          border: 0.6rem solid $color-white;
+          border-radius: 10rem;
+        }
+      }
+      .card-main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 2.2rem;
+        font-weight: bold;
+        color: #fff;
+        border-radius: 4rem;
+        padding-top: 2.5rem;
+        overflow: hidden;
+        height: 100%;
+        position: relative;
+        .ico-holder {
+          border: 1px solid #504F51;
+          display: inline-flex;
+          justify-content: center;
+          align-items: center;
+          min-width: 5rem;
+          min-height: 5rem;
+          border-radius: 12px;
+          margin-bottom: 0.5rem;
+          transition: all 0.4s ease-out;
+          position: relative;
+          z-index: 1;
+          @include bp(md) {
+            margin-bottom: 3rem;
+          }
+          img{
+            width: 2.4rem;
+            object-fit: contain;             
+          }
+        }
+        .title {
+          color: #1f1f1f;
+          text-align: center;
+          line-height: 1;
           position: absolute;
           left: 0;
           right: 0;
-          top: 0;
-          z-index: -1; 
-        }
-        .card-shadow {
-          box-shadow: 0 2.5rem 5rem rgba(75, 29, 10, 0.25);          
-          border: 0.2rem solid $color-white;
-          border-radius: 6.8rem;
-          overflow: hidden;        
-          transition: border 0.4s ease-in-out;  
-          height: 100%;
+          bottom: calc(100% - 0.5rem);
+          transform: translateY(-100%);
+          margin: 0;
+          font-size: 2.8rem;
+          transition: all 0.4s ease-out;
+          z-index: 2;
           @include bp(md) {
-            border: 0.6rem solid $color-white;
-            border-radius: 10rem;
+            font-size: 3.2rem;
           }
         }
-        .card-main {
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          font-size: 2.2rem;
-          font-weight: bold;
-          color: #fff;
-          border-radius: 4rem;
-          padding-top: 2.5rem;
-          overflow: hidden;
-          height: 100%;
-          position: relative;
-          .ico-holder {
-            border: 1px solid #504F51;
-            display: inline-flex;
-            justify-content: center;
-            align-items: center;
-            min-width: 5rem;
-            min-height: 5rem;
-            border-radius: 12px;
-            margin-bottom: 0.5rem;
-            transition: all 0.4s ease-out;
-            position: relative;
+        .image-holder {
+          flex-grow: 1;
+          position: absolute;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          height: calc(100% - 14rem);
+          transition: height 0.4s ease-out;
+          @include bp(md) {
+            height: calc(100% - 16rem);
+          }
+          &:before {
+            content: "";
             z-index: 1;
-            @include bp(md) {
-              margin-bottom: 3rem;
-            }
-            img{
-              width: 2.4rem;
-              object-fit: contain;             
-            }
-          }
-          .title {
-            color: #1f1f1f;
-            text-align: center;
-            line-height: 1;
-            position: absolute;
-            left: 0;
-            right: 0;
-            bottom: calc(100% - 0.5rem);
-            transform: translateY(-100%);
-            margin: 0;
-            font-size: 2.8rem;
-            transition: all 0.4s ease-out;
-            z-index: 2;
-            @include bp(md) {
-              font-size: 3.2rem;
-            }
-          }
-          .image-holder {
-            flex-grow: 1;
             position: absolute;
             left: 0;
             right: 0;
             bottom: 0;
-            height: calc(100% - 14rem);
-            transition: height 0.4s ease-out;
-            @include bp(md) {
-              height: calc(100% - 16rem);
-            }
-            &:before {
-              content: "";
-              z-index: 1;
-              position: absolute;
-              left: 0;
-              right: 0;
-              bottom: 0;
-              top: 0;
-              background: linear-gradient(180deg, rgba(237, 76, 102, 0) 10.78%, #F58864 100%);
-              opacity: 0;
-              transition: opacity 0.4s ease-out;
-            }
-            img {
-              width: 100%;
-              height: 100%;
-              object-position: center;
-              object-fit: cover;
-              border-radius: 2.5rem;
-            }
+            top: 0;
+            background: linear-gradient(180deg, rgba(237, 76, 102, 0) 10.78%, #F58864 100%);
+            opacity: 0;
+            transition: opacity 0.4s ease-out;
+          }
+          img {
+            width: 100%;
+            height: 100%;
+            object-position: center;
+            object-fit: cover;
+            border-radius: 2.5rem;
           }
         }
       }

@@ -3,39 +3,39 @@
 * @include bp(tablet-only) { SCSS here };
 * Default css is for mobile screens
 */
-.section-shop-occasion .swiper-creative .swiper-wrapper {
+.section-shop-occasion .swiper-wrapper {
   padding-bottom: 7.8rem;
 }
 @media (min-width: 750px) {
-  .section-shop-occasion .swiper-creative .swiper-wrapper {
+  .section-shop-occasion .swiper-wrapper {
     padding-bottom: 6rem;
   }
 }
-.section-shop-occasion .swiper-creative .swiper-slide {
+.section-shop-occasion .swiper-slide {
   overflow: initial;
 }
-.section-shop-occasion .swiper-creative .swiper-slide .linkbox {
+.section-shop-occasion .swiper-slide .linkbox {
   display: block;
 }
-.section-shop-occasion .swiper-creative .swiper-slide.swiper-slide-active .swiper-card .card-shadow, .section-shop-occasion .swiper-creative .swiper-slide:hover .swiper-card .card-shadow {
+.section-shop-occasion .swiper-slide.swiper-slide-active .swiper-card .card-shadow, .section-shop-occasion .swiper-slide:hover .swiper-card .card-shadow {
   border-color: #F5724C;
 }
-.section-shop-occasion .swiper-creative .swiper-slide.swiper-slide-active .swiper-card .card-main .ico-holder, .section-shop-occasion .swiper-creative .swiper-slide:hover .swiper-card .card-main .ico-holder {
+.section-shop-occasion .swiper-slide.swiper-slide-active .swiper-card .card-main .ico-holder, .section-shop-occasion .swiper-slide:hover .swiper-card .card-main .ico-holder {
   background-color: #ffffff;
   border-color: #ffffff;
 }
-.section-shop-occasion .swiper-creative .swiper-slide.swiper-slide-active .swiper-card .card-main .title, .section-shop-occasion .swiper-creative .swiper-slide:hover .swiper-card .card-main .title {
+.section-shop-occasion .swiper-slide.swiper-slide-active .swiper-card .card-main .title, .section-shop-occasion .swiper-slide:hover .swiper-card .card-main .title {
   bottom: 2rem;
   transform: translateY(0);
   color: #ffffff;
 }
-.section-shop-occasion .swiper-creative .swiper-slide.swiper-slide-active .swiper-card .card-main .image-holder, .section-shop-occasion .swiper-creative .swiper-slide:hover .swiper-card .card-main .image-holder {
+.section-shop-occasion .swiper-slide.swiper-slide-active .swiper-card .card-main .image-holder, .section-shop-occasion .swiper-slide:hover .swiper-card .card-main .image-holder {
   height: 100%;
 }
-.section-shop-occasion .swiper-creative .swiper-slide.swiper-slide-active .swiper-card .card-main .image-holder:before, .section-shop-occasion .swiper-creative .swiper-slide:hover .swiper-card .card-main .image-holder:before {
+.section-shop-occasion .swiper-slide.swiper-slide-active .swiper-card .card-main .image-holder:before, .section-shop-occasion .swiper-slide:hover .swiper-card .card-main .image-holder:before {
   opacity: 1;
 }
-.section-shop-occasion .swiper-creative .swiper-slide .swiper-card {
+.section-shop-occasion .swiper-slide .swiper-card {
   margin: 0 auto;
   width: 26.5rem;
   height: 33.3rem;
@@ -46,19 +46,19 @@
   border-radius: 10rem;
 }
 @media (min-width: 750px) {
-  .section-shop-occasion .swiper-creative .swiper-slide .swiper-card {
+  .section-shop-occasion .swiper-slide .swiper-card {
     width: 36.5rem;
     height: 46rem;
   }
 }
-.section-shop-occasion .swiper-creative .swiper-slide .swiper-card .floating-bg-image {
+.section-shop-occasion .swiper-slide .swiper-card .floating-bg-image {
   position: absolute;
   left: 0;
   right: 0;
   top: 0;
   z-index: -1;
 }
-.section-shop-occasion .swiper-creative .swiper-slide .swiper-card .card-shadow {
+.section-shop-occasion .swiper-slide .swiper-card .card-shadow {
   box-shadow: 0 2.5rem 5rem rgba(75, 29, 10, 0.25);
   border: 0.2rem solid #ffffff;
   border-radius: 6.8rem;
@@ -67,12 +67,12 @@
   height: 100%;
 }
 @media (min-width: 750px) {
-  .section-shop-occasion .swiper-creative .swiper-slide .swiper-card .card-shadow {
+  .section-shop-occasion .swiper-slide .swiper-card .card-shadow {
     border: 0.6rem solid #ffffff;
     border-radius: 10rem;
   }
 }
-.section-shop-occasion .swiper-creative .swiper-slide .swiper-card .card-main {
+.section-shop-occasion .swiper-slide .swiper-card .card-main {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -85,7 +85,7 @@
   height: 100%;
   position: relative;
 }
-.section-shop-occasion .swiper-creative .swiper-slide .swiper-card .card-main .ico-holder {
+.section-shop-occasion .swiper-slide .swiper-card .card-main .ico-holder {
   border: 1px solid #504F51;
   display: inline-flex;
   justify-content: center;
@@ -99,16 +99,16 @@
   z-index: 1;
 }
 @media (min-width: 750px) {
-  .section-shop-occasion .swiper-creative .swiper-slide .swiper-card .card-main .ico-holder {
+  .section-shop-occasion .swiper-slide .swiper-card .card-main .ico-holder {
     margin-bottom: 3rem;
   }
 }
-.section-shop-occasion .swiper-creative .swiper-slide .swiper-card .card-main .ico-holder img {
+.section-shop-occasion .swiper-slide .swiper-card .card-main .ico-holder img {
   width: 2.4rem;
   -o-object-fit: contain;
      object-fit: contain;
 }
-.section-shop-occasion .swiper-creative .swiper-slide .swiper-card .card-main .title {
+.section-shop-occasion .swiper-slide .swiper-card .card-main .title {
   color: #1f1f1f;
   text-align: center;
   line-height: 1;
@@ -123,11 +123,11 @@
   z-index: 2;
 }
 @media (min-width: 750px) {
-  .section-shop-occasion .swiper-creative .swiper-slide .swiper-card .card-main .title {
+  .section-shop-occasion .swiper-slide .swiper-card .card-main .title {
     font-size: 3.2rem;
   }
 }
-.section-shop-occasion .swiper-creative .swiper-slide .swiper-card .card-main .image-holder {
+.section-shop-occasion .swiper-slide .swiper-card .card-main .image-holder {
   flex-grow: 1;
   position: absolute;
   left: 0;
@@ -137,11 +137,11 @@
   transition: height 0.4s ease-out;
 }
 @media (min-width: 750px) {
-  .section-shop-occasion .swiper-creative .swiper-slide .swiper-card .card-main .image-holder {
+  .section-shop-occasion .swiper-slide .swiper-card .card-main .image-holder {
     height: calc(100% - 16rem);
   }
 }
-.section-shop-occasion .swiper-creative .swiper-slide .swiper-card .card-main .image-holder:before {
+.section-shop-occasion .swiper-slide .swiper-card .card-main .image-holder:before {
   content: "";
   z-index: 1;
   position: absolute;
@@ -153,7 +153,7 @@
   opacity: 0;
   transition: opacity 0.4s ease-out;
 }
-.section-shop-occasion .swiper-creative .swiper-slide .swiper-card .card-main .image-holder img {
+.section-shop-occasion .swiper-slide .swiper-card .card-main .image-holder img {
   width: 100%;
   height: 100%;
   -o-object-position: center;
