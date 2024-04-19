@@ -27,7 +27,7 @@
                     <div class="main-image">
                         {{ product.featured_image | image_url: width: 850 | image_tag: loading: 'eager' }}
                     </div>
-                    <div class="price-section-wrapper">
+                    <a href="{{ product.url }}" class="price-section-wrapper">
                         <div class="price-section">
                             <img class="circular-text" src="{{ 'circular-text.png' | asset_url }}" alt=""
                                 loading="eager" width="260" height="260">
@@ -42,7 +42,7 @@
                                 {% endif %}
                             </div>
                         </div>
-                    </div>
+                    </a>
                     <div class="box-image-shadow">
                         <img class="w-100" src="{{ 'box-shadow.png' | asset_url}}" alt="">
                     </div>

@@ -531,6 +531,9 @@ a.product__text {
 }
 
 @media screen and (max-width: 749px) {
+  .product--thumbnail_slider .product__media-list {
+    padding: 15px;
+  }
   .product__media-list {
     margin-left: -2.5rem;
     margin-bottom: 3rem;
@@ -551,7 +554,7 @@ a.product__text {
     background-color: rgba(var(--color-foreground), 0.2);
   }
   .product__media-list .product__media-item {
-    width: calc(100% - 3rem - var(--grid-mobile-horizontal-spacing));
+    width: 100%;
   }
   .product--mobile-columns .product__media-item {
     width: calc(50% - 1.5rem - var(--grid-mobile-horizontal-spacing));
