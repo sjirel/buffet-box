@@ -11,6 +11,7 @@
     overflow: initial;
     .linkbox {
       display: block;
+      border: 2px solid blue;
     }
     &.swiper-slide-active,&:hover {
       .swiper-card {
