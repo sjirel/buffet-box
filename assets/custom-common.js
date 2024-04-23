@@ -72,10 +72,8 @@ var shopoccasion = new swiper_bundle__WEBPACK_IMPORTED_MODULE_0__["default"](".s
   },
   effect: "creative",
   initialSlide: '3',
-  preventClicks: false,
   creativeEffect: {
     perspective: true,
-    preventClicks: false,
     limitProgress: 10,
     prev: {
       translate: ['-90%', 30, -60],

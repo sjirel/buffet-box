@@ -66,10 +66,8 @@ var shopoccasion = new Swiper(".shop-occasion-slider", {
     },
     effect: "creative",
     initialSlide: '3',
-    preventClicks: false,
     creativeEffect: {
         perspective: true,
-        preventClicks: false,
         limitProgress: 10,
         prev: {
             translate: ['-90%', 30, -60],
