@@ -38,6 +38,7 @@
         },
         "slide_FchiiF": {
           "type": "slide",
+          "disabled": true,
           "settings": {
             "bg_color": "orange",
             "product_item": "smores-box",
