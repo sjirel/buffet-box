@@ -24,7 +24,7 @@
   top: 0;
   bottom: 0;
   right: 0;
-  line-height: 1.1;
+  line-height: 1;
   font-weight: 600;
   display: flex;
   flex-direction: column;
@@ -65,7 +65,7 @@
   justify-content: center;
 }
 .hero-banner .outer-js-banner-big-product-title-slider .swiper .swiper-slide h2 {
-  line-height: 1;
+  line-height: 1.1;
   margin: 0;
   color: #fff;
   font-size: 8rem;
