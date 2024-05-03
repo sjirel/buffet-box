@@ -3,6 +3,17 @@
     "banner_slideshow": {
       "type": "banner-slideshow",
       "blocks": {
+        "slide_7BXRd9": {
+          "type": "slide",
+          "settings": {
+            "bg_color": "orange",
+            "product_item": "shabbos-party-box",
+            "img_or_svg": false,
+            "bg_composition_img": "shopify:\/\/shop_images\/composition_1.png",
+            "svg_code": "",
+            "is_special": false
+          }
+        },
         "slide_Wyp4aq": {
           "type": "slide",
           "settings": {
@@ -24,23 +35,12 @@
             "svg_code": "",
             "is_special": false
           }
-        },
-        "slide_7BXRd9": {
-          "type": "slide",
-          "settings": {
-            "bg_color": "orange",
-            "product_item": "shabbos-party-box",
-            "img_or_svg": false,
-            "bg_composition_img": "shopify:\/\/shop_images\/composition_1.png",
-            "svg_code": "",
-            "is_special": false
-          }
         }
       },
       "block_order": [
+        "slide_7BXRd9",
         "slide_Wyp4aq",
-        "slide_VCn8Rf",
-        "slide_7BXRd9"
+        "slide_VCn8Rf"
       ],
       "settings": {
         "show_slide_arrow": true
