@@ -148,7 +148,7 @@
   color: #9E9145;
 }
 .hero-banner .outer-js-banner-product-main-slider .color-bg-green .price-section-wrapper img {
-  filter: hue-rotate(320deg);
+  filter: invert(53%) sepia(74%) saturate(297%) hue-rotate(14deg) brightness(91%) contrast(89%);
 }
 .hero-banner .outer-js-banner-product-main-slider .swiper-wrapper {
   margin: 0 auto;
