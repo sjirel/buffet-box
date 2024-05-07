@@ -22,6 +22,16 @@
             {% for block in section.blocks %}
             <div class="swiper-slide  color-bg-{{ block.settings.bg_color }}">
                 {% assign product = block.settings.product_item %}
+
+                {% liquid 
+                    assign priceToshow = product.selected_or_first_available_variant
+                    for variant in product.variants
+                        if variant.title contains 'Regular' or variant.title contains 'regular'
+                            assign priceToshow = variant.price
+                            break 
+                        endif
+                    endfor
+                %}
                 {%- assign product_form_id = 'product-form-' | append: block.id -%}
                 <div class="main-image-with-price">
                     <div class="main-image">
@@ -35,7 +45,7 @@
                                 <h5 class="title">{{ product.title | prepend: '#' }}</h5>
                                 <div class="p-price">
                                     <span class="symbol">{{ cart.currency.symbol }}</span>
-                                    {{- product.price_min | money_without_currency }}
+                                    {{- priceToshow | money_without_currency }}
                                 </div>
                                 {% if block.settings.is_special %}
                                 <span class="special-tag">Special Price</span>
@@ -44,7 +54,7 @@
                         </div>
                     </a>
                     <div class="box-image-shadow">
-                        <img class="w-100" src="{{ 'box-shadow.png' | asset_url}}" alt="">
+                        <img class="w-100" src="{{ 'box-shadow.png' | asset_url }}" alt="">
                     </div>
                 </div>
                 {% if block.settings.svg_code != blank or block.settings.bg_composition_img != blank %}

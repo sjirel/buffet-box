@@ -1,18 +1,28 @@
 {{ 'product-card.css' | asset_url | stylesheet_tag }}
 
+{% liquid 
+    assign priceToshow = product.selected_or_first_available_variant
+    for variant in product.variants
+        if variant.title contains 'Regular' or variant.title contains 'regular'
+            assign priceToshow = variant.price
+            break 
+        endif
+    endfor
+%}
+
 <div class="product-card">
     <a class="link" href="{{ product.url }}">
-    <div class="product-image">
-        <div class="product-image__box">
-            {{ product.featured_media |  image_url: width: 450 |  image_tag: loading: 'lazy' }}
+        <div class="product-image">
+            <div class="product-image__box">
+                {{ product.featured_media |  image_url: width: 450 |  image_tag: loading: 'lazy' }}
+            </div>
         </div>
-    </div>
-    <div class="product-content">
-        {%- assign product_form_id = 'product-form-' | append: block.id -%}
-        <h2 class="product-title">{{ product.title |  prepend: '#' }}</h2>
-        <div class="product-price"><span class="currency">{{ cart.currency.symbol }}</span>{{ product.price | money_without_currency }}</div>        
-    </div>
-    <div class="product-content-footer">
+        <div class="product-content">
+            {%- assign product_form_id = 'product-form-' | append: block.id -%}
+            <h2 class="product-title">{{ product.title |  prepend: '#' }}</h2>
+            <div class="product-price"><span class="currency">{{ cart.currency.symbol }}</span>{{ priceToshow | money_without_currency }}</div>        
+        </div>
+        <div class="product-content-footer">
         {%- if product != blank -%}
             <div {{ block.shopify_attributes }}>
                 {%- form 'product', product -%}
@@ -24,7 +34,7 @@
                 block: block,
                 product: product,
                 product_form_id: product_form_id,
-                section_id: section.id
+                section_id: block.id
             -%}
         {%- endif -%}
        </div>
