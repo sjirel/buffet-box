@@ -1,7 +1,7 @@
 {{ 'product-card.css' | asset_url | stylesheet_tag }}
 
 {% liquid 
-    assign priceToshow = product.selected_or_first_available_variant
+    assign priceToshow = product.selected_or_first_available_variant.price
     for variant in product.variants
         if variant.title contains 'Regular' or variant.title contains 'regular'
             assign priceToshow = variant.price
