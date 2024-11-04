@@ -411,6 +411,9 @@
   margin: 0 auto;
   transition: all 0.4s ease-in-out;
 }
+.hero-banner .outer-js-banner-product-main-slider .swiper-slide .button {
+  z-index: 1;
+}
 @media (max-width: 767px) {
   .hero-banner .outer-js-banner-product-main-slider .swiper-slide-active:nth-child(2n+2) .floating-composition, .hero-banner .outer-js-banner-product-main-slider .swiper-slide-thumb-active:nth-child(2n+2) .floating-composition {
     transform: translateY(20%) !important;

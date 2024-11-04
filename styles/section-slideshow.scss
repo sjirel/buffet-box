@@ -46,8 +46,7 @@
             background: $bg-radial-green;
         }
         
-        
-
+    
 		.swiper {
 			height: 100%;
 			width: 100%;
@@ -444,6 +443,9 @@
 				width: 14rem;
 				margin: 0 auto;
 				transition: all 0.4s ease-in-out;
+			}
+			.button {
+				z-index: 1;
 			}
 		}
 		.swiper-slide-active:nth-child(2n+2), .swiper-slide-thumb-active:nth-child(2n+2) {

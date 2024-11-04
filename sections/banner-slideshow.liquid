@@ -124,15 +124,19 @@
                         <div class="slide-title-small">{{ product.title | prepend: '#' }}</div>
                         <div class="form-details">
                             {%- if product != blank -%}
-                            <div {{ block.shopify_attributes }}>
-                                {%- form 'product'
-                                , product -%}
-                                <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
-                                {{ form | payment_terms }}
-                                {%- endform -%}
-                            </div>
-                            {%- render 'buy-buttons-all-ajax', block: block, product: product, product_form_id: product_form_id, section_id: section.id
-                            -%}
+                                <div {{ block.shopify_attributes }}>
+                                    {%- form 'product'
+                                    , product -%}
+                                    <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
+                                    {{ form | payment_terms }}
+                                    {%- endform -%}
+                                </div>
+                                {%- render 'buy-buttons-all-ajax', block: block, product: product, product_form_id: product_form_id, section_id: section.id
+                                -%}
+                            {%  elsif block.settings.button_url != blank %}
+                                    <a href="{{block.settings.button_url}}" class="button product-form__submit button--primary">
+                                        {{block.settings.button_txt}}
+                                    </a>
                             {%- endif -%}
                         </div>
                     </div>
@@ -193,7 +197,7 @@
             "type": "product",
             "id": "product_item",
             "label": "Product"
-        },
+        },              
         {
             "type": "checkbox",
             "id": "img_or_svg",
@@ -241,6 +245,17 @@
                 "id": "product_item",
                 "label": "Product"
             },
+            {
+                "type": "url",
+                "id": "button_url",
+                "label": "Button URL"
+            },  
+            {
+                "type": "text",
+                "id": "button_txt",
+                "label": "Button Text",
+                "default": "view  more"
+            },             
             {
                 "type": "checkbox",
                 "id": "img_or_svg",
