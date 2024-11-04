@@ -1,15 +1,36 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "banner_slideshow": {
       "type": "banner-slideshow",
       "blocks": {
+        "image_DgCtQC": {
+          "type": "image",
+          "settings": {
+            "bg_img": "shopify://shop_images/chanukah_zone.jpg",
+            "title": "Chanukah Zone",
+            "desc": "<p>Feast on flavorful memories with your loved one and a delicious anniversary box.</p>",
+            "product_item": "donut-box",
+            "img_or_svg": false,
+            "bg_composition_img": "shopify://shop_images/composition.png",
+            "svg_code": ""
+          }
+        },
         "slide_7BXRd9": {
           "type": "slide",
           "settings": {
             "bg_color": "green",
             "product_item": "shabbos-party-box",
             "img_or_svg": false,
-            "bg_composition_img": "shopify:\/\/shop_images\/composition_1.png",
+            "bg_composition_img": "shopify://shop_images/composition_1.png",
             "svg_code": "",
             "is_special": false
           }
@@ -20,7 +41,7 @@
             "bg_color": "orange",
             "product_item": "donutbox",
             "img_or_svg": false,
-            "bg_composition_img": "shopify:\/\/shop_images\/composition.png",
+            "bg_composition_img": "shopify://shop_images/composition.png",
             "svg_code": "",
             "is_special": true
           }
@@ -31,13 +52,14 @@
             "bg_color": "blue",
             "product_item": "churrobox",
             "img_or_svg": false,
-            "bg_composition_img": "shopify:\/\/shop_images\/composition-churros.png",
+            "bg_composition_img": "shopify://shop_images/composition-churros.png",
             "svg_code": "",
             "is_special": false
           }
         }
       },
       "block_order": [
+        "image_DgCtQC",
         "slide_7BXRd9",
         "slide_Wyp4aq",
         "slide_VCn8Rf"
@@ -51,8 +73,8 @@
       "settings": {
         "title": "Welcome to Buffet Box",
         "subtxt": "Food & Fun For Friends And Family",
-        "large_image": "shopify:\/\/shop_images\/welcome-large_1e271964-9d5f-4b8e-ac90-bf9c225c4461.png",
-        "small_image": "shopify:\/\/shop_images\/welcome.png",
+        "large_image": "shopify://shop_images/welcome-large_1e271964-9d5f-4b8e-ac90-bf9c225c4461.png",
+        "small_image": "shopify://shop_images/welcome.png",
         "padding_top": 56,
         "padding_bottom": 200,
         "padding_top_mobile": 80,
@@ -65,8 +87,8 @@
         "card_a9EAhx": {
           "type": "card",
           "settings": {
-            "icon": "shopify:\/\/shop_images\/icon-gift.png",
-            "image": "shopify:\/\/shop_images\/gift_and_more.png",
+            "icon": "shopify://shop_images/icon-gift.png",
+            "image": "shopify://shop_images/gift_and_more.png",
             "title": "Gifts & More",
             "collection_link": "gift-more"
           }
@@ -74,8 +96,8 @@
         "card_6LPGaU": {
           "type": "card",
           "settings": {
-            "icon": "shopify:\/\/shop_images\/icon-employee.png",
-            "image": "shopify:\/\/shop_images\/employee.png",
+            "icon": "shopify://shop_images/icon-employee.png",
+            "image": "shopify://shop_images/employee.png",
             "title": "Employee",
             "collection_link": "congratulations"
           }
@@ -83,8 +105,8 @@
         "card_RpmXTe": {
           "type": "card",
           "settings": {
-            "icon": "shopify:\/\/shop_images\/personal_card_ico.svg",
-            "image": "shopify:\/\/shop_images\/personal_card_image.jpg",
+            "icon": "shopify://shop_images/personal_card_ico.svg",
+            "image": "shopify://shop_images/personal_card_image.jpg",
             "title": "Personal",
             "collection_link": "anniversary"
           }
@@ -92,8 +114,8 @@
         "card_RWdUty": {
           "type": "card",
           "settings": {
-            "icon": "shopify:\/\/shop_images\/loved_ones_ico.svg",
-            "image": "shopify:\/\/shop_images\/loved_ones_card-image.jpg",
+            "icon": "shopify://shop_images/loved_ones_ico.svg",
+            "image": "shopify://shop_images/loved_ones_card-image.jpg",
             "title": "Loved Ones",
             "collection_link": "loved-ones"
           }
@@ -101,8 +123,8 @@
         "card_XU7nRE": {
           "type": "card",
           "settings": {
-            "icon": "shopify:\/\/shop_images\/holidays_card-ico.svg",
-            "image": "shopify:\/\/shop_images\/holidays_card-image.jpg",
+            "icon": "shopify://shop_images/holidays_card-ico.svg",
+            "image": "shopify://shop_images/holidays_card-image.jpg",
             "title": "Holidays",
             "collection_link": "holiday"
           }
@@ -110,8 +132,8 @@
         "card_DazUT4": {
           "type": "card",
           "settings": {
-            "icon": "shopify:\/\/shop_images\/occasions_card-ico.svg",
-            "image": "shopify:\/\/shop_images\/occasions_card-image.jpg",
+            "icon": "shopify://shop_images/occasions_card-ico.svg",
+            "image": "shopify://shop_images/occasions_card-image.jpg",
             "title": "Occasions",
             "collection_link": "birthday"
           }
@@ -158,8 +180,8 @@
         "save_value": "Save up to 35%",
         "title": "Churros  Extravaganza",
         "product": "churrobox",
-        "desc": "<p>Indulge your sweet tooth and make every moment memorable with the magic of BuffetBox Churros!<\/p>",
-        "custom_img": "shopify:\/\/shop_images\/img-pill.png",
+        "desc": "<p>Indulge your sweet tooth and make every moment memorable with the magic of BuffetBox Churros!</p>",
+        "custom_img": "shopify://shop_images/img-pill.png",
         "padding_top": 270,
         "padding_bottom": 205,
         "padding_top_mobile": 100,

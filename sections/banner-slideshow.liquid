@@ -4,10 +4,21 @@
         <div class="swiper js-banner-big-product-title-slider">
             <div class="swiper-wrapper">
                 {% for block in section.blocks %}
-                {% assign product = block.settings.product_item %}
-                <div class="swiper-slide color-bg-{{ block.settings.bg_color }}">
-                    <h2>{{ product.title }}</h2>
-                </div>
+                {%  case block.type %}
+                    {% when 'slide' %}
+                        {% assign product = block.settings.product_item %}
+                        <div class="swiper-slide color-bg-{{ block.settings.bg_color }}">
+                            <h2>{{ product.title }}</h2>
+                        </div>
+                    {% when 'image' %}
+                        <div class="swiper-slide color-bg-{{ block.settings.bg_color }}">
+                            {% if block.settings.bg_img %}
+                                <div class="swiper-slide__bg">
+                                    {{ block.settings.bg_img | image_url: width: 1800 | image_tag: loading: 'eager' }}
+                                </div>
+                            {% endif %}
+                        </div>
+                    {% endcase %}
                 {% endfor %}
             </div>
         </div>
@@ -20,67 +31,112 @@
     <div class="swiper js-banner-product-main-slider">
         <div class="swiper-wrapper">
             {% for block in section.blocks %}
-            <div class="swiper-slide  color-bg-{{ block.settings.bg_color }}">
-                {% assign product = block.settings.product_item %}
 
-                {% liquid 
-                    assign priceToshow = product.selected_or_first_available_variant
-                    for variant in product.variants
-                        if variant.title contains 'Regular' or variant.title contains 'regular'
-                            assign priceToshow = variant.price
-                            break 
-                        endif
-                    endfor
-                %}
-                {%- assign product_form_id = 'product-form-' | append: block.id -%}
-                <div class="main-image-with-price">
-                    <div class="main-image">
-                        {{ product.featured_image | image_url: width: 850 | image_tag: loading: 'eager' }}
-                    </div>
-                    <a href="{{ product.url }}" class="price-section-wrapper">
-                        <div class="price-section">
-                            <img class="circular-text" src="{{ 'circular-text.png' | asset_url }}" alt=""
-                                loading="eager" width="260" height="260">
-                            <div class="price-txt-section">
-                                <h5 class="title">{{ product.title | prepend: '#' }}</h5>
-                                <div class="p-price">
-                                    <span class="symbol">{{ cart.currency.symbol }}</span>
-                                    {{- priceToshow | money_without_currency }}
+                {%  case block.type %}
+                {% when 'slide' %}
+                    <div class="swiper-slide  color-bg-{{ block.settings.bg_color }}">
+                        {% assign product = block.settings.product_item %}
+
+                        {% liquid 
+                            assign priceToshow = product.selected_or_first_available_variant
+                            for variant in product.variants
+                                if variant.title contains 'Regular' or variant.title contains 'regular'
+                                    assign priceToshow = variant.price
+                                    break 
+                                endif
+                            endfor
+                        %}
+                        {%- assign product_form_id = 'product-form-' | append: block.id -%}
+                        
+                        <div class="main-image-with-price">
+                            <div class="main-image">
+                                {{ product.featured_image | image_url: width: 850 | image_tag: loading: 'eager' }}
+                            </div>
+                            <a href="{{ product.url }}" class="price-section-wrapper">
+                                <div class="price-section">
+                                    <img class="circular-text" src="{{ 'circular-text.png' | asset_url }}" alt=""
+                                        loading="eager" width="260" height="260">
+                                    <div class="price-txt-section">
+                                        <h5 class="title">{{ product.title | prepend: '#' }}</h5>
+                                        <div class="p-price">
+                                            <span class="symbol">{{ cart.currency.symbol }}</span>
+                                            {{- priceToshow | money_without_currency }}
+                                        </div>
+                                        {% if block.settings.is_special %}
+                                        <span class="special-tag">Special Price</span>
+                                        {% endif %}
+                                    </div>
                                 </div>
-                                {% if block.settings.is_special %}
-                                <span class="special-tag">Special Price</span>
-                                {% endif %}
+                            </a>
+                            <div class="box-image-shadow">
+                                <img class="w-100" src="{{ 'box-shadow.png' | asset_url }}" alt="">
                             </div>
                         </div>
-                    </a>
-                    <div class="box-image-shadow">
-                        <img class="w-100" src="{{ 'box-shadow.png' | asset_url }}" alt="">
+
+                        {% if block.settings.svg_code != blank or block.settings.bg_composition_img != blank %}
+                        <div class="floating-composition">
+                            {% if block.settings.img_or_svg %}
+                                <div class="svg">{{ block.settings.svg_code }}</div>
+                            {%  else %}
+                            {{ block.settings.bg_composition_img | image_url: width: 1800 | image_tag: loading: 'eager' }}
+                            {% endif %}
+                        </div>
+                        {% endif %}
+                        <div class="slide-title-small">{{ product.title | prepend: '#' }}</div>
+                        <div class="form-details">
+                            {%- if product != blank -%}
+                            <div {{ block.shopify_attributes }}>
+                                {%- form 'product'
+                                , product -%}
+                                <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
+                                {{ form | payment_terms }}
+                                {%- endform -%}
+                            </div>
+                            {%- render 'buy-buttons-all-ajax', block: block, product: product, product_form_id: product_form_id, section_id: section.id
+                            -%}
+                            {%- endif -%}
+                        </div>
                     </div>
-                </div>
-                {% if block.settings.svg_code != blank or block.settings.bg_composition_img != blank %}
-                <div class="floating-composition">
-                    {% if block.settings.img_or_svg %}
-                        <div class="svg">{{ block.settings.svg_code }}</div>
-                    {%  else %}
-                    {{ block.settings.bg_composition_img | image_url: width: 1800 | image_tag: loading: 'eager' }}
-                    {% endif %}
-                </div>
-                {% endif %}
-                <div class="slide-title-small">{{ product.title | prepend: '#' }}</div>
-                <div class="form-details">
-                    {%- if product != blank -%}
-                    <div {{ block.shopify_attributes }}>
-                        {%- form 'product'
-                        , product -%}
-                        <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
-                        {{ form | payment_terms }}
-                        {%- endform -%}
+                {% when 'image' %}
+                    <div class="swiper-slide swiper-slide--image  color-bg-{{ block.settings.bg_color }}">
+                        {% assign product = block.settings.product_item %}
+                        <div class="content-holder">
+                            <div class="content-holder__box">
+                                {% if block.settings.title != blank %}
+                                    <h1>{{ block.settings.title }}</h1>
+                                    {% endif %}
+                                    {% if block.settings.desc != blank %}
+                                    <div class="desc">
+                                        {{ block.settings.desc }}
+                                    </div>
+                                 {% endif %}
+                            </div>
+                        </div>
+                        {% if block.settings.svg_code != blank or block.settings.bg_composition_img != blank %}
+                            <div class="floating-composition">
+                                {% if block.settings.img_or_svg %}
+                                    <div class="svg">{{ block.settings.svg_code }}</div>
+                                {%  else %}
+                                {{ block.settings.bg_composition_img | image_url: width: 1800 | image_tag: loading: 'eager' }}
+                                {% endif %}
+                            </div>
+                        {% endif %}
+                        <div class="slide-title-small">{{ product.title | prepend: '#' }}</div>
+                        <div class="form-details">
+                            {%- if product != blank -%}
+                            <div {{ block.shopify_attributes }}>
+                                {%- form 'product'
+                                , product -%}
+                                <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
+                                {{ form | payment_terms }}
+                                {%- endform -%}
+                            </div>
+                            {%- render 'buy-buttons-all-ajax', block: block, product: product, product_form_id: product_form_id, section_id: section.id
+                            -%}
+                            {%- endif -%}
+                        </div>
                     </div>
-                    {%- render 'buy-buttons-all-ajax', block: block, product: product, product_form_id: product_form_id, section_id: section.id
-                    -%}
-                    {%- endif -%}
-                </div>
-            </div>
+                {% endcase %}
             {% endfor %}
         </div>
     </div>
@@ -98,66 +154,111 @@
 "name": "Banner: Slideshow",
 "class": "hero-banner",
 "settings": [
-{
-"type": "checkbox",
-"id": "show_slide_arrow",
-"label": "Show Arrow"
-}
+    {
+        "type": "checkbox",
+        "id": "show_slide_arrow",
+        "label": "Show Arrow"
+    }
 ],
 "blocks": [
-{
-"name": "Slide",
-"type": "slide",
-"limit": 5,
-"settings": [
-{
-"type": "select",
-"id": "bg_color",
-"label": "Background Color",
-"options": [
     {
-    "label": "Orange",
-    "value": "orange"
-    }, {
-    "label": "Blue",
-    "value": "blue"
-    }, {
-    "label": "Pink",
-    "value": "pink"
-    }, {
-    "label": "Light Brown",
-    "value": "light-brown"
-    }, {
-    "label": "Green",
-    "value": "green"
+        "name": "Slide",
+        "type": "slide",
+        "limit": 5,
+        "settings": [
+        {
+            "type": "select",
+            "id": "bg_color",
+            "label": "Background Color",
+            "options": [
+                {
+                    "label": "Orange",
+                    "value": "orange"
+                }, {
+                    "label": "Blue",
+                    "value": "blue"
+                }, {
+                    "label": "Pink",
+                    "value": "pink"
+                }, {
+                    "label": "Light Brown",
+                    "value": "light-brown"
+                }, {
+                    "label": "Green",
+                    "value": "green"
+                }
+            ]
+        }, 
+        {
+            "type": "product",
+            "id": "product_item",
+            "label": "Product"
+        },
+        {
+            "type": "checkbox",
+            "id": "img_or_svg",
+            "label": "Is SVG?",
+            "info": "If selected, svg code will replace Image"
+        }, 
+        {
+            "type": "image_picker",
+            "id": "bg_composition_img",
+            "label": "BG composition"
+        }, 
+        {
+            "type": "html",
+            "id": "svg_code",
+            "label": "SVG code"
+        }, 
+        {
+            "type": "checkbox",
+            "id": "is_special",
+            "label": "Special Label?"
+        }
+        ]
+    },
+    {
+        "type": "image",
+        "name": "Slide: Background Image",
+        "settings": [
+            {
+                "type": "image_picker",
+                "id": "bg_img",
+                "label": "Background Image"
+            },
+            {
+                "type": "text",
+                "id": "title",
+                "label": "Title"
+            },
+            {
+                "type": "richtext",
+                "id": "desc",
+                "label": "Description"
+            },
+            {
+                "type": "product",
+                "id": "product_item",
+                "label": "Product"
+            },
+            {
+                "type": "checkbox",
+                "id": "img_or_svg",
+                "label": "Is SVG?",
+                "info": "If selected, svg code will replace Image"
+            }, 
+            {
+                "type": "image_picker",
+                "id": "bg_composition_img",
+                "label": "BG composition"
+            }, 
+            {
+                "type": "html",
+                "id": "svg_code",
+                "label": "SVG code"
+            }
+        ]
     }
-]
-}, {
-"type": "product",
-"id": "product_item",
-"label": "Product"
-},
-{
-    "type": "checkbox",
-    "id": "img_or_svg",
-    "label": "Is SVG?",
-    "info": "If selected, svg code will replace Image"
-}, {
-    "type": "image_picker",
-    "id": "bg_composition_img",
-    "label": "BG composition"
-},
-{
-    "type": "html",
-    "id": "svg_code",
-    "label": "SVG code"
-}, {
-"type": "checkbox",
-"id": "is_special",
-"label": "Special Label?"
-}
-]
-}
 ],
     "presets": [
         {

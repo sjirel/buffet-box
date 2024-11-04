@@ -60,6 +60,25 @@
 				display: flex;
 				flex-direction: column;
 				justify-content: center;
+				position: relative;
+				z-index: 1;
+				&__bg {
+					position: absolute;
+					left: 0;
+					right: 0;
+					top: 0;
+					bottom: 0;
+					z-index: -1;
+					img {
+						height: 100%;
+						width: 100%;
+						position: absolute;
+						left: 0;
+						top: 0;
+						object-fit: cover;
+						object-position: center;
+					}
+				}
 				h2 {
 					line-height: 1.1;
 					margin: 0;
@@ -191,9 +210,8 @@
 			display: flex;
 			transform: initial !important;
 			opacity: 1 !important;
-
 			&:not(.swiper-slide-active) {
-				.product-form__submit {
+				.product-form__submit, .content-holder, .slide-title-small, .main-image-with-price .box-image-shadow {
 					opacity: 0;
 				}
 
@@ -206,10 +224,6 @@
 						transform: rotate(-270deg);
 					}
 				}
-
-				.slide-title-small {
-					opacity: 0;
-				}
 			}
 
 			&:nth-child(2n+2) {
@@ -217,6 +231,40 @@
 					transform: translateY(-105%);
 					bottom: auto;
 					top: 0;
+				}
+			}
+
+			.content-holder {
+				color: $color-white;
+				font-size: 1.6rem;
+				line-height: 1.5;
+				font-weight: 600;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				padding: 0 2rem;
+				position: relative;
+				z-index: 1;
+				transition: opacity .8s ease-out;
+				width: 100%;
+				@include bp(md) {
+					padding: 0 3rem;
+					font-size: 1.8rem;
+				}
+				@include bp(xl) {
+					padding: 0 4.8rem;
+				}
+				&__box {
+					width: 47.5rem;
+					max-width: 100%;
+				}
+				h1,h2,h3,h4,h5,h6 {
+					color: inherit;
+				}
+				.desc {
+					@include bp(md) {
+						max-width: 35rem;
+					}
 				}
 			}
 
@@ -235,6 +283,7 @@
 					bottom: 0;
 					transform: translate(-59%, 37%);
 					width: 65%;
+					transition: opacity .8s ease-out;
 				}
 
 				.main-image {
@@ -356,7 +405,7 @@
 
 			.slide-title-small {
 				position: absolute;
-				left: 1.5rem;
+				left: 2rem;
 				bottom: 10.5rem;
 				transition: opacity 0.8s ease-out;
 				font-weight: 600;
@@ -368,6 +417,9 @@
 					bottom: 3.4rem;
 					font-size: 3.2rem;
 					max-width: 33.33%;
+				}
+				@include bp(md) { 
+					left: 4.8rem;
 				}
 			}
 
@@ -431,8 +483,8 @@
 		justify-content: space-between;
 		align-items: center;
 		position: absolute;
-		left: 1.5rem;
-		right: 1.5rem;
+		left: 2rem;
+		right:2rem;
 		bottom: 4rem;
 		z-index: 2;
 		pointer-events: none;
@@ -440,6 +492,10 @@
 			left: 3rem;
 			right: 3rem;
 			bottom: 3.4rem;
+		}
+		@include bp(md) {
+			left: 4.8rem;
+			right: 4.8rem;
 		}
 
 		.swiper-pagination {
