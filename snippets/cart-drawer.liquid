@@ -503,7 +503,14 @@
             {%- endif -%}
           </small>
         </div>
-
+        <div class="cart-terms">
+                  <input type="checkbox" id="terms-checkbox" name="terms" required="">
+                  <label for="terms-checkbox">I agree with the
+                    <a href="https://buffetbox.com/pages/terms-conditions" target="_blank">Terms and Conditions</a></label>
+                  <p id="terms-error" style="color: red; display: none;">
+                    You must agree to the terms and conditions before proceeding.
+                  </p>
+                </div>
         <!-- CTAs -->
 
         <div class="cart__ctas" {{ block.shopify_attributes }}>
