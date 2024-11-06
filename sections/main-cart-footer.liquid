@@ -58,11 +58,19 @@
                   {%- endif -%}
                 </div>
 
-                <div class="totals 123">
+                <div class="totals">
                   <h2 class="totals__total">{{ 'sections.cart.estimated_total' | t }}</h2>
                   <p class="totals__total-value">{{ cart.total_price | money_with_currency }}</p>
                 </div>
-
+                <div class="cart-terms">
+                  <input type="checkbox" id="terms-checkbox" name="terms" required>
+                  <label for="terms-checkbox">I agree with the
+                    <a href="/pages/terms-conditions" target="_blank">Terms and Conditions</a>
+                  </label>
+                  <p id="terms-error" style="color: red; display: none;">
+                    You must agree to the terms and conditions before proceeding.
+                  </p>
+                </div>
                 <small class="tax-note caption-large rte">
                   {%- if cart.taxes_included and shop.shipping_policy.body != blank -%}
                     {{ 'sections.cart.taxes_included_and_shipping_policy_html' | t: link: shop.shipping_policy.url }}
@@ -128,6 +136,21 @@
     document.querySelector('#cart').appendChild(cartSubmitInput);
     document.querySelector('#checkout').addEventListener('click', function (event) {
       document.querySelector('#cart').submit();
+    });
+  });
+
+  $(document).ready(function() {
+    const checkoutButton = $('button[name="checkout"]');
+    const termsCheckbox = $('#terms-checkbox');
+    const termsError = $('#terms-error');
+
+    checkoutButton.on('click', function(event) {
+      if (!termsCheckbox.is(':checked')) {
+        event.preventDefault();
+        termsError.show();
+      } else {
+        termsError.hide();
+      }
     });
   });
 </script>
