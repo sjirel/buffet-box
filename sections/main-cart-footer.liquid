@@ -121,6 +121,20 @@
 
 <script>
   document.addEventListener('DOMContentLoaded', function () {
+    //accept
+    const checkoutButton = $('button[name="checkout"]');
+    const termsCheckbox = $('#terms-checkbox');
+    const termsError = $('#terms-error');
+
+    checkoutButton.on('click', function(event) {
+      if (!termsCheckbox.is(':checked')) {
+        event.preventDefault();
+        termsError.show();
+      } else {
+        termsError.hide();
+      }
+    });
+    
     function isIE() {
       const ua = window.navigator.userAgent;
       const msie = ua.indexOf('MSIE ');
@@ -136,20 +150,6 @@
     document.querySelector('#cart').appendChild(cartSubmitInput);
     document.querySelector('#checkout').addEventListener('click', function (event) {
       document.querySelector('#cart').submit();
-    });
-
-    //accept
-    const checkoutButton = $('button[name="checkout"]');
-    const termsCheckbox = $('#terms-checkbox');
-    const termsError = $('#terms-error');
-
-    checkoutButton.on('click', function(event) {
-      if (!termsCheckbox.is(':checked')) {
-        event.preventDefault();
-        termsError.show();
-      } else {
-        termsError.hide();
-      }
     });
   });
 </script>
