@@ -427,7 +427,7 @@
  {% render 'multiship' %} 
 </head>
 
-  <body class="template-{{ template.name }} page-{{ page.handle }} gradient{% if settings.animations_hover_elements != 'none' %} animate--hover-{{ settings.animations_hover_elements }}{% endif %} body-class">
+  <body class="template-{{ template.name }} {% if template.name == 'collection'%} collection-{{collection.handle}} {% elsif template.name == 'page'%}page-{{ page.handle }}{% endif %} gradient{% if settings.animations_hover_elements != 'none' %} animate--hover-{{ settings.animations_hover_elements }}{% endif %} body-class">
     <a class="skip-to-content-link button visually-hidden" href="#MainContent">
       {{ 'accessibility.skip_to_text' | t }}
     </a>
