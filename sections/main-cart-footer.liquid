@@ -120,21 +120,25 @@
 </div>
 
 <script>
-  document.addEventListener('DOMContentLoaded', function () {
-    //accept
-    const checkoutButton = $('button[name="checkout"]');
-    const termsCheckbox = $('#terms-checkbox');
-    const termsError = $('#terms-error');
+  document.addEventListener('DOMContentLoaded', function() {
+    const checkoutButton = document.querySelector('button[name="checkout"]');
+    const termsCheckbox = document.getElementById('terms-checkbox');
+    const termsError = document.getElementById('terms-error');
 
-    checkoutButton.on('click', function(event) {
-      if (!termsCheckbox.is(':checked')) {
-        event.preventDefault();
-        termsError.show();
-      } else {
-        termsError.hide();
-      }
+    // Initially hide the error message
+    termsError.style.display = 'none';
+
+    // Add click event listener on the checkout button
+    checkoutButton.addEventListener('click', function(event) {
+        if (!termsCheckbox.checked) {
+            event.preventDefault(); // Stop the form from submitting
+            termsError.style.display = 'block'; // Show error message
+        } else {
+            termsError.style.display = 'none'; // Hide error message
+        }
     });
-    
+  });
+  document.addEventListener('DOMContentLoaded', function () {
     function isIE() {
       const ua = window.navigator.userAgent;
       const msie = ua.indexOf('MSIE ');
