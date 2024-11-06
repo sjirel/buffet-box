@@ -15,6 +15,13 @@
       padding-bottom: {{ section.settings.padding_bottom }}px;
     }
   }
+  .cart-terms{
+    margin: 2.2rem 0 1.6rem auto;
+  }
+  .cart-terms a{
+    text-decoration: underline;
+    color: #b62940;
+  }
 {%- endstyle -%}
 
 <div
@@ -62,7 +69,10 @@
                   <h2 class="totals__total">{{ 'sections.cart.estimated_total' | t }}</h2>
                   <p class="totals__total-value">{{ cart.total_price | money_with_currency }}</p>
                 </div>
-
+                <div class="cart-terms">
+                  <input type="checkbox" id="terms-checkbox" name="terms" form="cart" required>
+                  <label for="terms-checkbox">By choosing this shipping option, I reviewed and accept the <a href="/pages/terms-conditions" target="_blank">terms</a>, duration, and arrival date.</label>
+                </div>
                 <small class="tax-note caption-large rte">
                   {%- if cart.taxes_included and shop.shipping_policy.body != blank -%}
                     {{ 'sections.cart.taxes_included_and_shipping_policy_html' | t: link: shop.shipping_policy.url }}
@@ -112,6 +122,24 @@
 </div>
 
 <script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const checkoutButton = document.querySelector('button[name="checkout"]');
+    const termsCheckbox = document.getElementById('terms-checkbox');
+    const termsError = document.getElementById('terms-error');
+
+    // Initially hide the error message
+    termsError.style.display = 'none';
+
+    // Add click event listener on the checkout button
+    checkoutButton.addEventListener('click', function(event) {
+        if (!termsCheckbox.checked) {
+            event.preventDefault(); // Stop the form from submitting
+            termsError.style.display = 'block'; // Show error message
+        } else {
+            termsError.style.display = 'none'; // Hide error message
+        }
+    });
+  });
   document.addEventListener('DOMContentLoaded', function () {
     function isIE() {
       const ua = window.navigator.userAgent;
