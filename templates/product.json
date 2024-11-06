@@ -117,7 +117,7 @@
           "settings": {
             "icon": "shipping",
             "heading": "1-3",
-            "caption": "Days Shipping"
+            "caption": "Days Shipping days, based on your selection"
           }
         }
       },
