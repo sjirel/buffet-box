@@ -14,8 +14,7 @@
       "blocks": {
         "title": {
           "type": "title",
-          "settings": {
-          }
+          "settings": {}
         },
         "caption": {
           "type": "text",
@@ -26,28 +25,23 @@
         },
         "price": {
           "type": "price",
-          "settings": {
-          }
+          "settings": {}
         },
         "tags_nADhWb": {
           "type": "tags",
-          "settings": {
-          }
+          "settings": {}
         },
         "rating_FfBcy7": {
           "type": "rating",
-          "settings": {
-          }
+          "settings": {}
         },
         "description": {
           "type": "description",
-          "settings": {
-          }
+          "settings": {}
         },
         "quantity_selector": {
           "type": "quantity_selector",
-          "settings": {
-          }
+          "settings": {}
         },
         "variant_picker": {
           "type": "variant_picker",
@@ -117,7 +111,7 @@
           "settings": {
             "icon": "shipping",
             "heading": "1-3",
-            "caption": "Days Shipping days, based on your selection"
+            "caption": "Shipping Days, based on your selection"
           }
         }
       },
