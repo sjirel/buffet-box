@@ -94,7 +94,7 @@
           "type": "icon_text",
           "settings": {
             "icon": "donut",
-            "heading": "24",
+            "heading": "{{ product.metafields.custom.total_servings.value }}",
             "caption": ""
           }
         },
