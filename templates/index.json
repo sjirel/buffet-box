@@ -15,7 +15,7 @@
         "image_DgCtQC": {
           "type": "image",
           "settings": {
-            "bg_img": "shopify://shop_images/chanukah_zone.jpg",
+            "bg_img": "shopify://shop_images/background.png",
             "title": "Chanukah Zone",
             "desc": "<p>Feast on flavorful memories with your loved one and a delicious anniversary box.</p>",
             "product_item": "",
