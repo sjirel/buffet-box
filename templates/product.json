@@ -50,6 +50,12 @@
             "swatch_shape": "circle"
           }
         },
+        "1_click_delivery_date_picker_app_block_NghCGn": {
+          "type": "shopify://apps/1-click-delivery-date-picker/blocks/app-block/425b82c5-9e5a-4dad-9124-b6b73688e04c",
+          "settings": {
+            "product": "{{product}}"
+          }
+        },
         "buy_buttons": {
           "type": "buy_buttons",
           "settings": {
@@ -67,6 +73,7 @@
         "description",
         "quantity_selector",
         "variant_picker",
+        "1_click_delivery_date_picker_app_block_NghCGn",
         "buy_buttons"
       ],
       "settings": {
