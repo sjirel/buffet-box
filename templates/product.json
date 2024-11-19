@@ -14,8 +14,7 @@
       "blocks": {
         "title": {
           "type": "title",
-          "settings": {
-          }
+          "settings": {}
         },
         "caption": {
           "type": "text",
@@ -26,34 +25,35 @@
         },
         "price": {
           "type": "price",
-          "settings": {
-          }
+          "settings": {}
         },
         "tags_nADhWb": {
           "type": "tags",
-          "settings": {
-          }
+          "settings": {}
         },
         "rating_FfBcy7": {
           "type": "rating",
-          "settings": {
-          }
+          "settings": {}
         },
         "description": {
           "type": "description",
-          "settings": {
-          }
+          "settings": {}
         },
         "quantity_selector": {
           "type": "quantity_selector",
-          "settings": {
-          }
+          "settings": {}
         },
         "variant_picker": {
           "type": "variant_picker",
           "settings": {
             "picker_type": "dropdown",
             "swatch_shape": "circle"
+          }
+        },
+        "1_click_delivery_date_picker_app_block_NghCGn": {
+          "type": "shopify://apps/1-click-delivery-date-picker/blocks/app-block/425b82c5-9e5a-4dad-9124-b6b73688e04c",
+          "settings": {
+            "product": "{{product}}"
           }
         },
         "buy_buttons": {
@@ -73,6 +73,7 @@
         "description",
         "quantity_selector",
         "variant_picker",
+        "1_click_delivery_date_picker_app_block_NghCGn",
         "buy_buttons"
       ],
       "settings": {
@@ -100,7 +101,7 @@
           "type": "icon_text",
           "settings": {
             "icon": "donut",
-            "heading": "24",
+            "heading": "{{ product.metafields.custom.total_servings.value }}",
             "caption": ""
           }
         },
@@ -117,7 +118,7 @@
           "settings": {
             "icon": "shipping",
             "heading": "1-3",
-            "caption": "Days Shipping"
+            "caption": "Shipping Days, based on your selection"
           }
         }
       },
@@ -147,7 +148,7 @@
           "type": "column",
           "settings": {
             "title": "Shipping Information",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "text": "<p>We strive to ship every order promptly and securely so it arrives in top condition. Please select your preferred shipping option to ensure timely delivery. For faster service, we also offer local delivery with private couriers.</p>",
             "link_label": "",
             "link": ""
           }

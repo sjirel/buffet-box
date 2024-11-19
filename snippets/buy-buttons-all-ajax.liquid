@@ -103,7 +103,11 @@
                 {% endif %}  
                 
               {%- else -%}
-                {{ 'products.product.add_to_cart' | t }}
+                {% if is_collection_chanukah_zone %}
+                  Pre-Order Now
+                {% else %}   
+                  {{ 'products.product.add_to_cart' | t }}      
+                {% endif %}   
               {%- endif -%}
               {% render 'icon-cart' %}
             </span>
