@@ -443,6 +443,9 @@
 				width: 22rem;
 				margin: 0 auto;
 				transition: all 0.4s ease-in-out;
+				@include bp(below-md) {
+					bottom: 4.1rem;
+				}
 			}
 			.button {
 				z-index: 1;

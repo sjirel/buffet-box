@@ -411,6 +411,11 @@
   margin: 0 auto;
   transition: all 0.4s ease-in-out;
 }
+@media (max-width: 767px) {
+  .hero-banner .outer-js-banner-product-main-slider .swiper-slide .product-form__submit {
+    bottom: 4.1rem;
+  }
+}
 .hero-banner .outer-js-banner-product-main-slider .swiper-slide .button {
   z-index: 1;
 }
