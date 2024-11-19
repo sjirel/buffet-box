@@ -4780,3 +4780,11 @@ details-disclosure > details {
     --border-offset: 0px; /* Prevent the border from growing on buttons when this effect is on. */
   }
 }
+.kosher-symbols .icon-list {
+  display: flex;
+  -moz-column-gap: 1rem;
+       column-gap: 1rem;
+}
+.kosher-symbols .icon-list figure {
+  width: 100px;
+}

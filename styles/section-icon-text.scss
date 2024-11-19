@@ -1,0 +1,22 @@
+.text-with-icon {
+  text-align: center;
+  h4 {
+    margin-bottom: 1rem;
+  }
+  p {
+    margin: 0;
+  }
+}
+.image-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 1rem;
+  figure {
+    margin: 0;
+    width: 100px;
+    img {
+      width: 100%;
+    }
+  }
+}

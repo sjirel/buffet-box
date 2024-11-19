@@ -1,0 +1,116 @@
+{{ 'section-icon-text.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+
+<div class="isolate">
+  <div class="text-with-icon content-container color-{{ section.settings.color_scheme }} gradient section-{{ section.id }}-padding">
+    <div class="text-with-icon__wrapper page-width">
+        <h4 class="h5">{{section.settings.text}}</h4>
+        <div class="image-list">         
+          {%- for block in section.blocks -%}
+            {%- if block.settings.image != blank -%}
+              <figure>
+                {{
+                  block.settings.image
+                  | image_url: width: 150
+                  | image_tag
+                }}
+
+              </figure>
+
+            {% endif  %}
+          {%- endfor -%}
+        </div>
+
+
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Kosher Certification",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": {
+    "groups": [
+      "header",
+      "footer"
+    ]
+  },
+  "settings": [
+    {
+      "type": "richtext",
+      "id": "text",
+      "default": "<p>100% Kosher certified.</p>",
+      "label": "t:sections.rich-text.blocks.text.settings.text.label"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "scheme-1"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 52
+    }
+  ],
+  "blocks": [
+    {
+      "type": "image",
+      "name": "image",
+      "limit": 4,
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "t:sections.image-with-text.settings.image.label"
+        }        
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Kosher Certification",
+      "blocks": [
+        {
+          "type": "image"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

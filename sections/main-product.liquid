@@ -565,6 +565,34 @@
               {% render 'icon-with-text',
                 block: block
               %}
+            {%- when 'kosher-symbols' -%} 
+              <div class="kosher-symbols">
+                <h4 class="h5">{{block.settings.heading_kosher}}</h4>
+                <div class="list-icon">
+                  {%- if block.settings.image_1_kosher != blank -%}
+                    <figure>
+                      {{
+                        block.settings.image_1_kosher
+                        | image_url: width: 150
+                        | image_tag
+                      }}
+      
+                    </figure>
+      
+                  {% endif  %}
+                  {%- if block.settings.image_2_kosher != blank -%}
+                    <figure>
+                      {{
+                        block.settings.image_2_kosher
+                        | image_url: width: 150
+                        | image_tag
+                      }}
+      
+                    </figure>
+      
+                  {% endif  %}                  
+                </div>
+              </div>
           {%- endcase -%}
         {%- endfor -%}
         <a href="{{ product.url }}" class="link product__view-details animate-arrow">
@@ -2053,6 +2081,29 @@
           "default": "Heading",
           "label": "t:sections.main-product.blocks.icon_with_text.settings.heading_3.label",
           "info": "t:sections.main-product.blocks.icon_with_text.settings.heading.info"
+        }
+      ]
+    },
+    {
+      "type": "kosher-symbols",
+      "name": "Kosher Symbols",
+      "settings": [
+        {
+          "type": "inline_richtext",
+          "id": "heading_kosher",
+          "default": "Heading",
+          "label": "t:sections.main-product.blocks.icon_with_text.settings.heading_1.label",
+          "info": "t:sections.main-product.blocks.icon_with_text.settings.heading.info"
+        },        
+        {
+          "type": "image_picker",
+          "id": "image_1_kosher",
+          "label": "t:sections.main-product.blocks.icon_with_text.settings.image_1.label"
+        },
+        {
+          "type": "image_picker",
+          "id": "image_2_kosher",
+          "label": "t:sections.main-product.blocks.icon_with_text.settings.image_2.label"
         }
       ]
     }

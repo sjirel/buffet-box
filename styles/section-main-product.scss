@@ -1663,3 +1663,22 @@ a.product__text {
     padding: 0.3rem 1.2rem 0.5rem;
   }
 }
+
+.kosher-symbols {
+  display: flex;
+  align-items: center;
+  column-gap: 1.2rem;
+  margin-bottom: 2.3rem;
+  h4 {
+    margin-bottom: 0;
+    color: $color-black;
+  }
+  .list-icon {
+    display: flex;
+    column-gap: 1rem;
+    figure {
+      width: 70px;
+      margin: 0;
+    }
+  }
+}

@@ -1588,3 +1588,24 @@ a.product__text {
   border-radius: 10rem;
   padding: 0.3rem 1.2rem 0.5rem;
 }
+
+.kosher-symbols {
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 1.2rem;
+       column-gap: 1.2rem;
+  margin-bottom: 2.3rem;
+}
+.kosher-symbols h4 {
+  margin-bottom: 0;
+  color: #1F1F1F;
+}
+.kosher-symbols .list-icon {
+  display: flex;
+  -moz-column-gap: 1rem;
+       column-gap: 1rem;
+}
+.kosher-symbols .list-icon figure {
+  width: 70px;
+  margin: 0;
+}
