@@ -191,11 +191,13 @@
         "subtitle": "Explore Our",
         "title": "Best Sellers",
         "products": [
-          "donutbox",
-          "churrobox",
-          "smores-box",
-          "booze-box",
-          "shabbos-party-box"
+          "chanukah-party-box",
+          "cookie-decoration-box",
+          "donut-box",
+          "donut-box-half-size",
+          "mini-donuts-box",
+          "mini-donuts-box-half-size",
+          "smores-box-1"
         ],
         "padding_top": 0,
         "padding_bottom": 180,
