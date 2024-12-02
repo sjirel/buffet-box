@@ -400,6 +400,21 @@
     margin-top: 1.5rem;
   }
 }
+.footer__payment {
+  display: flex;
+  align-items: center;
+}
+.footer__payment a.download-brochure {
+  color: #1F1F1F;
+  text-transform: capitalize;
+  margin-left: 3rem;
+}
+.footer__payment a.download-brochure .icon {
+  width: 1.4rem;
+  color: #B62940;
+  margin-right: 0.6rem;
+}
+
 .footer__copyright {
   color: #1F1F1F;
   font-size: 1.3rem;

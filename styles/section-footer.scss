@@ -58,6 +58,7 @@
 .footer__content-top {
   padding-bottom: 5rem;
   display: block;
+
 }
 
 @media screen and (max-width: 749px) {
@@ -401,7 +402,20 @@
     margin-top: 1.5rem;
   }
 }
-
+.footer__payment {
+  display: flex;
+  align-items: center;
+  a.download-brochure {
+    color: $color-black;
+    text-transform: capitalize;
+    margin-left: 3rem;
+    .icon {
+      width: 1.4rem;
+      color: #B62940;
+      margin-right: 0.6rem;
+    }
+  }
+}
 
 .footer__copyright {
   color: $color-black;
