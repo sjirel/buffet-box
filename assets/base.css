@@ -4788,3 +4788,13 @@ details-disclosure > details {
 .kosher-symbols .icon-list figure {
   width: 100px;
 }
+
+a.download-brochure {
+  color: #1F1F1F;
+  text-transform: capitalize;
+}
+a.download-brochure .icon {
+  width: 1.4rem;
+  color: #B62940;
+  margin-right: 0.6rem;
+}

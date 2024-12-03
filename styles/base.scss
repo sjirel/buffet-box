@@ -3968,3 +3968,12 @@ details-disclosure > details {
   }
 }
 
+a.download-brochure {
+  color: $color-black;
+  text-transform: capitalize;
+  .icon {
+    width: 1.4rem;
+    color: #B62940;
+    margin-right: 0.6rem;
+  }
+}

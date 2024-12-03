@@ -7,7 +7,7 @@
  * made to this file may be overwritten.
  * ------------------------------------------------------------
  */
-{
+ {
   "sections": {
     "main": {
       "type": "main-product",
@@ -26,6 +26,14 @@
         "price": {
           "type": "price",
           "settings": {}
+        },
+        "kosher_symbols_e9xCfk": {
+          "type": "kosher-symbols",
+          "settings": {
+            "heading_kosher": "100% Kosher Certified",
+            "image_1_kosher": "shopify://shop_images/logo-1_1.png",
+            "image_2_kosher": "shopify://shop_images/logo-2_1.png"
+          }
         },
         "tags_nADhWb": {
           "type": "tags",
@@ -68,6 +76,7 @@
         "title",
         "caption",
         "price",
+        "kosher_symbols_e9xCfk",
         "tags_nADhWb",
         "rating_FfBcy7",
         "description",
