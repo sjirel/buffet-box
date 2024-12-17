@@ -79,7 +79,7 @@
 
               <tbody>
                 {%- for item in cart.items -%}
-                  <tr class="cart-item 132" id="CartItem-{{ item.index | plus: 1 }}">
+                  <tr class="cart-item" id="CartItem-{{ item.index | plus: 1 }}">
                     <td class="cart-item__media">
                       {% if item.image %}
                         {% comment %} Leave empty space due to a:empty CSS display: none rule {% endcomment %}
@@ -169,6 +169,9 @@
                           </li>
                         {%- endfor -%}
                       </ul>
+                      {% if item.product.metafields.custom.display_cart_message_flag == true %}
+                        <p class="caption-with-letter-spacing">{{ item.product.metafields.custom.cart_message }}</p>
+                      {%- endif -%}
                     </td>
 
                     <td class="cart-item__totals right medium-hide large-up-hide">
