@@ -17,6 +17,9 @@
       padding-bottom: {{ section.settings.padding_bottom }}px;
     }
   }
+  .cart-item__details .ms__toggle-box{
+    color: #b62940;
+  }
 {%- endstyle -%}
 
 {%- unless settings.cart_type == 'drawer' -%}
@@ -169,6 +172,9 @@
                           </li>
                         {%- endfor -%}
                       </ul>
+                      {% if item.product.metafields.custom.display_cart_message_flag == true %}
+                        <p class="ms__toggle-box label">{{ item.product.metafields.custom.cart_message }}</p>
+                      {%- endif -%}
                     </td>
 
                     <td class="cart-item__totals right medium-hide large-up-hide">
