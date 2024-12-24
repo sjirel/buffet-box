@@ -2783,9 +2783,9 @@ product-info .loading__spinner:not(.hidden) ~ *,
     justify-content: space-between;
   }
   .header__heading-link {
-    width: 16rem;
+    width: 7.2rem;
     @include bp(md) {
-      width: 19rem;
+      width: 10.2rem;
     }
   }
 }
