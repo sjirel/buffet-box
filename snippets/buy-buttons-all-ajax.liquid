@@ -97,7 +97,8 @@
             <span>
               {%- if product.selected_or_first_available_variant.available == false or quantity_rule_soldout -%}
                 {% if is_collection_chanukah_zone %}
-                    Coming soon
+                    {% comment %}Coming soon{% endcomment %}
+                  {{ 'products.product.sold_out' | t }}
                 {% else %}   
                   {{ 'products.product.sold_out' | t }}        
                 {% endif %}  
