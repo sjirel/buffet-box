@@ -48,7 +48,7 @@
                         %}
                         {%- assign product_form_id = 'product-form-' | append: block.id -%}
                         
-                        <div class="main-image-with-price {{ block.id }}">
+                        <div class="main-image-with-price {{ block.settings.product_item }}">
                             <div class="main-image">
                                 {{ product.featured_image | image_url: width: 850 | image_tag: loading: 'eager' }}
                             </div>
