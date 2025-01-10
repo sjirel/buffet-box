@@ -59,13 +59,25 @@
             "svg_code": "",
             "is_special": false
           }
+        },
+        "slide_P43Met": {
+          "type": "slide",
+          "settings": {
+            "bg_color": "pink",
+            "product_item": "strawberry-short-cake-box",
+            "img_or_svg": false,
+            "bg_composition_img": "shopify://shop_images/Group_9_2.png",
+            "svg_code": "",
+            "is_special": false
+          }
         }
       },
       "block_order": [
         "image_DgCtQC",
         "slide_7BXRd9",
         "slide_Wyp4aq",
-        "slide_VCn8Rf"
+        "slide_VCn8Rf",
+        "slide_P43Met"
       ],
       "settings": {
         "show_slide_arrow": true
