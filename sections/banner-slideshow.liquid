@@ -48,7 +48,7 @@
                         %}
                         {%- assign product_form_id = 'product-form-' | append: block.id -%}
                         
-                        <div class="main-image-with-price">
+                        <div class="main-image-with-price {{ block.id }}">
                             <div class="main-image">
                                 {{ product.featured_image | image_url: width: 850 | image_tag: loading: 'eager' }}
                             </div>
@@ -153,6 +153,9 @@
     </div>
     <div class="swiper-pagination"></div>
 </div>
+<style>
+
+</style>
 {% schema %}
 {
 "name": "Banner: Slideshow",
