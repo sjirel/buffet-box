@@ -29,6 +29,7 @@
         },
         "slide_aMCKwY": {
           "type": "slide",
+          "disabled": true,
           "settings": {
             "bg_color": "orange",
             "product_item": "smores-box",
@@ -40,6 +41,7 @@
         },
         "slide_P43Met": {
           "type": "slide",
+          "disabled": true,
           "settings": {
             "bg_color": "pink",
             "product_item": "strawberry-short-cake-box",
