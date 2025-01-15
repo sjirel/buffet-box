@@ -47,7 +47,16 @@
                             endfor
                         %}
                         {%- assign product_form_id = 'product-form-' | append: block.id -%}
-                        
+                        <div class="text-slider-static">
+                          {% if product.selected_or_first_available_variant.id == 43852034900146 %}
+                              <h1>Winter S'mores Zone</h1>
+                              <span>Enjoy a cozy night with family and friends around a hot and delicious smores box.</span>
+                          {% endif %}
+                          {% if product.selected_or_first_available_variant.id == 43917528924338 %}
+                            <h1>Valentine’s Day</h1>
+                            <span>Feast on flavorful memories with your loved one and a delicious strawberry shortcake box.</span>
+                          {% endif %} 
+                        </div>
                         <div class="main-image-with-price {{ block.settings.product_item }}">
                               
                             <div class="main-image">
