@@ -82,7 +82,17 @@
                             {% endif %}
                         </div>
                         {% endif %}
-                        <div class="slide-title-small">{{ product.title | prepend: '#' }}</div>
+                       
+                      {% if product.selected_or_first_available_variant.id == 43852034900146 or product.selected_or_first_available_variant.id == 43917528924338 %}
+                        {% if product.selected_or_first_available_variant.id == 43852034900146 %}
+                          <div class="slide-title-small">#SmoresBox</div>
+                        {% endif %}
+                        {% if product.selected_or_first_available_variant.id == 43917528924338 %}
+                          <div class="slide-title-small">#ShortcakeBox</div>
+                        {% endif %}
+                      {%  else %}
+                         <div class="slide-title-small">{{ product.title | prepend: '#' }}</div>
+                      {% endif %}
                         <div class="form-details">
                             {%- if product != blank -%}
                             <div {{ block.shopify_attributes }}>
