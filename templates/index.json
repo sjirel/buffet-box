@@ -51,6 +51,7 @@
         },
         "slide_7BXRd9": {
           "type": "slide",
+          "disabled": true,
           "settings": {
             "bg_color": "green",
             "product_item": "shabbos-party-box",
@@ -62,6 +63,7 @@
         },
         "slide_Wyp4aq": {
           "type": "slide",
+          "disabled": true,
           "settings": {
             "bg_color": "orange",
             "product_item": "donutbox",
@@ -73,6 +75,7 @@
         },
         "slide_VCn8Rf": {
           "type": "slide",
+          "disabled": true,
           "settings": {
             "bg_color": "blue",
             "product_item": "churrobox",
