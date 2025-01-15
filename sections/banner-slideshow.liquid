@@ -103,7 +103,7 @@
                                 {%- endform -%}
                             </div>
                               {% if product.selected_or_first_available_variant.id == 43852034900146 or product.selected_or_first_available_variant.id == 43917528924338 %}
-                                <a href="{{ product.selected_or_first_available_variant.url }}" id="ProductSubmitButton-template--16756019462322__banner_slideshow" type="submit" name="add" class="product-form__submit button button--primary" disabled="">
+                                <a href="{{ product.url }}" id="ProductSubmitButton-template--16756019462322__banner_slideshow" type="submit" name="add" class="product-form__submit button button--primary" disabled="">
                                   <span>View Product</span></a>
                                 {%  else %}
                                 {%- render 'buy-buttons-all-ajax', block: block, product: product, product_form_id: product_form_id, section_id: section.id
