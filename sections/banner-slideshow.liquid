@@ -47,7 +47,7 @@
                             endfor
                         %}
                         {%- assign product_form_id = 'product-form-' | append: block.id -%}
-                        <div class="text-slider-static">
+                        <div class="text-slider-static {{ block.settings.product_item }}">
                           {% if product.selected_or_first_available_variant.id == 43852034900146 %}
                               <h1>Winter S'mores <br/>Zone</h1>
                               <span>Enjoy a cozy night with family and friends<br/> around a hot and delicious smores box.</span>
