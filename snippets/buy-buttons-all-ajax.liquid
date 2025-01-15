@@ -95,25 +95,21 @@
             {% endif %}
           >
             <span>
-              {% if product.selected_or_first_available_variant.id == 43852034900146 or product.selected_or_first_available_variant.id == 43917528924338 %}
-                  View Product
-              {% else %}
-                {%- if product.selected_or_first_available_variant.available == false or quantity_rule_soldout -%}
-                  {% if is_collection_chanukah_zone %}
-                      {% comment %}Coming soon{% endcomment %}
-                    {{ 'products.product.sold_out' | t }}
-                  {% else %}   
-                    {{ 'products.product.sold_out' | t }}        
-                  {% endif %}  
-                  
-                {%- else -%}
-                  {% if is_collection_chanukah_zone %}
-                    Pre-Order Now
-                  {% else %}   
-                    {{ 'products.product.add_to_cart' | t }}      
-                  {% endif %}   
-                {%- endif -%}
-              {% endif %}  
+              {%- if product.selected_or_first_available_variant.available == false or quantity_rule_soldout -%}
+                {% if is_collection_chanukah_zone %}
+                    {% comment %}Coming soon{% endcomment %}
+                  {{ 'products.product.sold_out' | t }}
+                {% else %}   
+                  {{ 'products.product.sold_out' | t }}        
+                {% endif %}  
+                
+              {%- else -%}
+                {% if is_collection_chanukah_zone %}
+                  Pre-Order Now
+                {% else %}   
+                  {{ 'products.product.add_to_cart' | t }}      
+                {% endif %}   
+              {%- endif -%}
               {% render 'icon-cart' %}
             </span>
             {%- render 'loading-spinner' -%}
