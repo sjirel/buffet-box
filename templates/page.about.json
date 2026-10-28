@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "image_banner_EfKbWW": {
@@ -23,7 +32,7 @@
         "heading_AwzXJk"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/top_1.png",
+        "image": "shopify://shop_images/top_1.png",
         "image_overlay_opacity": 0,
         "image_height": "adapt",
         "desktop_content_position": "middle-center",
@@ -42,8 +51,8 @@
       "settings": {
         "title": "Fun Food Creativity",
         "subtxt": "",
-        "large_image": "shopify:\/\/shop_images\/welcome-large_1e271964-9d5f-4b8e-ac90-bf9c225c4461.png",
-        "small_image": "shopify:\/\/shop_images\/welcome-image-orange.png",
+        "large_image": "shopify://shop_images/welcome-large_1e271964-9d5f-4b8e-ac90-bf9c225c4461.png",
+        "small_image": "shopify://shop_images/welcome-image-orange.png",
         "padding_top": 180,
         "padding_bottom": 200,
         "padding_top_mobile": 100,
@@ -66,7 +75,7 @@
           "type": "column",
           "settings": {
             "title": "Diverse Selection",
-            "text": "<p>Explore a world of flavor with our diverse selection of Buffet Boxes. From the classic allure of donuts to the crispy goodness of churros, the creamy indulgence of ice cream, and more – each box is a treasure trove of taste sensations.<\/p>",
+            "text": "<p>Explore a world of flavor with our diverse selection of Buffet Boxes. From the classic allure of donuts to the crispy goodness of churros, the creamy indulgence of ice cream, and more – each box is a treasure trove of taste sensations.</p>",
             "link_label": "",
             "link": ""
           }
@@ -75,7 +84,7 @@
           "type": "column",
           "settings": {
             "title": "Quality Ingredients",
-            "text": "<p>We source the finest ingredients to create our treats, ensuring that every bite is a moment of bliss. Our commitment to quality extends to the materials used in our card boxes, making them not only delicious but also eco-friendly.<\/p>",
+            "text": "<p>We source the finest ingredients to create our treats, ensuring that every bite is a moment of bliss. Our commitment to quality extends to the materials used in our card boxes, making them not only delicious but also eco-friendly.</p>",
             "link_label": "",
             "link": ""
           }
@@ -84,7 +93,7 @@
           "type": "column",
           "settings": {
             "title": "Convenience Redefined",
-            "text": "<p>Embrace the simplicity of Buffet Box. No need for elaborate setups or lengthy preparations – just open the box, and the feast begins. It's the perfect solution for those who crave premium treats without the fuss.<\/p>",
+            "text": "<p>Embrace the simplicity of Buffet Box. No need for elaborate setups or lengthy preparations – just open the box, and the feast begins. It's the perfect solution for those who crave premium treats without the fuss.</p>",
             "link_label": "",
             "link": ""
           }
@@ -93,7 +102,7 @@
           "type": "column",
           "settings": {
             "title": "Perfect for Every Occasion",
-            "text": "<p>Whether it's a birthday, a workplace celebration, or a cozy night in, Buffet Box adds a touch of sweetness to every moment. Our thoughtfully curated selections cater to a variety of tastes, ensuring there's a perfect box for every palate.<\/p>",
+            "text": "<p>Whether it's a birthday, a workplace celebration, or a cozy night in, Buffet Box adds a touch of sweetness to every moment. Our thoughtfully curated selections cater to a variety of tastes, ensuring there's a perfect box for every palate.</p>",
             "link_label": "",
             "link": ""
           }
@@ -132,8 +141,8 @@
         "heading": "",
         "heading_size": "h1",
         "enable_video_looping": false,
-        "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
-        "cover_image": "shopify:\/\/shop_images\/regularbox.jpg",
+        "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+        "cover_image": "shopify://shop_images/regularbox.jpg",
         "description": "",
         "full_width": false,
         "color_scheme": "scheme-5",

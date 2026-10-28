@@ -9,6 +9,29 @@
  */
 {
   "sections": {
+    "rich_text_edKdMB": {
+      "type": "rich-text",
+      "blocks": {
+        "text_7TMXNL": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Shipping outside the tri-state area?</strong><br/><br/>Please select <strong>UPS Next Day</strong> or <strong>UPS 3-Day Select</strong> to ensure timely delivery<br/><br/></p>"
+          }
+        }
+      },
+      "block_order": [
+        "text_7TMXNL"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
     "cart-items": {
       "type": "main-cart-items",
       "settings": {
@@ -76,6 +99,7 @@
     }
   },
   "order": [
+    "rich_text_edKdMB",
     "cart-items",
     "cart-footer",
     "featured-collection"

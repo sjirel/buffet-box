@@ -12,9 +12,20 @@
     "banner_slideshow": {
       "type": "banner-slideshow",
       "blocks": {
+        "slide_Wyp4aq": {
+          "type": "slide",
+          "disabled": true,
+          "settings": {
+            "bg_color": "orange",
+            "product_item": "donutbox",
+            "img_or_svg": false,
+            "bg_composition_img": "shopify://shop_images/composition.png",
+            "svg_code": "",
+            "is_special": true
+          }
+        },
         "image_DgCtQC": {
           "type": "image",
-          "disabled": true,
           "settings": {
             "bg_img": "shopify://shop_images/background.png",
             "title": "Chanukah Zone",
@@ -29,6 +40,7 @@
         },
         "slide_aMCKwY": {
           "type": "slide",
+          "disabled": true,
           "settings": {
             "bg_color": "orange",
             "product_item": "smores-box",
@@ -40,6 +52,7 @@
         },
         "slide_P43Met": {
           "type": "slide",
+          "disabled": true,
           "settings": {
             "bg_color": "pink",
             "product_item": "strawberry-short-cake-box",
@@ -61,18 +74,6 @@
             "is_special": false
           }
         },
-        "slide_Wyp4aq": {
-          "type": "slide",
-          "disabled": true,
-          "settings": {
-            "bg_color": "orange",
-            "product_item": "donutbox",
-            "img_or_svg": false,
-            "bg_composition_img": "shopify://shop_images/composition.png",
-            "svg_code": "",
-            "is_special": true
-          }
-        },
         "slide_VCn8Rf": {
           "type": "slide",
           "disabled": true,
@@ -87,15 +88,35 @@
         }
       },
       "block_order": [
+        "slide_Wyp4aq",
         "image_DgCtQC",
         "slide_aMCKwY",
         "slide_P43Met",
         "slide_7BXRd9",
-        "slide_Wyp4aq",
         "slide_VCn8Rf"
       ],
       "settings": {
         "show_slide_arrow": true
+      }
+    },
+    "featured_collection": {
+      "type": "section-best-seller",
+      "settings": {
+        "subtitle": "Explore Our",
+        "title": "Best Sellers",
+        "products": [
+          "donutbox",
+          "donut-box",
+          "donut-box-half-size",
+          "mini-donuts-box-half-size",
+          "mini-donuts-box",
+          "chanukah-party-box",
+          "smores-box-1"
+        ],
+        "padding_top": 100,
+        "padding_bottom": 180,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 0
       }
     },
     "kosher_certification_a6VgCE": {
@@ -214,25 +235,6 @@
         "padding_bottom_mobile": 80
       }
     },
-    "featured_collection": {
-      "type": "section-best-seller",
-      "settings": {
-        "subtitle": "Explore Our",
-        "title": "Best Sellers",
-        "products": [
-          "birthday-box",
-          "churrobox",
-          "donutbox",
-          "cookie-dough-box",
-          "shabbos-party-box",
-          "smores-box"
-        ],
-        "padding_top": 0,
-        "padding_bottom": 180,
-        "padding_top_mobile": 0,
-        "padding_bottom_mobile": 0
-      }
-    },
     "collage": {
       "type": "banner-with-product",
       "settings": {
@@ -271,10 +273,10 @@
   },
   "order": [
     "banner_slideshow",
+    "featured_collection",
     "kosher_certification_a6VgCE",
     "image_banner",
     "rich_text",
-    "featured_collection",
     "collage",
     "sectionTestimonial",
     "findPerfectGift"
