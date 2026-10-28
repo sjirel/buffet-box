@@ -7,7 +7,7 @@
  * made to this file may be overwritten.
  * ------------------------------------------------------------
  */
- {
+{
   "sections": {
     "main": {
       "type": "main-product",
@@ -29,6 +29,7 @@
         },
         "kosher_symbols_e9xCfk": {
           "type": "kosher-symbols",
+          "disabled": true,
           "settings": {
             "heading_kosher": "100% Kosher Certified",
             "image_1_kosher": "shopify://shop_images/logo-1_1.png",

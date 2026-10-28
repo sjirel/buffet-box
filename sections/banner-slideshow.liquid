@@ -47,8 +47,18 @@
                             endfor
                         %}
                         {%- assign product_form_id = 'product-form-' | append: block.id -%}
-                        
-                        <div class="main-image-with-price">
+                        <div class="text-slider-static {{ block.settings.product_item }}">
+                          {% if product.selected_or_first_available_variant.id == 43852034900146 %}
+                              <h1>Winter S'mores <br/>Zone</h1>
+                              <span>Enjoy a cozy night with family and friends<br/> around a hot and delicious smores box.</span>
+                          {% endif %}
+                          {% if product.selected_or_first_available_variant.id == 43917528924338 %}
+                            <h1>Valentine’s Day</h1>
+                            <span>Feast on flavorful  memories with your loved<br> ones and a delicious strawberry shortcake dessert box</span>
+                          {% endif %} 
+                        </div>
+                        <div class="main-image-with-price {{ block.settings.product_item }}">
+                              
                             <div class="main-image">
                                 {{ product.featured_image | image_url: width: 850 | image_tag: loading: 'eager' }}
                             </div>
@@ -82,7 +92,17 @@
                             {% endif %}
                         </div>
                         {% endif %}
-                        <div class="slide-title-small">{{ product.title | prepend: '#' }}</div>
+                       
+                      {% if product.selected_or_first_available_variant.id == 43852034900146 or product.selected_or_first_available_variant.id == 43917528924338 %}
+                        {% if product.selected_or_first_available_variant.id == 43852034900146 %}
+                          <div class="slide-title-small s-sliders">#SmoresBox</div>
+                        {% endif %}
+                        {% if product.selected_or_first_available_variant.id == 43917528924338 %}
+                          <div class="slide-title-small s-sliders">#DessertBox</div>
+                        {% endif %}
+                      {%  else %}
+                         <div class="slide-title-small">{{ product.title | prepend: '#' }}</div>
+                      {% endif %}
                         <div class="form-details">
                             {%- if product != blank -%}
                             <div {{ block.shopify_attributes }}>
@@ -92,8 +112,13 @@
                                 {{ form | payment_terms }}
                                 {%- endform -%}
                             </div>
-                            {%- render 'buy-buttons-all-ajax', block: block, product: product, product_form_id: product_form_id, section_id: section.id
+                              {% if product.selected_or_first_available_variant.id == 43852034900146 or product.selected_or_first_available_variant.id == 43917528924338 %}
+                                <a href="{{ product.url }}" id="ProductSubmitButton-template--16756019462322__banner_slideshow" type="submit" name="add" class="product-form__submit button button--primary" disabled="">
+                                  <span>View Product</span></a>
+                                {%  else %}
+                                {%- render 'buy-buttons-all-ajax', block: block, product: product, product_form_id: product_form_id, section_id: section.id
                             -%}
+                              {%- endif -%}
                             {%- endif -%}
                         </div>
                     </div>
@@ -153,6 +178,104 @@
     </div>
     <div class="swiper-pagination"></div>
 </div>
+<style>
+.text-slider-static{
+  opacity: 1;
+  position: absolute;
+  z-index: 999;
+  top: 22vw;
+  left: 50px;
+}
+.text-slider-static h1{
+  font-size: 70px;
+  color: #fff;
+}
+.text-slider-static span{
+  font-size: 20px;
+  font-weight: 600;
+  color: #fff;
+  line-height: 28px;
+} 
+.text-slider-static.strawberry-short-cake-box{
+  top: 26vw;
+}
+.text-slider-static.strawberry-short-cake-box h1, .text-slider-static.strawberry-short-cake-box span{
+    color: #B50F18;
+}
+.text-slider-static{
+  display:none;
+}
+.swiper-slide-active > .text-slider-static{
+  display:block;
+}
+.main-image-with-price.smores-box,
+.main-image-with-price.strawberry-short-cake-box{
+    display:none;
+}
+.swiper-slide-active > .main-image-with-price.smores-box + .floating-composition,
+.swiper-slide-active > .main-image-with-price.strawberry-short-cake-box + .floating-composition{
+    transform: translateY(0) !important;
+}
+.slide-title-small.s-sliders{
+  color:#ffffff !important;
+}
+@media (max-width: 1024px) {
+  .hero-banner .swiper-slide-active > .main-image-with-price.smores-box + .floating-composition{
+	background-image: url(//buffetbox.com/cdn/shop/files/smores-box-3.png?v=1736961098);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 87vw;
+    transform: translateY(0%) !important;
+    background-position: center;
+  }
+  .hero-banner .swiper-slide-active > .main-image-with-price.strawberry-short-cake-box + .floating-composition{
+	background-image: url(//buffetbox.com/cdn/shop/files/Strawberry-box-2.png?v=1736938436);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 87vw;
+    transform: translateY(0%) !important;
+    background-position: center;
+  }
+  .swiper-slide-active > .main-image-with-price.smores-box + .floating-composition img,
+  .swiper-slide-active > .main-image-with-price.strawberry-short-cake-box + .floating-composition img{
+     display:none;
+   }
+}  
+@media (max-width: 767px) {
+  .text-slider-static{
+    left: unset;
+    width:100%;
+    top: 83vw;
+  }
+  .text-slider-static h1{
+    font-size: 48px;
+    text-align: center;
+  }
+  .text-slider-static span{
+    display:none;
+  }
+  .text-slider-static.strawberry-short-cake-box{
+    top: 19vw;
+  }
+  .text-slider-static.strawberry-short-cake-box h1{
+    font-size: 54px;
+  }
+  .hero-banner .swiper-slide-active > .main-image-with-price.smores-box + .floating-composition{
+	background-image: url(//cdn.shopify.com/s/files/1/0647/8145/1442/files/smores-box-3_af3a5bd7-bdb9-4b02-afdb-4dbd04724009.png?v=1737103910);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 192vw;
+    background-position: center;
+  }
+  .hero-banner .swiper-slide-active > .main-image-with-price.strawberry-short-cake-box + .floating-composition{
+    background-image: url(//cdn.shopify.com/s/files/1/0647/8145/1442/files/strawberry-box-3.png?v=1737103954);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 192vw;
+    background-position: center;
+  }
+}  
+</style>
 {% schema %}
 {
 "name": "Banner: Slideshow",
